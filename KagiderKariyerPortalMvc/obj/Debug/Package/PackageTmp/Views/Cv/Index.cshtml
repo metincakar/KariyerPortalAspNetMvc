@@ -1,0 +1,500 @@
+﻿@using System.Web.UI.WebControls
+@using KagiderKariyerPortal.Entities.ConCreate
+@model IEnumerable<KagiderKariyerPortalMvc.Models.CvDetail>
+
+@{
+    Layout = ViewBag.editcv ? "../Shared/_Layout.cshtml" : "../Shared/_Layoutisveren.cshtml";
+    ViewBag.Title = "Özgeçmiş Bilgileriniz";
+
+
+
+    var selectCalismadurumu = new List<SelectListItem>()
+    {
+        new SelectListItem() { Text = "Serbest", Value = "S" },
+
+        new SelectListItem() { Text = "Yarı Zamanlı / Part Time", Value = "P" },
+
+        new SelectListItem() { Text = "Dönemsel // Proje Bazlı",Value="D"},
+        new SelectListItem() { Text="Stajyer",Value="S" },
+        new SelectListItem() {  Text="Tam Zamanlı",Value="F" },
+         new SelectListItem() {  Text="Gönüllü",Value="G"}
+    };
+}
+
+
+<div class="page-header">
+    <h1>Özgeçmiş Bilgileriniz <small>özgeçmiş bilgileriniz</small></h1>
+</div>
+<div class="panel panel-primary" style="width: 1020px">
+    <div class="panel-heading" style="width: auto">Cv</div>
+    <div class="panel-body" style="width: auto">
+
+
+        <div id="updateDialog" title="Güncelle" style="display: none"><b style="color: red">Yükleniyor...</b></div>
+        <div id="updateDialogEgitim" title="Güncelle" style="display: none"><b style="color: red">Yükleniyor...</b></div>
+        <div id="updateDialogInfo" title="Güncelle" style="display: none"><b style="color: red">Yükleniyor...</b></div>
+        <div id="updateDialogKisisel" title="Güncelle" style="display: none"><b style="color: red">Yükleniyor...</b></div>
+        <div id="updateDialogDil" title="Güncelle" style="display: none"><b style="color: red">Yükleniyor...</b></div>
+        <div id="updateDialogSertifika" title="Güncelle" style="display: none"><b style="color: red">Yükleniyor...</b></div>
+        <div id="updateDialogSeminer" title="Güncelle" style="display: none"><b style="color: red">Yükleniyor...</b></div>
+        <div id="updateDialogSinav" title="Güncelle" style="display: none"><b style="color: red">Yükleniyor...</b></div>
+        <table  style="background-color: rgb(255, 255, 255);width: 100%" border="0" cellspacing="0" cellpadding="0" >
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="cvDiv" style="background-color: White; border: 0px solid silver;  ">
+                            <div class="ozgecmisimWrapper">
+                                @{
+                                    var item = new CvIletisimBilgi();
+                                    var kisiselitem = new CvKisiselBilgi();
+                                    var deneyimlist = new List<CvIsDeneyimleri>();
+                                    var universilist = new List<CvEgitimUniversiteBilgi>();
+                                    var dillerlist = new List<CvDilBilgi>();
+                                    var user = new UserProfile();
+                                    var cvother = new CvOther();
+                                    var sertifikaList = new List<CvSertifikaBilgi>();
+                                    var seminerList = new List<CvSeminerler>();
+                                    var sinavList = new List<CvSinavBilgi>();
+
+                                    foreach (var detail in Model)
+                                    {
+                                        item = detail.IletisimBilgisi;
+                                        kisiselitem = detail.KisiselBilgisi;
+                                        deneyimlist = detail.IsDeneyimleri;
+                                        universilist = detail.Universiteler;
+                                        dillerlist = detail.Diller;
+                                        user = detail.User;
+                                        cvother = detail.Other;
+                                        sertifikaList = detail.SertifikaBilgileri;
+                                        seminerList = detail.SeminerBilgileri;
+                                        sinavList = detail.SinavBilgileri;
+
+                                    }
+
+
+                                }
+
+                                <div class="left-side">
+                                    <div class="cv-page-cont" id="cvDuzenleme">
+                                        <style type="text/css">
+                                            .photo-holder {
+                                                padding: 10px 10px 4px 10px;
+                                                background: #f6f6f6;
+                                                border: solid 1px #d5d5d5;
+                                                margin-bottom: 14px;
+                                            }
+
+                                            .photo-holder {
+                                                padding-bottom: 10px;
+                                            }
+
+                                            .photo-shaddow {
+                                                background: url(/WebSite/Images/Kariyerim/shaddow.png) no-repeat scroll 0px 100% transparent;
+                                                width: auto;
+                                                height: auto;
+                                                float: right;
+                                                margin: 0 15px 12px 0;
+                                                overflow: visible;
+                                            }
+
+                                            .cvduzenle {
+                                                float: right;
+                                                text-decoration: none;
+                                                font-weight: normal;
+                                                color: #000000;
+                                                position: relative;
+                                                left: -5px;
+                                                top: 3px;
+                                                font-size: 12px;
+                                            }
+
+                                            .cvbaslik {
+                                                color: #000000;
+                                                font-family: Arial;
+                                                font-size: 24px;
+                                                font-weight: bold;
+                                                z-index: 20000;
+                                                position: relative;
+                                            }
+
+                                            .cvtitle {
+                                                color: #666666;
+                                                font-family: Arial;
+                                                font-size: 16px;
+                                                font-weight: bold;
+                                            }
+
+                                            .beyaz {
+                                                color: #fff3ce;
+                                            }
+
+                                            .item-css {
+                                                vertical-align: top;
+                                                padding-bottom: 10px;
+                                            }
+
+                                            .linkYaziBoyutu {
+                                                font-size: 12px;
+                                            }
+                                        </style>
+                                        <style type="text/css">
+                                            .jcrop-holder {
+                                                text-align: left;
+                                            }
+
+                                            .jcrop-vline, .jcrop-hline {
+                                                font-size: 0;
+                                                position: absolute;
+                                                background: white url('/WebSite/Images/Jcrop.gif') top left repeat;
+                                            }
+
+                                            .jcrop-vline {
+                                                height: 100%;
+                                                width: 1px !important;
+                                            }
+
+                                            .jcrop-hline {
+                                                width: 100%;
+                                                height: 1px !important;
+                                            }
+
+                                            .jcrop-handle {
+                                                font-size: 1px;
+                                                width: 7px !important;
+                                                height: 7px !important;
+                                                border: 1px #eee solid;
+                                                background-color: #333;
+                                                width: 9px;
+                                                height: 9px;
+                                            }
+
+                                            .jcrop-tracker {
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+
+                                            .custom .jcrop-vline, .custom .jcrop-hline {
+                                                background: yellow;
+                                            }
+
+                                            .custom .jcrop-handle {
+                                                border-color: black;
+                                                background-color: #C7BB00;
+                                                -moz-border-radius: 3px;
+                                                -webkit-border-radius: 3px;
+                                            }
+                                        </style>
+                                        <div class="per-info-cont clearfix">
+                                            <div class="per-img" id="per-img">
+                                                @if (Session["uid"] != null)
+                                                {
+                                                    @Html.Partial("_ResimGosterPartial", user)
+                                                }
+
+                                            </div>
+                                            <div class="per-name-title">
+                                                <h1 id="cvisim">@Html.DisplayFor(modelItem => item.UyeAd) @Html.DisplayFor(modelItem => item.UyeSoyad)</h1>
+                                                <h2 id="cvunvan"></h2>
+                                            </div>
+                                        </div>
+
+
+
+                                        @{
+                                            var detailkisisel = new List<CvKisiselBilgi>();
+                                            detailkisisel.Add(kisiselitem);
+                                            var iletisimlist = new List<CvIletisimBilgi>();
+                                            iletisimlist.Add(item);
+                                        }
+
+
+                                        <div id="genelbilgiajax">
+
+                                            @Html.Partial("_IletisimBilgileriPartial", iletisimlist)
+
+                                        </div>
+
+
+                                        <div id="kisiselajax">
+                                            @Html.Partial("_KisiselBilgilerPartial", detailkisisel.AsEnumerable())
+                                        </div>
+                                        <!--İş deneyimleri-->
+                                        <div id="dvIsTecrubelerim">
+                                            @Html.Partial("_IsDeneyimleriPartial", deneyimlist)
+                                        </div>
+                                        <!--/İş deneyimleri-->
+                                        <div id="dvSummary">
+
+
+                                            <div id="dvOzett" class="short-info info-box">
+                                                <p>
+                                                    <h3>
+                                                        Özel Bilgi  @Html.ActionLink("Düzenle", "EditOther", new { id = cvother.OtherId, tip = 0 }, new { @class = "editDialog edit-btn", title = "Özet Bilgi", en = "750", boy = "515", sil = "0" })
+                                                    </h3>
+                                                </p>
+                                                <p>
+
+                                                    @Html.TextArea("nmOzel", cvother.OzetBilgi, new { @id = "dvOzet", rows = 8, style = " width : 600px;" })
+                                                </p>
+                                            </div>
+
+
+                                        </div>
+                                        <!--/Özet Bilgi-->
+                                        <!--Eğitim Bilgileri-->
+                                        <div id="dvEgitimDurumum">
+                                            @Html.Partial("_UniversiteEgitimPartial", universilist)
+                                        </div>
+                                        <!--/Eğitim Bilgileri-->
+                                        <!--Yabancı Dil-->
+
+                                        <div id="dvDillerTum">
+                                            @Html.Partial("_YabanciDillerPartial", dillerlist)
+
+                                        </div>
+
+
+                                        <!--/Yabancı Dil-->
+                                        <div id="niteliklertr" class="ability-info info-box">
+                                            <h3> Yetkinlikler</h3>
+                                            <ul id="dvBilgisayarBilg" class="comp-ab">
+                                                <li class="clearfix">
+                                                    <div class="col title-col">
+                                                        <strong>
+                                                            <span id="lblBilgisayarBilgileriRes">Bilgisayar Bilgileri</span>
+                                                        </strong>
+                                                    </div>
+                                                    <div class="col info-col">
+
+                                                        @Html.TextArea("nmBilgisayar", cvother.BilgisayarBilgi, new { @id = "dvBilg", rows = 10, style = " width : 350px;" })
+                                                        &nbsp;
+                                                    </div>
+                                                    <div class="col edit-col">
+                                                        <a href="@Url.Action("EditOther","Cv",new{id=cvother.OtherId,tip=1})" style="text-decoration: none;" id="aBilgisayarBilgileri" title="Bilgisayar Bilgileri" tur="modal" en="600" boy="360" class="add-btn editDialog">Ekle</a>
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="exam-info" id="dvSinavlarim">
+                                                <li>
+                                                    <div class="exam-title"><strong> Sınav Bilgileri</strong> <a href="@Url.Action("AddSinav","Cv")" en="640" boy="380" class="editDialogSinav add-btn">Ekle</a></div>
+                                                    <div id="dvsinav-box" class="exam-box clearfix">
+
+                                                        @Html.Partial("_SinavPartial", model: sinavList)
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!-- SertifikaBilgileri -->
+                                            <ul class="cert-info" id="dvSertifikalarim">
+                                                <li>
+                                                    <div class="cert-title">
+                                                        <strong>
+                                                            <span id="lblSertifikaBilgileri">Sertifika Bilgileri</span>
+                                                        </strong> <a href="@Url.Action("AddSertifika", "Cv")" id="aa" en="800" boy="340" title="Sertifika Ekle" class="editDialogSertifika add-btn">Ekle</a>
+                                                    </div>
+                                                    <div id="dvcert-box" class="cert-box clearfix">
+                                                        @Html.Partial("_SertifikaPartial", model: sertifikaList)
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!-- SeminerlerveKurslar (Eğitimler) -->
+
+                                            <ul class="course-info" id="dvEgitimlerim">
+                                                <li>
+                                                    <div class="course-title">
+                                                        <strong> Seminerler ve Kurslar</strong>
+                                                        <a href="@Url.Action("AddSeminer","Cv")" en="600" boy="350" parametre="" title="Yeni Seminer" tur="modal" class="editDialogSeminer add-btn">Ekle</a>
+                                                    </div>
+
+                                                    <div id="dvsem-box" class="course-box clearfix">
+                                                        @Html.Partial("_SeminerPartial", model: seminerList)
+                                                    </div>
+
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <div id="dvBursBasariOdulProje">
+                                            <div id="burslarOdullertr" class="project-info info-box">
+                                                <h3>Burslar/Projeler<a href="@Url.Action("EditOther","Cv",new{id=cvother.OtherId,tip=4})" id="bursBasariLink" en="750" boy="340" title="Buslar ve Projeler" tur="modal" parametre="" class="editDialog edit-btn">Düzenle</a></h3>
+                                                <ul id="dvburs">
+                                                    <li>
+                                                        @cvother.BurslarProjeler
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--Soldaki tüm alanlar için boş olduğunda bu görünecek-->
+                                        </div>
+                                        <!--Ek Bilgiler-->
+                                        <div id="divEkbilgileri">
+                                            <div id="ekbilgitr" class="add-info info-box">
+                                                <h3>Ek Bilgiler <a href="@Url.Action("EditOther",new{id=cvother.OtherId,tip=2})" id="ekBilgiLink" title="Ek Bilgiler" en="600" boy="420" tur="modal" parametre="" class="editDialog edit-btn">Düzenle</a></h3>
+                                                <ul id="dvEkBilgilerim">
+                                                    <li id="hobitr" class="clearfix">
+                                                        <strong><span id="lblHobilerRes">Hobiler/İlgi Alanları</span></strong>:@cvother.Hobiler
+                                                    </li>
+
+                                                    <li id="uyelikler">
+                                                        <strong>
+                                                            <span id="uyelikler">
+                                                                Üye Olunan Topluluklar
+                                                            </span>
+                                                        </strong>:  @cvother.Uyelikler
+                                                    </li>
+                                                    <li id="sosyalsorumluluk">
+                                                        <strong>
+                                                            <span>Sosyal sorululuk çalışmaları</span>
+                                                        </strong>: @cvother.SosyalSorumlulukCalismalari
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <!--/Ek Bilgiler-->
+                                        <!--Referanslar-->
+                                        <div id="dvReferanslarim">
+                                            <div id="referanslartr" class="ref-info info-box">
+                                                <h3>
+                                                    Referanslar
+                                                    <a href="@Url.Action("EditOther","Cv",new{id=cvother.OtherId,tip=3})" class="editDialog edit-btn" en="600" boy="480" title="Referanslar">Düzenle</a>
+                                                </h3>
+                                                <ul id="refref">
+                                                    <li>
+
+                                                        <div class="ref-name">@cvother.Ref1AdSoyad</div>
+                                                        <div class="ref-title">@cvother.Ref1Pozisyon</div>
+                                                        <div class="ref-detail">Tel : @cvother.Ref1Tel</div>
+                                                        <div class="ref-detail">Mail : @cvother.Ref1Mail</div>
+
+                                                    </li>
+                                                    @if (!string.IsNullOrEmpty(cvother.Ref2AdSoyad))
+                                                    {
+                                                        <li>
+                                                            <hr />
+                                                            <div class="ref-name">@cvother.Ref2AdSoyad</div>
+                                                            <div class="ref-title">@cvother.Ref2Pozisyon</div>
+                                                            <div class="ref-detail">Tel : @cvother.Ref2Tel</div>
+                                                            <div class="ref-detail">Mail : @cvother.Ref2Mail</div>
+                                                        </li>
+                                                    }
+                                                </ul>
+
+                                            </div>
+
+
+                                        </div>
+                                        <!--/Referanslar-->
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="cerceve cv-pross">
+                                        <div>
+                                            <div><span>Özgeçmiş İşlemleri</span></div>
+                                        </div>
+                                        <div class="icerik">
+                                            <ul>
+                                                <li><a href="@Url.Action("MyAppList","Employee")" target="_blank">Başvurularım</a></li>
+                                                <li><a href="javascript:void(0)" onclick="yazdir(@user.UserId);" class="print-link"><span>Yazdır</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    @using (Html.BeginForm("EditWorkDetail", "Cv"))
+                                    {
+                                        <table >
+                                            <tbody>
+
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>
+                                                            <span id="lblTercihIsAlaniRes">Çalışmak İstediğiniz Departmanlar</span>
+                                                        </b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        @Html.DropDownList("CalismakIstedigiAlan", new MultiSelectList(ViewBag.ListDepartman, "Value", "Text", (string[])ViewBag.selectedDepartmanlar), "Depatman Seçiniz", new { style = "width: 100%", @class = "searchSelect", multiple = "multiple" })
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>
+                                                            <span id="lblTercihPozisyonRes">Çalışmak İstediğiniz Pozisyonlar</span>
+                                                        </b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        @Html.DropDownList("IstenilenPozisyon", new MultiSelectList(ViewBag.Pozisyonlar, "Value", "Text", (string[])ViewBag.selectedPozisyonlar), "Pozisyon Seçiniz", new { style = "width: 100%", @class = "searchSelect", multiple = "multiple" })
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>
+                                                            <span id="Label1">Çalışma Durumu Tercihiniz</span>
+                                                        </b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+
+                                                        @Html.DropDownList("CalismaDurumu", new SelectList(selectCalismadurumu, "Value", "Text", ViewBag.calismatercihi))
+                                                    </td>
+                                                </tr>
+                                                <tr><td><input type="submit" value="Kaydet" class="btn" /></td></tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                    }
+                                  
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="dialog-confirm" style="display: none">
+                            <p>
+                                <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+                                Are you sure to delete ?
+                            </p>
+                        </div>
+                        <div id="dialog-edit" style="display: none">
+                        </div>
+                        <div id="dialog-view" style="display: none">
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div></div>
+        @if (!ViewBag.editcv)
+        {
+            <script>
+                $(".right-side").hide();
+                $(".edit-btn").hide();
+                $(".add-btn").hide();
+
+                $(".left-side").width("100%");
+            </script>
+        }
+
+        <script>
+            function yazdir(uid) {
+                window.open("/Cv/CvYazdir/" + uid);
+            }
+
+            $(document).ready(function () {
+                $(".searchSelect").select2({
+                    placeholder: "Seçiniz...",
+                    allowClear: true
+                });
+            });
+        </script>
+        @Html.Partial("_ScriptPartialSuccess")

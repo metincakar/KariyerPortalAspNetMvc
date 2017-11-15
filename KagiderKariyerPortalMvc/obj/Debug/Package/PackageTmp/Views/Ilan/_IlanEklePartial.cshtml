@@ -1,0 +1,238 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.Ilan
+@{
+    Layout = "../shared/_LayoutIsveren.cshtml";
+}
+<script src="~/ckeditor/ckeditor.js"></script>
+
+<div class="page-header">
+    <h1>Yeni İlan Oluştur <small>İlan bırakarak aradığınız elemana ulaşabilirsiniz</small></h1>
+</div>
+
+    @using (Html.BeginForm("AddIlan", "Ilan", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "updateForm" }))
+    {
+        @Html.HiddenFor(m => m.UserId)
+        @Html.HiddenFor(m=>m.FirmaId)
+         @Html.HiddenFor(m=>m.IlanDurum)
+        <section>
+            <div class="panel panel-primary">
+                <div class="panel-heading">İlan Ekle</div>
+                <div class="panel-body">
+                    @*<div class="clearfix " style="margin: 0 0 30px 0;">
+                    <div style="float: left !important; ">
+                        <div style="padding-left: 74px; height: 65px; background: url(../../assets/images/spriteDashboard.png) no-repeat -13px -343px; " >
+                            <div style="padding-top: 18px;" class="row1">Yenibiriş 'e Üye Ol</div>
+                        </div>
+                    </div>
+                </div>*@
+                    <div class="row signupFormcont">
+                        <div class="col-xs-12 kutu" style="background-color: White; border: 0px solid silver; padding: 10px;">
+                            <div style="font-size: 18px; color: #000; margin-bottom: 5px; font-weight: bold; margin-bottom: 20px !important; ">İlan Detay</div>
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.IlanTitle, new { @class = "col-xs-5 " })
+                                    <div class="col-xs-7">
+                                        @Html.TextBoxFor(m => m.IlanTitle, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.IlanTitle)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Detail, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.TextAreaFor(m => m.Detail, new { @class = "form-control", id = "genelNitelik", style = "height: 100px;" })
+                                        @Html.ValidationMessageFor(m => m.Detail)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.AcikPozisyon, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.TextBoxFor(m => m.AcikPozisyon, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.ArananPozisyonlar, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.DropDownList("IstenilenPozisyon", new MultiSelectList(ViewBag.Pozisyonlar, "Value", "Text"), "Pozisyon Seçiniz", new { style = "width: 100%", @class = "searchSelect", multiple = "multiple" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.EgitimSeviyesi, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.DropDownListFor(m => m.EgitimSeviyesi, new SelectList(ViewBag.egitimSeviyesiList, "Id", "Seviye", Model.EgitimSeviyesi), "Seçiniz", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.EgitimSeviyesi)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.ArananPersonelSayisi, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.TextBoxFor(m => m.ArananPersonelSayisi, string.Format("1"), new { @value = "1", @class = "form-control" })
+
+                                        @Html.ValidationMessageFor(m => m.ArananPersonelSayisi)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 kutu" style="background-color: White; border: 0px solid silver; padding: 10px;">
+                            <div style="font-size: 18px; color: #000; margin-bottom: 5px; font-weight: bold; margin-bottom: 20px !important; ">Diğer Bilgiler</div>
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.CountryId, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+
+                                        @Html.DropDownListFor(m => m.CountryId, new SelectList(ViewBag.Ulkeler, "CountryId", "Country"), "Seçiniz", new { @class = "form-control" })
+
+                                        @Html.ValidationMessageFor(model => model.CountryId)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.CityId, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.DropDownListFor(m => m.CityId, new SelectList(ViewBag.Sehirler, "CityId", "City"), "Seçiniz", new { @class = "form-control", @id = "cities" })
+                                        @Html.ValidationMessageFor(model => model.CityId)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.CountyId, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.DropDownListFor(m => m.CountyId, new SelectList(ViewBag.Ilceler, "CountyId", "County"), "Seçiniz", new { @class = "form-control", @id = "towns" })
+                                        @Html.ValidationMessageFor(model => model.CountyId)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Tecrube, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.TextBoxFor(m => m.Tecrube, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.IlanStartDate, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.TextBoxFor(m => m.IlanStartDate, new { @class = "form-control datepicker" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.IlanFinishDate, new { @class = "col-xs-5" })
+                                    <div class="col-xs-7">
+                                        @Html.TextBoxFor(m => m.IlanFinishDate, new { @class = "form-control datepicker" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.PozisyonSeviyesi, new { @class = "col-xs-5" })
+                                    <div class="col-md-1">
+                                        Stajyer @Html.RadioButtonFor(model => model.PozisyonSeviyesi, 0, new { @class = "form-control" })
+                                    </div>
+
+                                    <div class="col-md-1 fontSmall">
+                                        Uzman @Html.RadioButtonFor(model => model.PozisyonSeviyesi, 1, new { @class = "form-control" })
+                                    </div>
+                                    <div class="col-md-1 fontSmall">
+                                        Uzman Yardımcısı @Html.RadioButtonFor(model => model.PozisyonSeviyesi, 2, new { @class = "form-control" })
+                                    </div>
+                                    <div class="col-md-1 fontSmall">
+                                        Diğer @Html.RadioButtonFor(model => model.PozisyonSeviyesi, 3, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.PozisyonTipi, new { @class = "col-xs-5" })
+                                    <div class="col-md-1 fontSmall">
+                                        Sürekli @Html.RadioButtonFor(model => model.PozisyonTipi, 0, new { @class = "form-control" })
+                                    </div>
+
+                                    <div class="col-md-1 fontSmall">
+                                        Tam Zamanlı @Html.RadioButtonFor(model => model.PozisyonTipi, 1, new { @class = "form-control" })
+                                    </div>
+                                    <div class="col-md-1 fontSmall">
+                                        Yarı Zamanlı @Html.RadioButtonFor(model => model.PozisyonTipi, 2, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="button" value="Kaydet" class="btn btn-default" onclick="kaydet();" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    }
+
+@*<aside>
+    <h3>İlan Bırak.</h3>
+    <p>
+        Firma bilgilerinizi girerek ilan bırakabilirsiniz
+    </p>
+</aside>*@
+
+
+<script>
+    $.validator.methods["date"] = function (value, element) { return true; } //chrome daki tarhi sıkıntısını çözen kod
+    $(document).ready(function () {
+
+
+        $(function () {
+            //CKEDITOR.replace('genelNitelik');
+            $(".datepicker").datepicker({
+                //showOn: "button",
+                changeMonth: true,
+                changeYear: true,
+                buttonImage: "takvim.png",
+                buttonImageOnly: true,
+                dateFormat: "dd/mm/yy",
+                monthNames: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+                monthNamesMin: ["Ock", "Şub", "Mrt", "Nsn", "May", "Haz", "Tem", "Ağu", "Eyl", "Ekm", "Kas", "Ara"],
+                dayNamesMin: ["Pts", "Sl", "Çrş", "Prş", "Cm", "Cts", "Pzr"]
+            });
+            $(".datepicker").datepicker('setDate', 'today');
+        });
+
+
+        $("#cities").change(function () {
+
+            $.ajax({
+                type: "post",
+
+                url: "/Cv/IlceGetir",
+
+                data: "ilId=" + $(this).val(),
+
+                error: function (err) { },
+
+                success: function (response) { $("#towns").html(addOption(response)); },
+
+                complete: function () { }
+
+            });
+
+        });
+    });
+    function addOption(response) {
+
+        var items = "<option value=\"\">Lütfen Seçiniz...</option>";
+
+        $.each(response, function (i, town) {
+
+            items += "<option value=\"" + town.Value + "\">" + town.Text + "</option>";
+
+        });
+
+        return items;
+
+    }
+    function kaydet() {
+        if ($("#updateForm").valid())
+        {
+            $("#updateForm").submit();
+        }
+    }
+    $(document).ready(function () {
+        $(".searchSelect").select2({
+            placeholder: "Seçiniz...",
+            allowClear: true
+        });
+    });
+</script>
+@Html.Partial("~/Views/Cv/_ScriptsDialog.cshtml")

@@ -1,0 +1,208 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvKisiselBilgi
+
+
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@*<script src="~/Scripts/datapicker-tr.js"></script>*@
+@using (Ajax.BeginForm("CvEditKisiselBilgi", "Cv", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "kisiselajax",
+            HttpMethod = "POST",
+            OnSuccess = "updateSuccessKisisel"
+
+        }, new { @id = "updateFormKisisel", @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    @Html.HiddenFor(model => model.KisiselBilgiId)
+    @Html.HiddenFor(model => model.UserId)
+    <h4>Kişisel Bilgiler.</h4>
+    <hr />
+    <table style="width: 100%">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="row" style="width: 100%">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Cinsiyet, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-2">
+                                Erkek @Html.RadioButtonFor(model => model.Cinsiyet, true, new { @class = "form-control",@id="erkek" })
+                            </div>
+                            <div class="col-md-2">
+                                Kadın @Html.RadioButtonFor(model => model.Cinsiyet, false, new { @class = "form-control", @id = "kadin" })
+                            </div>
+
+
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.MedeniDurum, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-2">
+                                Evli @Html.RadioButtonFor(model => model.MedeniDurum, true, new { @class = "form-control" })
+                            </div>
+                            <div class="col-md-2">
+                                Bekar @Html.RadioButtonFor(model => model.MedeniDurum, false, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.DogumTarihi, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(m => m.DogumTarihi, Model.DogumTarihi.ToString("dd/MM/yyyy"), new {@readonly=true,@class = "form-control datepicker" })
+
+                            </div>
+                            @Html.ValidationMessageFor(model => model.DogumTarihi)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.CityId, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(m => m.CityId, new SelectList(ViewBag.Sehirler, "CityId", "City"), new { @class = "form-control" })
+
+                            </div>
+                            @Html.ValidationMessageFor(model => model.CityId)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.TcNo, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(m => m.TcNo, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="row">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.CountryId, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-8">
+
+                                @Html.DropDownListFor(m => m.CountryId, new SelectList(ViewBag.Ulkeler, "CountryId", "Country"), new { @class = "form-control" })
+
+
+                            </div>
+                            @Html.ValidationMessageFor(model => model.CountryId)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.AskerlikDurum, new { @class = "col-md-4 control-label fontSmall",@id="lblaker" })
+                            <div class="col-md-8">
+
+                                @Html.DropDownListFor(m => m.AskerlikDurum, new SelectList(ViewBag.askerlik, "DurumId", "Durum"), "Seçiniz", new { @class = "form-control",@id="aker" })
+
+                                @Html.ValidationMessageFor(model => model.AskerlikDurum)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.SurucuBelge, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-2">
+                                Var @Html.RadioButtonFor(model => model.SurucuBelge, true, new { @class = "form-control" })
+                            </div>
+                            <div class="col-md-2">
+                                Yok @Html.RadioButtonFor(model => model.SurucuBelge, false, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.SurucuBelgeVerilisTarih, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(m => m.SurucuBelgeVerilisTarih, Model.SurucuBelgeVerilisTarih.ToString("dd/MM/yyyy"), new {@readonly=true, @class = "form-control datepicker dateRule" })
+                        @Html.ValidationMessageFor(model => model.SurucuBelgeVerilisTarih)
+                             </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.SurucuBelgeSinifi, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(m => m.SurucuBelgeSinifi, new SelectList(ViewBag.surucuSinif, "SinifId", "Sinif"), "Seçiniz", new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.EgitimDurumu, new { @class = "col-md-4 control-label fontSmall" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(m => m.EgitimDurumu, new SelectList(ViewBag.egitimSeviyesiList, "Id", "Seviye", Model.EgitimDurumu), "Seçiniz", new { @class = "form-control",id="egitimi"})
+                                @Html.ValidationMessageFor(m => m.EgitimDurumu)
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();" />
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+@if (Model.Cinsiyet == false)
+{
+    <script>
+        document.getElementById('aker').style.display = 'none';
+        document.getElementById('lblaker').style.display = 'none';
+    </script>
+    
+}
+<script>
+    //$().ready(function() {
+    //jquery.extend(jQuery.validator.methods, {
+    //    date: function (value, element) {
+    //        var isChrome = window.chrome;
+    //        // make correction for chrome
+    //        if (isChrome) {
+    //            var d = new Date();
+    //            return this.optional(element) ||
+    //            !/Invalid|NaN/.test(new Date(d.toLocaleDateString(value)));
+    //        }
+    //            // leave default behavior
+    //        else {
+    //            return this.optional(element) ||
+    //            !/Invalid|NaN/.test(new Date(value));
+    //        }
+    //    }
+    //});
+    $.validator.methods["date"] = function (value, element) { return true; } //chrome daki tarhi sıkıntısını çözen kod
+
+
+    $(function () {
+      
+        $('#erkek').click(function() {
+            document.getElementById('aker').style.display = '';
+            document.getElementById('lblaker').style.display = '';
+        });
+        $('#kadin').click(function () {
+            document.getElementById('aker').style.display = 'none';
+            document.getElementById('lblaker').style.display = 'none';
+        });
+    });
+
+    //$(".datepicker").datepicker($.datepicker.regional["tr"]);
+    $(".datepicker").datepicker('setDate', 'today');
+  
+    $(".datepicker").datepicker({
+        //showOn: "button",
+        changeMonth: true,
+        changeYear: true,
+        shortYearCutoff: 50,
+        buttonImage: "takvim.png",
+        buttonImageOnly: true,
+        dateFormat: "dd/mm/yy",
+        monthNames: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+        monthNamesShort: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+        dayNamesMin: ["Pts", "Sl", "Çrş", "Prş", "Cm", "Cts", "Pzr"],
+        yearRange: '1940:2050'
+    });
+    
+    function kaydet() {
+        
+        if ($('#updateFormKisisel').valid())
+        {
+            $('#updateFormKisisel').submit();
+            $('#updateDialogKisisel').dialog('destroy').empty();
+            $('#updateDialogKisisel').dialog('close');
+            $('#egitimdurumu').html($( "#egitimi option:selected" ).text());
+        }
+    }
+    function updateSuccessKisisel() {
+
+        $('#commonMessage').html("Kişisel Bilgiler Güncellenmiştir!");
+        $('#commonMessage').delay(400).slideDown(400).delay(3000).slideUp(400);
+    }
+</script>

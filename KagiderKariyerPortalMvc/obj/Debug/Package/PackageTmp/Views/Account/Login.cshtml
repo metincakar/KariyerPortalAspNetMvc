@@ -1,0 +1,140 @@
+﻿@model KagiderKariyerPortalMvc.Models.LoginModel
+
+@{
+    ViewBag.Title = "Üye Girişi";
+}
+@{
+    if (Model.MemberTypeId== 1 && ViewBag.Viewtype==0)
+    {
+        Layout = "../Shared/_layoutIsveren.cshtml";
+    }
+    else if (Model.MemberTypeId == 0 && ViewBag.Viewtype == 0)
+     {
+         Layout = "../Shared/_layout.cshtml";
+     }
+}
+<hgroup class="title">
+    
+    @if (Model.MemberTypeId == 1)
+    {
+        <h3>İş Veren @ViewBag.Title. </h3>
+        
+    }
+    else if (Model.MemberTypeId == 0)
+    {
+        <h3>İş arayan @ViewBag.Title. </h3>
+       
+    }
+
+</hgroup>
+
+<section id="loginForm">
+    <h5>@ViewBag.Message.</h5>
+    @*@using (Html.BeginForm( "Login", "Account",new { ReturnUrl = ViewBag.ReturnUrl },FormMethod.Post, new { @class = "form-horizontal", role = "form",id="updateForm"}))
+        {*@   
+    
+    @using (Ajax.BeginForm("LoginAjax", "Account", new { returnUrl = ViewBag.returnUrl }, new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "message_login",
+        OnSuccess = "updateSuccess",
+        LoadingElementId = "loading"
+
+    }, new { @id = "updateForm", @class = "form-horizontal", role = "form" }))
+    { 
+
+    @Html.HiddenFor(m=>m.MemberTypeId)
+    @Html.HiddenFor(m=>m.MemberType)
+ 
+    <input type="hidden" name="viewtype" value="@ViewBag.Viewtype" />
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+
+                <div class="form-group">
+                  @Html.LabelFor(m => m.UserName, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </div>
+                 </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-4">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+                </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.RememberMe, new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.CheckBoxFor(m => m.RememberMe, new { @class = "form-control checkbox" })
+                          
+        </div>
+    </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Giriş" class="btn btn-primary" />
+            </div>
+        </div>
+            <p>
+            
+                İnsan kaynakları platformuna üye değilseniz... <a href="@Url.Action("Register",routeValues:new{membertypeid=@Model.MemberTypeId})" class="btn-link"> yeni üye kayit &raquo;</a>
+        </p> 
+}
+    <div id="loading" style="display: none;"><b style="color:red">işlem yapılıyor bekleyiniz...</b></div>
+    <div id="message_login"></div>
+</section>
+
+    @if (Model.MemberTypeId == 0)
+    {
+
+        <aside>
+            <h3>Yeni Üye Kayıt.</h3>
+            <p>yeni üye kaydı yaparak cv bırakabilirsiniz.</p>
+            <p>
+                @*@Html.ActionLink("Geleceğin Kadın Lideri Üye Girişi &raquo;", "LoginMember", new { membertypeid = 2 }, new { @class = "btn btn-default" })*@
+                @*<a href="@Url.Action("LoginMember", routeValues: new {membertypeid = 2})" class="btn Yellow">Geleceğin Kadın Lideri <br />Üye Girişi &raquo;</a>*@
+                <a href="@Url.Action("Register",routeValues:new{id=@Model.MemberTypeId})" class="btn">Yeni Üye Kayıt</a>
+            </p>
+        </aside>
+    }
+    else
+    {
+        <aside>
+            <h3>Yeni İşVeren Üye Kayıt.</h3>
+            <p>sisteme kayıt olarak iş ilanları bırakabilirsiniz.</p>
+            <p>
+                @*@Html.ActionLink("Geleceğin Kadın Lideri Üye Girişi &raquo;", "LoginMember", new { membertypeid = 2 }, new { @class = "btn btn-default" })*@
+                @*<a href="@Url.Action("LoginMember", routeValues: new {membertypeid = 4})" class="btn Yellow">Kagider <br />Üye Girişi &raquo;</a>*@
+                <a href="@Url.Action("Register",routeValues:new{id=@Model.MemberTypeId})" class="btn">Yeni Üye Kayıt</a>
+            </p>
+        </aside>
+    }
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+
+}
+<script type="text/javascript">
+
+    function updateSuccess(data) {
+        if (data.Success == true)
+        {
+         
+            window.location.href = data.returnUrl;
+            $('#updateDialog').dialog('close');
+              
+          } else {
+            $('#message_login').html(data.ErrorMessage);
+        }
+
+        //$('#sonuc').hide('slow');
+        //$('#sonuc').show('slow');
+
+    }
+
+</script>

@@ -1,0 +1,112 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvKisiselBilgi
+
+
+
+@using (Ajax.BeginForm("CvCreateKisiselBilgi", "Cv", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            UpdateTargetId = "kisiselajax",
+            OnSuccess = "updateSuccess"
+
+        }, new { @id = "updateForm" }))
+    { 
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+     @Html.HiddenFor(model => model.KisiselBilgiId)
+            @Html.HiddenFor(model => model.UserId)
+       <div class="form-group">
+            @Html.LabelFor(m => m.Cinsiyet, new { @class = "col-md-4 control-label" })
+            <div class="col-md-1">
+                Erkek @Html.RadioButtonFor(model => model.Cinsiyet, true, new {  @class = "form-control" })
+               </div>
+            <div class="col-md-1">
+                Kadın @Html.RadioButtonFor(model => model.Cinsiyet, false, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MedeniDurum, new { @class = "col-md-4 control-label" })
+            <div class="col-md-1">
+                Evli @Html.RadioButtonFor(model => model.MedeniDurum, true, new {  @class = "form-control" })
+            </div>
+            <div class="col-md-1">
+                Bekar @Html.RadioButtonFor(model => model.MedeniDurum, false, new { @class = "form-control" })
+            </div>
+        </div>
+     <div class="form-group">
+        @Html.LabelFor(m => m.DogumTarihi, new { @class = "col-md-4 control-label" })
+         <div class="col-md-4">
+             @Html.TextBoxFor(m => m.DogumTarihi, new { @class = "form-control datepicker" })
+             @Html.ValidationMessageFor(model => model.DogumTarihi)
+         </div>
+    </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.CityId, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+                 @Html.DropDownListFor(m => m.CityId, new SelectList(ViewBag.Sehirler, "CityId", "City"), "Seçiniz", new { @class = "form-control" })
+                 @Html.ValidationMessageFor(model => model.CityId)
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.TcNo, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+                 @Html.TextBoxFor(m => m.TcNo, new { @class = "form-control" })
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.CountryId, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+       
+                 @Html.DropDownListFor(m => m.CountryId, new SelectList(ViewBag.Ulkeler, "CountryId", "Country"), "Seçiniz",new { @class = "form-control" })
+
+                 @Html.ValidationMessageFor(model => model.CountryId)
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.AskerlikDurum, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+
+                 @Html.DropDownListFor(m => m.AskerlikDurum, new SelectList(ViewBag.askerlik, "DurumId", "Durum"), "Seçiniz", new { @class = "form-control" })
+
+                 @Html.ValidationMessageFor(model => model.AskerlikDurum)
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.SurucuBelge, new { @class = "col-md-4 control-label" })
+             <div class="col-md-1">
+                 Var @Html.RadioButtonFor(model => model.SurucuBelge, true, new { @class = "form-control" })
+             </div>
+             <div class="col-md-1">
+                 Yok @Html.RadioButtonFor(model => model.SurucuBelge, false, new { @class = "form-control" })
+             </div>
+         </div>
+
+         <div class="form-group">
+             @Html.LabelFor(m => m.SurucuBelgeVerilisTarih, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+                 @Html.TextBoxFor(m => m.SurucuBelgeVerilisTarih, new { @class = "form-control datepicker" })
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m =>m.SurucuBelgeSinifi, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+                 @Html.DropDownListFor(m => m.SurucuBelgeSinifi,new SelectList(ViewBag.surucuSinif,"SinifId","Sinif"),"Seçiniz", new { @class = "form-control" })
+             </div>
+         </div>
+    
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+        </div>
+    </div>
+
+}
+<script>
+    $(".datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+    $(".datepicker").datepicker('setDate', 'today');
+    function kaydet() {
+
+        $('#updateForm').submit();
+        $('#updateDialog').dialog('close');
+    }
+</script>

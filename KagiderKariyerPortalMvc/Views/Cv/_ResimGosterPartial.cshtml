@@ -1,0 +1,16 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.User
+
+@if (Model.ResimYol!=null)
+{
+    <img  id="cvfoto" style="width: 100px; height: 130px;" src="@Model.ResimYol">
+
+}
+else
+{
+    <img src="~/Content/themes/base/images/male.jpg" />
+   
+}
+
+@Html.ActionLink("Düzenle", "UserImage", new { id = Model.UserId }, new { @class = "editDialog edit-btn cv-image-selected", @style = "border-radius:10px;", title = "Resim Düzenle", en = "550", boy = "700" })
+
+@Html.Partial("_ScriptsDialog")

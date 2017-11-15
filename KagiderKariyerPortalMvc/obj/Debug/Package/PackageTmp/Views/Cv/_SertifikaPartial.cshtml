@@ -1,0 +1,68 @@
+﻿@model System.Collections.Generic.List<KagiderKariyerPortal.Entities.ConCreate.CvSertifikaBilgi>
+
+
+
+
+@foreach (var sert in Model)
+{
+    <div class="cert-item">
+        <strong class="clearfix">
+            <span>
+                @sert.SertifikaAd
+            </span> <a href="@Url.Action("EditSertifika","Cv",new{id=sert.SertifikaId})" en="800" boy="220" title="Sertifika düzenle" class="editDialogSertifika edit-btn">Düzenle</a>
+        </strong>
+        <span>@sert.AlindigiKurum - @sert.SertifikaAy.@sert.SertifikaSene</span>
+        <p>@sert.Aciklama</p>
+        <div style="margin-bottom:5px;">
+            <span style="font-size:11px;text-align:right"></span>
+            <span style="font-size:11px;text-align:right"></span>
+        </div>
+    </div>
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var linkObj;
+        $(function () {
+
+            $.ajaxSetup({ cache: false });
+            $(".editDialogSertifika").click(function () {
+                //change the title of the dialog
+
+                linkObj = $(this);
+                var dialogDiv = $('#updateDialogSertifika');
+                var viewUrl = linkObj.attr('href');
+                var title = linkObj.attr('title');
+                var en = linkObj.attr('en');
+                var boy = linkObj.attr('boy');
+                $('#updateDialogSertifika').dialog({
+                    autoOpen: false,
+                    height: 'auto',
+                    width: en,
+
+                    title: title,
+                    resizable: true,
+                    modal: true,
+                    draggable: true,
+                    open: function (event, ui) {
+                        $(this).load(viewUrl);
+                    },
+                    close: function (event, ui) {
+                        $('#updateDialogSertifika').dialog('destroy').empty();
+                    }
+
+                });
+                dialogDiv.dialog('open');
+                return false;
+            });
+        });
+
+
+
+    });
+
+
+</script>
+
+

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<KagiderKariyerPortal.Entities.ConCreate.IlanBasvuru>
+
+@{
+    ViewBag.Title = "Başvurularım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h1>Başvurularım <small>iş ilanlarına yaptığınız başvurular</small></h1>
+</div>
+
+<div class="col-md-12">
+    <div class="col-md-3">
+        @using (@Html.BeginForm("SearchApp", "Employee"))
+        {
+            <div class="panel panel-primary">
+                <div class="panel-heading">Filtre</div>
+                <div class="panel-body">
+                    Anahtar kelime
+                    <input type="text" name="keyword" value="" class="form-control" />
+                    Firma Adı
+                    <input type="text" name="firmaAdi" value="" class="form-control">
+                    <input type="submit" name="btnSubmit" value="Ara" class="btn btn-warning form-control" />
+                </div>
+            </div>
+        }
+    </div>
+            <div class="col-md-9">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Başvuru Listesi</div>
+                    <div class="panel-body">
+                        <table class="table table-hover" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th>Firma</th>
+                                    <th>
+                                        İlan Başlık
+                                    </th>
+                                    <th>
+                                        Açık Pozisyon
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.BasvuruTarih)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Onyazi)
+                                    </th>
+
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            <img width="95" height="26" align="left" src="@item.Ilan.Firma.FirmaLogo" class="pure-img" />   @Html.DisplayFor(modelItem => item.Ilan.Firma.FirmaAd)
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("IlanDetail","Ilan",routeValues:new{id=item.IlanId})" class="pozlink">@item.Ilan.IlanTitle</a>
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Ilan.AcikPozisyon)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.BasvuruTarih)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Onyazi)
+                                        </td>
+                                        <td><a href="@Url.Action("EditApp",routeValues:new{id=item.BasvuruId})" class="pozlink">Düzenle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>

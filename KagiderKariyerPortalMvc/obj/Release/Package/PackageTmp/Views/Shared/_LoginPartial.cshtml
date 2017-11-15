@@ -1,0 +1,14 @@
+﻿@if (Session["uid"]!=null) {
+    <text>
+        Merhaba, @Html.ActionLink(Session["uname"].ToString(), "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Çıkış</a>
+        }
+    </text>
+} else {
+    <ul>
+        <li>@Html.ActionLink("Yeni Üye Ol", "Register", "Account", routeValues: new { membertypeid = 0, membertype = "sifreliIsarayan" }, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Üye Girişi", "Login", "Account", routeValues: new {membertypeid=0,membertype="sifreliIsarayan"}, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

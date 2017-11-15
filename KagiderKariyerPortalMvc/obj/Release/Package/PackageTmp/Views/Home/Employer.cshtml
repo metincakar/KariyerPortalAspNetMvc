@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "İş veren login";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            Kagider Üyesi iseniz sistem mobil numaranızlar giriş yapabilir ve iş ilanı bırakabilirsiniz.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("LoginMember","Account")">Kagider Üye Girişi &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>Kagider üyesi değilsiniz fakat online ik platformumuza kayıtlı iseniz şifrenizle giriş yapabilirsiniz veya sisteme kayıt olabilirsiniz.</p>
+        <p><a class="btn btn-default" href="@Url.Action("Login","Account",routeValues: new { membertypeid = 1, membertype = "sifreliIsveren" })">Şifreli Üye Girişi &raquo;</a></p>
+    </div>
+  
+</div>

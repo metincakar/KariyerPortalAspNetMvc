@@ -1,0 +1,103 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvEgitimUniversiteBilgi
+
+
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Ajax.BeginForm("EditEgitim",null, new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "dvEgitimDurumum",
+            HttpMethod = "Post",
+            OnSuccess = "updateSuccessEgitim"
+        }, new { @id = "updateEgitim", @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+     
+            @Html.HiddenFor(model => model.EgitimId)
+            @Html.HiddenFor(model => model.UserId)
+    <input type="hidden" name="is_delete" id="is_delete" value="0" />
+
+     <div class="form-group">
+                           @Html.LabelFor(m => m.EgitimTipi, new { @class = "col-md-4 control-label" })
+                           <div class="col-md-4">
+                               @Html.DropDownListFor(m => m.EgitimTipi, new SelectList(ViewBag.egitimSeviyesiList, "Id", "Seviye", Model.EgitimTipi), "Seçiniz", new { @class = "form-control" })
+                               @Html.ValidationMessageFor(m => m.EgitimTipi)
+                           </div>
+        </div>
+    <div class="form-group">
+         @Html.Label("lblEgitimTip", "Okul Adı", new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.OkulAd, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m=>m.OkulAd)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Bolum, new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.Bolum, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MezuniyetYil, new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            <select name="MezuniyetYil" class="form-control">
+                @{
+                    for (int i =1960; i < 2050; i++)
+                        {
+                            var selectedYear = false || Model.MezuniyetYil!=null && int.Parse(Model.MezuniyetYil) == i;
+
+                            <option value="@i" selected="@selectedYear">@i</option>
+                        }
+                }
+
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MezuniyetDerece,new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.MezuniyetDerece, new { @class = "form-control" })
+        </div>
+    </div>
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Sil" onclick="sil();" />
+        </div>
+    </div>
+     <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+        </div>
+    </div>
+      
+    }
+
+<script>
+    function sil() {
+        if ($('#updateEgitim').valid())
+        {
+            $('#is_delete').val('1');
+            $('#updateEgitim').submit();
+            $('#updateDialogEgitim').dialog('destroy').empty();
+            $('#updateDialogEgitim').dialog('close');
+        }
+    }
+
+    function updateSuccessEgitim() {
+        
+        $('#commonMessage').html("Egitim Bilgileri Güncellenmiştir!");
+        $('#commonMessage').delay(400).slideDown(400).delay(3000).slideUp(400);
+    }
+    function kaydet() {
+        if ($('#updateEgitim').valid())
+        {
+            $('#updateEgitim').submit();
+            $('#updateDialogEgitim').dialog('close');
+        }
+    }
+
+</script>

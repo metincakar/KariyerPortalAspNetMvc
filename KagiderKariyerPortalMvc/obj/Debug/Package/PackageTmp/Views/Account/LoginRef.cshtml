@@ -1,0 +1,98 @@
+﻿@model KagiderKariyerPortalMvc.Models.LoginRefModel
+
+@{
+    ViewBag.Title = "Referanslı üye girişi";
+}
+
+<hgroup class="title">
+
+  
+        <h2>İş arayan @ViewBag.Title. </h2>
+  
+</hgroup>
+
+
+<section id="loginForm">
+    <h4>Kagider üyesi iseniz giriş yapabilirsiniz.</h4>
+    @using (Ajax.BeginForm("LoginRef", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "message_login",
+        OnSuccess = "updateSuccess",
+        LoadingElementId = "loading"
+
+    }, new { @id = "updateForm", @class = "form-horizontal", role = "form" }))
+    {
+
+        @Html.HiddenFor(m => m.MemberTypeId)
+        @Html.HiddenFor(m => m.MemberType)
+
+        <input type="hidden" name="viewtype" value="@ViewBag.Viewtype" />
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(m => m.MemberName, new { @class = "col-md-3 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.MemberName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.MemberName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.MemberSurName, new { @class = "col-md-3 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.MemberSurName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.MemberSurName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Mobiltel, new { @class = "col-md-3 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Mobiltel, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Mobiltel)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Giriş" class="btn btn-default" />
+            </div>
+        </div>
+
+        @*<p>
+                @Html.ActionLink("Register", "Register") if you don't have an account.
+            </p>*@
+    }
+    <div id="loading" style="display: none;"><b style="color:red">işlem yapılıyor bekleyiniz...</b></div>
+    <div id="message_login"></div>
+</section>
+
+<aside>
+    <h3>Referanslı Üye Girişi.</h3>
+    <p>
+        @Html.ActionLink("Yeni Üye Kayıt", "Register", new { membertypeid = Model.MemberTypeId, membertype = Model.MemberType }, new { @class = "btn btn-default" })
+    </p>
+</aside>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+
+    function updateSuccess(data) {
+        if (data.Success == true) {
+
+            window.location.href = data.returnUrl;
+            $('#updateDialog').dialog('close');
+
+        } else {
+            $('#message_login').html(data.ErrorMessage);
+        }
+
+        //$('#sonuc').hide('slow');
+        //$('#sonuc').show('slow');
+
+    }
+
+</script>

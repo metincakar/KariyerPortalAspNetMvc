@@ -1,0 +1,186 @@
+﻿@model List<KagiderKariyerPortal.Entities.ConCreate.UserProfile>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../shared/_LayoutIsveren.cshtml";
+}
+
+<h2>Admin Panel</h2>
+
+<hgroup>
+    <p>
+        <h3>İş Veren Üye Listesi</h3>
+    </p>
+</hgroup>
+<div class="panel panel-default">
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+        @using (@Html.BeginForm("SearchUser", "Admin"))
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <select name="onay">
+
+                                <option value="false" selected="true">Onay Bekleyenler</option>
+                                <option value="true">Onaylananlar</option>
+                            </select>
+                        </th>
+                        <th><input type="submit" value="Ara" class="btn btn-primary form-control" /></th>
+                    </tr>
+                </thead>
+
+            </table>
+        }
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+        @using (@Html.BeginForm("Onayla", "Admin"))
+        {
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Sec
+                        </th>
+                        <th>Ad Soyad</th>
+                        <th>Firma</th>
+                        <th>Kayıt Olma Tarihi</th>
+                        @*<th>Onay Tarihi</th>*@
+                        <th>Onay Durumu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <input type="hidden" name="UserId" value="@user.UserId" />
+                        <tr>
+                            <td><input type="checkbox" name="onay" value="@user.UserId" /></td>
+                            <td>@user.MemberName @user.MemberSurName</td>
+                            <td></td>
+                            <td>@user.KayitTarihi.GetValueOrDefault()</td>
+                            @*<td>@user.OnayTarihi</td>*@
+                            <td>@user.OnayDurumu</td>
+                        </tr>
+                    }
+                    <tr>
+                        <td colspan="5"><input type="submit" value="Onayla" class="btn-warning" /></td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+        }</div></div>
+        <br /><br /><br /><br />
+        <section class="content">
+            <!-- general form elements disabled -->
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Kategori Tanımları</div>
+                        <div class="panel-body">
+
+                            @using (Html.BeginForm("AddSubCategory", "Settings", FormMethod.Post, htmlAttributes: new { role = "form" }))
+                            {
+
+                        <!-- select -->
+                                <div class="form-group">
+                                    <label>Kategori</label>
+                                    @Html.DropDownList("MainCategoryId", new SelectList(ViewBag.ListCategory, "MainCategoryId", "MainCategoryName"), "KategoriSeçiniz", new { data_native_menu = "false", @class = "searchSelect form-control" })
+                                </div>
+                        <!-- text input -->
+                                <div class="form-group">
+                                    <label>Alt Kategori</label>
+                                    @Html.TextBox("SubCategoryName", new { @class = "form-control", placeholder = "Enter ..." }, " ")
+
+                                </div>
+                                <div class="form-group" style="display: none">
+                                    <label>İlişkili Kategori</label>
+                                    @Html.DropDownList("RelatedId", new SelectList(ViewBag.ListCategory, "MainCategoryId", "MainCategoryName"), "İlişkili Kategori", new { data_native_menu = "false", @class = "form-control" })
+                                </div>
+                        <!-- textarea -->
+                                <div class="form-group">
+                                    <label>Açıklama</label>
+                                    <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                                </div>
+
+
+
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                                </div>
+
+
+
+
+
+                            }
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div>
+
+                <!-- right column -->
+                <div class="col-md-6">
+                    <!-- Horizontal Form -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Tanımlı alt kategoriler</div>
+                        <div class="panel-body">
+                            @using (@Html.BeginForm("SearchSubCategory", "Admin"))
+                            {
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-group">
+                                                    <label>Kategori</label>
+                                                    @Html.DropDownList("MainCategoryId", new SelectList(ViewBag.ListCategory, "MainCategoryId", "MainCategoryName"), "KategoriSeçiniz", new { data_native_menu = "false", @class = "searchSelect form-control" })
+                                                </div>
+                                            </th>
+                                            <th><input type="submit" value="Ara" class="btn btn-primary form-control" /></th>
+                                        </tr>
+                                    </thead>
+
+                                </table>
+                            }
+                        </div><!-- /.box-header -->
+                        <div class="box-body no-padding">
+                            <table class="table">
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>Kategori</th>
+                                    <th>AltKategori</th>
+                                    <th style="width: 40px">İlişkili kategori</th>
+                                </tr>
+                                @{
+                                    int say = 0;
+                                    foreach (var sub in ViewBag.subCatList)
+                                    {
+                                        say++;
+                                        <tr>
+                                            <td>@say.</td>
+                                            <td>@sub.MCatName</td>
+                                            <td>
+                                                @sub.SCatName
+                                            </td>
+                                            <td>@sub.RCatName</td>
+                                        </tr>
+                                    }
+                                }
+
+
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div>
+            </div>
+        </section>
+        <script>
+            $(document).ready(function () {
+                $(".searchSelect").select2();
+            });</script>

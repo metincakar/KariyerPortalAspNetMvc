@@ -1,0 +1,116 @@
+﻿@using System.Web.UI.WebControls
+@model KagiderKariyerPortalMvc.Models.LoginMemberModel
+@{
+    ViewBag.Title = "üye girişi";
+}
+
+<hgroup class="title">
+   
+    @if (Convert.ToInt32(Request.QueryString["membertypeid"]) == 4)
+    {
+        <h3>İşveren @ViewBag.Title. </h3>
+    }
+    else if (Convert.ToInt32(Request.QueryString["membertypeid"]) == 2)
+    {
+        <h3>İş arayan @ViewBag.Title. </h3>
+    }
+</hgroup>
+
+<section id="loginForm">
+    <h5>@ViewBag.Message</h5>
+    @using (Ajax.BeginForm("LoginMember", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "message_login",
+        OnSuccess = "updateSuccess",
+        LoadingElementId = "loading"
+
+    }, new { @id = "updateForm", @class = "form-horizontal", role = "form" }))
+    {
+        
+           @Html.HiddenFor(m=>m.MemberTypeId)
+           @Html.HiddenFor(m=>m.MemberType)
+ 
+           <input type="hidden" name="viewtype" value="@ViewBag.Viewtype" />
+        
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+         <div class="form-group">
+                  @Html.LabelFor(m => m.MemberName, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(m => m.MemberName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.MemberName)
+                    </div>
+                 </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.MemberSurName, new { @class = "col-md-3 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.MemberSurName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.MemberSurName)
+            </div>
+        </div>
+        <div class="form-group">
+                    @Html.LabelFor(m => m.Mobiltel, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(m => m.Mobiltel, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Mobiltel)
+                    </div>
+                </div>
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Giriş" class="btn btn-default" />
+        </div>
+</div>
+
+        @*<p>
+            @Html.ActionLink("Register", "Register") if you don't have an account.
+        </p>*@
+    }
+    <div id="loading" style="display: none;"><b style="color:red">işlem yapılıyor bekleyiniz...</b></div>
+    <div id="message_login"></div>
+</section>
+@if (Convert.ToInt32(Request.QueryString["membertypeid"]) == 2)
+{
+    <aside>
+        <h3>İş arayan üye girişi.</h3>
+        <p>İnsan kaynakları platformuna kayıtlı iş arayan üyeler kullanıcı adı ve şifreleriyle login olabilirler..</p>
+        <p>
+            @*@Html.ActionLink("Geleceğin Kadın Lideri Üye Girişi &raquo;", "LoginMember", new { membertypeid = 2 }, new { @class = "btn btn-default" })*@
+            <a href="@Url.Action("Login", routeValues: new {membertypeid = 0})" class="btn Yellow">Üye Girişi &raquo;</a>
+        </p>
+    </aside>
+}
+else
+{
+     <aside>
+        <h3>İş veren üye girişi şifreli.</h3>
+        <p>Kagider üyesi değilsiniz fakat online ik platformumuza kayıtlı iseniz şifrenizle giriş yapabilirsiniz veya sisteme kayıt olabilirsiniz</p>
+        <p>
+            @*@Html.ActionLink("Geleceğin Kadın Lideri Üye Girişi &raquo;", "LoginMember", new { membertypeid = 2 }, new { @class = "btn btn-default" })*@
+            <a href="@Url.Action("Login", routeValues: new {membertypeid = 1})" class="btn Yellow">Üye Girişi &raquo;</a>
+        </p>
+    </aside>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+
+    function updateSuccess(data) {
+        if (data.Success == true) {
+
+            window.location.href = data.returnUrl;
+            $('#updateDialog').dialog('close');
+
+        } else {
+            $('#message_login').html(data.ErrorMessage);
+        }
+
+        //$('#sonuc').hide('slow');
+        //$('#sonuc').show('slow');
+
+    }
+
+</script>

@@ -1,0 +1,5 @@
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Interfaces\bin\Debug\KagiderKariyerPortal.Interfaces.dll
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Interfaces\bin\Debug\KagiderKariyerPortal.Interfaces.pdb
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Interfaces\obj\Debug\KagiderKariyerPortal.Interfaces.dll
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Interfaces\obj\Debug\KagiderKariyerPortal.Interfaces.pdb
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Interfaces\obj\Debug\KagiderKariyerPortal.Interfaces.csprojResolveAssemblyReference.cache

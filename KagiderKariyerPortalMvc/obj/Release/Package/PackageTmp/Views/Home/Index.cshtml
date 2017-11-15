@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Ana Sayfa";
+}
+@section featured {
+    <section class="featured">
+                <div class="content-wrapper">
+                    <hgroup class="title">
+                        <h1>@ViewBag.Title.</h1>
+                        <h2>@ViewBag.Message</h2>
+                    </hgroup>
+                    <p>
+                        KAGİDER olarak inanıyoruz ki gençlik demek geleceğimiz demektir.
+                    </p>
+                    <p>
+        Genç kadınların yetkinliklerini ve profesyonel iletişim ağlarını artırarak iş hayatına güçlü bir başlangıç yapmalarını amaçlayan, 2010 yılında başlattığımız  Geleceğin Kadın Liderleri projesi ile başladığımız gençlik çalışmaları sonuçları ve istatistiksel veriler gösteriyor ki Türkiye’deki genç kadın ve işgücü elimizdeki en büyük potansiyelimizdir. Ekonomik avantajımızı ve genç nüfus gücümüzü korumak için gençlere ve kadınlara yatırım yapmak zorunda olduğumuzun farkındayız.
+        </p>
+    <p>
+                        Bu doğrultuda birbirinden değerli projeleri hayata geçirmek üzere işbirliği yaptığımız kurumlar ve KAGİDER üyelerinin iş ilanlarının yayınlanacağı platformda işveren ile KAGİDER’in başarılı gençlik projeleri yoluyla tanıştığımız Türkiye’nin her yerinden genci bir araya getiriyor olacağız.
+
+                    </p>
+                </div>
+    </section>
+}
+@if (Session["uid"]==null)
+{
+    <h3>Sisteme Giriş Seçenekleri:</h3>
+    <ol class="round">
+        <li class="one">
+           
+            
+                 <div class="row">
+                     <div class="col-md-4">
+                         <h2>İş Arayan Girişi</h2>
+                         <p>
+                             Sisteme giriş yaparak cv oluşturabilir iş ilanlarını
+                             inceleyebilirsini.
+                         </p>
+                     
+                     </div>
+                     <div class="col-md-4">
+                         <h2></h2>
+                         <p><a class="btn " href="@Url.Action("Employee", "Home")">Daha fazlası &raquo;</a></p>
+                     </div>
+                </div>
+        </li>
+
+        <li class="two">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>İş Veren Girişi</h2>
+                    <p>
+                        Sisteme giriş yaparak iş ilanları oluşturabilirsiniz.
+                    </p>
+                   
+                </div>
+                <div class="col-md-4">
+                    <h2></h2>
+                    <p><a class="btn btn-default" href="@Url.Action("Employer", "Home")">Daha fazlası &raquo;</a> </p>
+                </div>
+            </div>
+        </li>
+    </ol>
+}
+<article>
+    <p>
+        @Html.Partial("~/Views/Ilan/_IlanListPartial.cshtml");
+     
+    </p>
+
+  
+</article>
+
+

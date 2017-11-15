@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+    <body>
+        <div id="main_body">
+            <div id="menu">
+                @if (Request.IsAuthenticated) 
+                {
+                    if (User.Identity.Name != null)
+                    {
+                        @User.Identity.Name;
+                        
+                        
+                    }
+                    
+                 
+                        @Html.ActionLink("Log Off", "LogOffIsArayan", "Account");
+                }
+                else
+                {
+                    <table border="0.5">
+                        <tr>
+                            <td colspan="2">İş Arayan Girişi</td>
+                            <td colspan="2">İş Veren Girişi</td>
+                        </tr>
+                        <tr>
+                            <td>Kagider Üyesi Giriş=>@Html.ActionLink("Giriş Yap", "LoginIsArayanDiger", "Account")</td>
+                            <td>Diğer Giriş=>
+                                <table>
+                                    <tr>
+                                        <td>@Html.ActionLink("Referans Giriş", "LoginIsArayanDiger", "Account")</td>
+                                        <td>@Html.ActionLink("Şifreli Giriş Yap", "LoginIsArayanDiger", "Account")</td>
+                                    </tr>  
+                                </table> 
+                            </td>
+                            <td>Kagider Üyesi Giriş=>@Html.ActionLink("Kagider Üye Girişi", "LoginIsArayanDiger", "Account")</td>
+                            <td>Diğer Giriş=>@Html.ActionLink("Şifreli Giriş Yap", "LoginIsArayanDiger", "Account")</td>
+                        </tr>
+                    </table>
+
+                }
+            </div>
+            <div id="content">
+                @RenderBody()
+            </div>
+            <div id="foter"></div>
+           
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

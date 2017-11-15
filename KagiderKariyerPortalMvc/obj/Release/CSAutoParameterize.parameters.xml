@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-KagiderKariyerPortalMvc-20150407205243;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-KagiderKariyerPortalMvc-20150407205243.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Metin\\documents\\visual\ studio\ 2013\\Projects\\KagiderKariyerPortal\\KagiderKariyerPortalMvc\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="KagiderContext-Web.config Connection String" description="KagiderContext Connection String used in web.config by the application to access the database." defaultValue="user id=sa;pwd=1;data source=.;persist security info=False;initial catalog=KagiderDB" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Metin\\documents\\visual\ studio\ 2013\\Projects\\KagiderKariyerPortal\\KagiderKariyerPortalMvc\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='KagiderContext']/@connectionString" />
+  </parameter>
+  <parameter name="KagiderContext_DatabasePublish-Web.config Connection String" description="KagiderContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="KagiderContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Metin\\documents\\visual\ studio\ 2013\\Projects\\KagiderKariyerPortal\\KagiderKariyerPortalMvc\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='KagiderContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

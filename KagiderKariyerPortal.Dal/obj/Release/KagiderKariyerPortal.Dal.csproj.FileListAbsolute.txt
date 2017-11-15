@@ -1,0 +1,12 @@
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\KagiderKariyerPortal.Dal.dll.config
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\KagiderKariyerPortal.Dal.dll
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\KagiderKariyerPortal.Dal.pdb
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\EntityFramework.dll
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\KagiderKariyerPortal.Entities.dll
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\KagiderKariyerPortal.Entities.pdb
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\EntityFramework.xml
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\obj\Release\KagiderKariyerPortal.Dal.csprojResolveAssemblyReference.cache
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\obj\Release\KagiderKariyerPortal.Dal.dll
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Dal\obj\Release\KagiderKariyerPortal.Dal.pdb

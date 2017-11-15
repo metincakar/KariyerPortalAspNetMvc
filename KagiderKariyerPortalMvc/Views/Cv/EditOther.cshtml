@@ -1,0 +1,184 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvOther
+
+
+
+@{
+    var dnmId = "";
+    if (ViewBag.tip == 0)
+    {dnmId = "dvOzet";}
+    else if (ViewBag.tip == 1)
+    { dnmId = "dvBilg"; }
+    else if (ViewBag.tip == 2)
+    { dnmId = "dvEkBilgilerim"; }
+    else if (ViewBag.tip == 3)
+    { dnmId = "refref"; }
+    else if (ViewBag.tip == 4)
+    { dnmId = "dvburs"; }
+    
+}
+
+@using (Ajax.BeginForm("EditOther", "Cv", new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+
+    UpdateTargetId = @dnmId,
+    HttpMethod = "POST",
+    OnSuccess = "updateSuccessOther"
+
+}, new { @id = "updateForm", @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(model => model.UserId)
+    @Html.HiddenFor(model => model.OtherId)
+    <input type="hidden" name="tip" value="@ViewBag.tip">
+    if (ViewBag.tip == 0)
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.OzetBilgi, new {@class = "col-md-4 control-label fontSmall", rows = 10, style = " width : 350px;"})
+            @Html.HiddenFor(m => m.BilgisayarBilgi)
+            <div class="col-md-8">
+                @Html.TextAreaFor(m => m.OzetBilgi, new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.OzetBilgi)
+            </div>
+        </div>
+    }
+    else if (ViewBag.tip == 1)
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.BilgisayarBilgi, new {@class = "col-md-4 control-label fontSmall"})
+            <div class="col-md-8">
+                @Html.TextAreaFor(m => m.BilgisayarBilgi, new {@class = "form-control", rows = 10, style = " width : 350px;"})
+                @Html.HiddenFor(m => m.OzetBilgi)
+                @Html.ValidationMessageFor(model => model.BilgisayarBilgi)
+            </div>
+        </div>
+    }
+    else if (ViewBag.tip == 2)
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Hobiler, new {@class = "col-md-4 control-label fontSmall"})
+            <div class="col-md-8">
+                @Html.TextAreaFor(m => m.Hobiler, new {@class = "form-control", rows = 10, style = " width : 350px;"})
+                @Html.ValidationMessageFor(model => model.Hobiler)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Uyelikler, new {@class = "col-md-4 control-label fontSmall"})
+            <div class="col-md-8">
+                @Html.TextAreaFor(m => m.Uyelikler, new {@class = "form-control", rows = 10, style = " width : 350px;"})
+                @Html.ValidationMessageFor(model => model.Uyelikler)
+            </div>
+        </div>
+     <div class="form-group">
+            @Html.LabelFor(m => m.SosyalSorumlulukCalismalari, new {@class = "col-md-4 control-label fontSmall"})
+         <div class="col-md-8">
+             @Html.TextAreaFor(m => m.SosyalSorumlulukCalismalari, new { @class = "form-control", rows = 10, style = " width : 350px;" })
+             @Html.ValidationMessageFor(model => model.SosyalSorumlulukCalismalari)
+         </div>
+        </div>
+    }
+     else if (ViewBag.tip == 3)
+     {
+         <div class="form-group">
+             @Html.LabelFor(m => m.Ref1AdSoyad, new {@class = "col-md-4 control-label fontSmall"})
+             <div class="col-md-8">
+                 @Html.TextBoxFor(m => m.Ref1AdSoyad, new {@class = "form-control"})
+                
+                 @Html.ValidationMessageFor(model => model.BilgisayarBilgi)
+                 @Html.HiddenFor(m => m.OzetBilgi)
+                 @Html.HiddenFor(m => m.BilgisayarBilgi)
+
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.Ref1Pozisyon, new {@class = "col-md-4 control-label fontSmall"})
+             <div class="col-md-8">
+                 @Html.TextBoxFor(m => m.Ref1Pozisyon, new {@class = "form-control"})
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.Ref1Tel, new {@class = "col-md-4 control-label fontSmall"})
+             <div class="col-md-8">
+                 @Html.TextBoxFor(m => m.Ref1Tel, new {@class = "form-control"})
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.Ref1Mail, new {@class = "col-md-4 control-label fontSmall"})
+             <div class="col-md-8">
+                 @Html.TextBoxFor(m => m.Ref1Mail, new {@class = "form-control"})
+             </div>
+         </div>
+         <hr/>
+         <div class="form-group">
+             @Html.LabelFor(m => m.Ref2AdSoyad, new {@class = "col-md-4 control-label fontSmall"})
+             <div class="col-md-8">
+                 @Html.TextBoxFor(m => m.Ref2AdSoyad, new {@class = "form-control"})
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.Ref2Pozisyon, new {@class = "col-md-4 control-label fontSmall"})
+             <div class="col-md-8">
+                 @Html.TextBoxFor(m => m.Ref2Pozisyon, new {@class = "form-control"})
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.Ref2Tel, new {@class = "col-md-4 control-label fontSmall"})
+             <div class="col-md-8">
+                 @Html.TextBoxFor(m => m.Ref2Tel, new {@class = "form-control"})
+             </div>
+         </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.Ref2Mail, new {@class = "col-md-4 control-label fontSmall"})
+             <div class="col-md-8">
+                 @Html.TextBoxFor(m => m.Ref2Mail, new {@class = "form-control"})
+             </div>
+         </div>
+     }
+     else if (ViewBag.tip == 4)
+     {
+            <div class="form-group">
+            @Html.LabelFor(m => m.BurslarProjeler, new {@class = "col-md-4 control-label fontSmall"})
+            <div class="col-md-8">
+                @Html.TextAreaFor(m => m.BurslarProjeler, new {@class = "form-control", rows = 10, style = " width : 350px;"})
+                @Html.ValidationMessageFor(model => model.BurslarProjeler)
+            </div>
+        </div>
+     }
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();" />
+        </div>
+    </div>
+}
+
+
+<script>
+
+    function sil() {
+        if ($('#updateForm').valid()) {
+            $('#is_delete').val('1');
+            $('#updateForm').submit();
+            $('#commonMessage').html("Silme işlemi yapılmıştır!");
+            $('#updateDialog').dialog('destroy').empty();
+            $('#updateDialog').dialog('close');
+        }
+    }
+
+
+    function kaydet() {
+        if ($('#updateForm').valid()) {
+            $('#updateForm').submit();
+            $('#commonMessage').html("Güncelleme yapılmıştır!");
+            $('#updateDialog').dialog('destroy').empty();
+            $('#updateDialog').dialog('close');
+        }
+    }
+
+    function updateSuccessOther() {
+
+
+        $('#commonMessage').delay(400).slideDown(400).delay(3000).slideUp(400);
+    }
+</script>

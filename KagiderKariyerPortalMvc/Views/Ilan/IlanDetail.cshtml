@@ -1,0 +1,147 @@
+﻿@using System.Globalization
+@using KagiderKariyerPortalMvc.Models
+@model KagiderKariyerPortal.Entities.ConCreate.Ilan
+
+
+
+
+@{
+
+    var modeleEgitimSeviyesiModel = new EgitimSeviyesiModel();
+    var pozisyonTipiModel = new PozisyonTipiModel();
+    var pozisyonSeviyesiModel = new PozisyonSeviyesiModel();
+    var pozisyontipi = pozisyonTipiModel.PozisyonTipiList.Find(p => p.Id == Model.PozisyonTipi).Tip;
+    var pozisyonSeviyesi = pozisyonSeviyesiModel.PozisyonSeviyesiList.Find(s => s.Id == Model.PozisyonSeviyesi).Seviye;
+    var egitim = modeleEgitimSeviyesiModel.EgitimSeviyesiList.Find(e => e.Id== Model.EgitimSeviyesi).Seviye;
+    Layout = ViewBag.logintype==0 ? "../shared/_Layout.cshtml" : "../shared/_Layoutisveren.cshtml";
+}
+
+            <div id="divIlanDetay">
+                <div id="divJobDetail">
+                    <br>
+                    <div id="divIlanSablon" >
+                        <div style="width: 715px;">
+
+                            <div  style="width: 715px; height: 111px;">
+                                <div  style=' width: 9px; height: 111px; float: left;'></div>
+                                <div class="kutu"  style="width: 697px; height: 150px; float: left; background-color:white">
+                                    <div  style="padding: 10px; color:steelblue; font-size: 18px; font-weight: bold; float: left;">
+                                        @Html.DisplayFor(m => m.AcikPozisyon)
+                                        <br>
+                                        <span style="color: steelblue; font-size: 12px !important; font-weight: normal;">&nbsp;(ref: @Html.DisplayFor(m => m.IlanId))</span>
+                                        <br>
+                                        <span style="color: steelblue !important; padding-top: 20px; font-size: 16px !important; display: block;">&nbsp;
+                                        <a class="link" style="color: steelblue;" href="">@Html.DisplayFor(m => m.Firma.FirmaAd)</a></span>
+                                    </div>
+                                    <div class="fontbig" style=' top: 20%; width: 161px !important; height: 67px !important; right: 5%; color: steelblue; font-weight: bold; float: right; position: relative;'>
+                                        <img style="margin: 12px auto; width: 150px; display: block;" src="@Model.Firma.FirmaLogo">
+
+                                    </div>
+                                </div>
+                                <div class="headerRight" style=' width: 9px; height: 111px; float: left;'>
+                                   
+                                </div>
+                            </div>
+                            <div class="content" style="width: 715px;">
+                                <div class="positionContent" style="padding: 10px; width: 691px; border-right-color: rgb(235, 235, 235); border-left-color: rgb(235, 235, 235); border-right-width: 2px; border-left-width: 2px; border-right-style: solid; border-left-style: solid; display: inline-block;">
+                                    <div class="divJobPostingInfo" style="padding: 10px 10px 30px; width: 100%;">
+                                        <div class="h1" style="padding-bottom: 5px; font-size: 14px;">İlan Bilgileri</div>
+                                        <div style="padding: 2px 0px;"><span  style="font-weight: normal; display: inline-block;">İlan ilk yayın tarihi bilgisi:</span>&nbsp;@Html.DisplayFor(m => m.IlanStartDate, Model.IlanStartDate.ToShortDateString())</div>
+                                        <div style="padding: 2px 0px;"><span  style="font-weight: normal; display: inline-block;">İlan Güncelleme Tarihi:</span>&nbsp;@Html.DisplayFor(m => m.IlanStartDate)</div>
+                                        <div style="padding: 2px 0px;"><span  style="font-weight: normal; display: inline-block;">İlan kapanma tarihi bilgisi:</span>&nbsp;@Html.DisplayFor(m => m.IlanFinishDate, Model.IlanFinishDate.ToString("d"))</div>
+                                    </div>
+                                    <div style="padding: 10px 10px 30px; width: 100%;">
+                                        <div class="h1" style="font-size: 14px;">Genel nitelikler:</div>
+                                        <p style="color: rgb(102, 102, 102);">
+                                            @Html.Raw(Model.Detail)
+                                        </p>
+                                    </div>
+                                    <div style="padding: 10px 10px 0px; width: 100%;">
+                                        <div class="h1" style="font-size: 14px;">İş tanımı:</div>
+                                        <p style="color: rgb(102, 102, 102);">@Model.IlanTitle</p>
+                                    </div>
+                                </div>
+                                <div class="borderBottom" style='background: url("/Website/Images/sablonlar/borderBottom.jpg") no-repeat; width: 715px; height: 7px;'>
+                                    
+                                    @if (ViewBag.logintype == 1)
+                                    {
+                                        if (Request.IsAuthenticated && WebSecurity.GetUserId(User.Identity.Name.Replace("i", "İ")) == Model.UserId)
+                                        {
+                                            <div id="duzenle"><a href="@Url.Action("EditIlan", "Ilan", new {id = Model.IlanId})" class="btn btn-default">DÜZENLE</a></div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (!ViewBag.BasvurusuVarmi)
+                                        {
+                                            <div id="basvur"><a href="@Url.Action("AddApp", "Employee", new {id = Model.IlanId})" class="btn btn-default">Başvur</a></div>
+                                        }
+                                        else
+                                        {
+                                           <div id="basvur">BU İLANA DAHA ÖNCE BAŞVURU YAPTINIZ!</div> 
+                                        }
+                                    }
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="PositionInfo" style="width: 715px; margin-top: 20px;">
+               
+                    <div class="positionContent" style="padding: 10px; width: 691px; border-right-color: rgb(235, 235, 235); border-left-color: rgb(235, 235, 235); border-right-width: 2px; border-left-width: 2px; border-right-style: solid; border-left-style: solid; display: inline-block;">
+                        <div class="h1" style="padding-bottom: 5px; font-size: 14px;">Pozisyon Hakkındaki Diğer Bilgiler</div>
+                        <div style="padding: 2px 0px;">
+                            <span  style="display: inline-block;">Şehir/Ülke:</span>&nbsp;@Model.SetupCity.City (@Model.SetupCounty.County)
+                        </div>
+                        <div style="width: 100%; padding-top: 20px;">
+                            <div class="leftBlock" style="width: 48%; float: left;">
+                                <div style="padding: 2px 0px;"><span  style="display: inline-block;">Personel sayısı:</span>&nbsp;@Model.ArananPersonelSayisi</div>
+                                <div style="padding: 2px 0px;">
+                                    <span  style="display: inline-block;">Firma Sektörü:</span>&nbsp;@Model.Firma.FirmaCalismaAlanlari
+                                </div>
+                                <div style="padding: 2px 0px;">
+                                    <span  style="display: inline-block;">Pozisyon Tipi:</span>&nbsp;@pozisyontipi
+                                </div>
+                            </div>
+                            <div class="leftBlock" style="width: 48%; padding-left: 10px; border-left-color: rgb(235, 235, 235); border-left-width: 2px; border-left-style: solid; float: left;">
+
+                                @*<div style="padding: 2px 0px;">
+                                    <span class="h1" style="display: inline-block;">İş Alanı:</span>&nbsp;İş Geliştirme, Mühendislik
+                                </div>*@
+                                <div style="padding: 2px 0px;">
+                                    <span  style="display: inline-block;">Pozisyon Seviyesi:</span>&nbsp;@pozisyonSeviyesi
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="CandidateInfo" style="width: 715px; margin-top: 20px;">
+                    <div  style="padding: 10px; width: 691px; border-right-color: rgb(235, 235, 235); border-left-color: rgb(235, 235, 235); border-right-width: 2px; border-left-width: 2px; border-right-style: solid; border-left-style: solid; display: inline-block;">
+                        <div class="h1" style="padding-bottom: 5px; font-size: 14px;">Aday Bilgileri</div>
+                        <div style="width: 100%; padding-top: 20px;">
+                            <div class="leftBlock" style="width: 48%; float: left;">
+                                <div style="padding: 2px 0px;">
+                                    <span  style="display: inline-block;" >Tecrübe:</span>&nbsp;@Model.Tecrube
+                                </div>
+                            </div>
+                            <div class="leftBlock" style="width: 48%; padding-left: 10px; border-left-color: rgb(235, 235, 235); border-left-width: 2px; border-left-style: solid; float: left;">
+                                @*<div style="padding: 2px 0px;"><span class="h1" style="display: inline-block;">Cinsiyet:</span>&nbsp;Erkek</div>*@
+
+                                <div style="padding: 2px 0px;">
+                                    <span  style="display: inline-block;">Eğitim Seviyesi:</span>&nbsp;@egitim
+                                </div>
+                                @*<div style="padding: 2px 0px;"><span class="h1" style="display: inline-block;">Askerlik Durumu:</span>&nbsp;Yapıldı,Muaf,Tecilli</div>*@
+                            </div>
+                        </div>
+                    </div>
+             
+                </div>
+
+
+              
+
+  

@@ -1,0 +1,57 @@
+﻿@using KagiderKariyerPortal.Entities.ConCreate
+@model System.Collections.Generic.IEnumerable<KagiderKariyerPortal.Entities.ConCreate.CvKisiselBilgi>
+
+
+
+@{
+    var kisisel = new CvKisiselBilgi();
+    foreach (var detail in Model)
+    {
+        kisisel = detail;
+    }
+}
+
+@if (kisisel != null)
+{
+
+    <div id="divKisiselDolu" class="pers-info info-box info-box">
+        <h3>Kişisel Bilgiler @Html.ActionLink("Duzenle", "CvEditKisiselBilgi", new { id = kisisel.KisiselBilgiId }, new { @class = "editDialog edit-btn", title = "Kişisel Bilgileri Düzenle", en = "750", boy = "515" })</h3>
+        <ul>
+            <li style="list-style: none;" id="medenidurumutr">
+                <strong><span id="lblMedeniDurumRes">Medeni Durumu</span></strong>:
+                @if (kisisel.MedeniDurum)
+                {
+                    <strong id="medenidurum">Evli</strong>
+                }
+                else
+                {<strong id="medenidurum">Bekar</strong>}
+            </li>
+            <li style="list-style: none;" id="uyruktr"><strong> <span id="lblUyrukRes">Uyruk</span></strong>: <span id="uyruk">@Html.DisplayFor(kisiselItem => kisisel.SetupCountry.Country)</span></li>
+            <li style="list-style: none;" id="askerlikdurumutr"><strong><span id="lblAskerlikDurumuRes">Askerlik Durumu</span></strong>:<span id="askerlik">@ViewBag.asker </span></li>
+            <li style="list-style: none;" id="tckimliknotr"><strong><span id="lblTcKimlikRes">TC Kimlik No</span></strong>: <span id="tcno">@Html.DisplayFor(kisiselItem => kisisel.TcNo)</span></li>
+            <li style="list-style: none;" id="dogumtarihitr"><strong><span id="lblDogumTarihiRes">Doğum Tarihi</span></strong>:  <span id="dtarih">@Html.DisplayFor(kisiselItem => kisisel.DogumTarihi)</span></li>
+            <li style="list-style: none;" id="dogumyeritr"><strong> <span id="lblDogumYeriRes">Doğum Yeri</span></strong>: <span id="dyeri">@Html.DisplayFor(kisiselItem => kisisel.SetupCity.City)</span></li>
+            <li style="list-style: none;" id="surucubelgesitr"><strong> <span id="lblSurucuBelgesiRes">Sürücü Belgesi</span></strong>: <span id="sbelge">@Html.DisplayFor(kisiselItem => kisisel.SurucuBelgeSinifi) (@Html.DisplayFor(kisiselItem => kisisel.SurucuBelgeVerilisTarih))</span></li>
+
+
+        </ul>
+    </div>
+}
+else
+{
+    <div id="divKisiselBos" class="short-info info-box empty-box">
+        <h3> Kişisel Bilgiler </h3>
+        <div class="empty-area">
+            <span>
+
+                @Html.ActionLink("Bilginizi ekleyin", "CvCreateKisiselBilgi", null, new { @class = "editDialog add-btn", title = "Kişisel Bilgileri Ekle", en = "750", boy = "515" })
+            </span>
+        </div>
+    </div>
+}
+
+@Html.Partial("_ScriptsDialog")
+
+
+
+

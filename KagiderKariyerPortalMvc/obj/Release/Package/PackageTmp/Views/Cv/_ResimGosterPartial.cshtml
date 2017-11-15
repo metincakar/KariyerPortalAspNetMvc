@@ -1,0 +1,6 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.User
+
+<img id="cvfoto" style="width: 100px; height: 130px;" src="~/Content/themes/base/images/male.jpg">
+@Html.ActionLink("Düzenle", "UserImage", new { id = Model.UserId }, new { @class = "editDialog edit-btn", title = "Resim Düzenle", en = "450", boy = "700" })
+
+@Html.Partial("_ScriptsDialog")

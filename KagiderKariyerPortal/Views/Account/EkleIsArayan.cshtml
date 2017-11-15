@@ -1,0 +1,13 @@
+﻿@model KagiderKariyerPortal.Models.LoginIsArayanDiger
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../shared/_Layout.cshtml";
+}
+
+<h2>Yeni Üye</h2>
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Kaydet"/>
+}

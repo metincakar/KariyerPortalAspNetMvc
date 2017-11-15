@@ -1,0 +1,434 @@
+﻿/* atlantis */
+body
+{
+    font-family: arial;
+}
+
+body, div, td
+{ 
+	margin: 0px;
+	
+	font-size: 12px;
+}
+/*input[type=text],textarea,input[type=password],select 
+{ 
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    border:1px solid;
+    border-color:Silver;
+    padding:3px 2px 2px 3px ;
+    background: #f6f6f6 s(http://cdn1.kariyer.net/WebSite/Images/jqueryui/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;
+    color:Black;
+}*/
+
+
+
+.fontBig
+{
+    font-size:16px;
+}
+
+.fontSmall
+{
+    font-size:11px;
+}
+
+
+div.cerceve div.ust
+{
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/roundTopLeft.gif);
+	background-position: top left;
+	background-repeat: repeat-x;
+	height: 12px;
+}
+
+
+
+div.cerceve div.ust div { 
+	position: relative;
+}
+
+
+div.cerceve div.ust div div { 
+position: absolute; 
+width: 72px; 
+height: 82px; 
+background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/sayi.png); 
+top: -14px !important;
+top: -17px;
+}
+
+div.cerceve div.ust div div span { 
+position: relative; 
+left: -7px; 
+width: 100%; 
+text-align: center; 
+font-size: 18px; 
+font-weight: bold; 
+color: #FFFFFF; 
+background-image: url(Website/images/null.html);
+top: 19px; 
+}
+	
+div.cerceve div.ust span
+{
+	width: 100%;
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/roundTopRight.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	height: 12px;
+	position: relative;
+	display: block;
+	white-space: nowrap;
+	overflow: visible;
+}
+
+div.cerceve div.alt
+{
+	background-image: url('http://www.kariyer.net/WebSite/Images/modalssprite.png'); background-position: 0 -1426px;
+	/*background-position: top left;*/
+	background-repeat: repeat-x;
+	height: 12px;
+}
+
+div.cerceve div.alt span
+{
+	width: 100%;
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/roundBottomRight.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	height: 12px;
+	position: relative;
+	display: block;
+	white-space: nowrap;
+}
+
+div.cerceve div.icerik
+{
+	height:100%;
+	border-left: 1px solid #dfc8ee;
+	border-right: 1px solid #dfc8ee;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+div.cerceve div.icerikGenis
+{
+	
+	border-left: 1px solid #dfc8ee;
+	border-right: 1px solid #dfc8ee;
+	padding-bottom: 10px;
+}
+
+div.cerceve div.baslik1
+{
+	height: 25px;
+	background-image:url('http://www.kariyer.net/WebSite/Images/modalssprite.png'); background-position: 0 -1278px;
+	/*background-position: center left;*/
+	background-repeat: no-repeat;
+	font-weight: bold;
+	color: #a22fa7;
+	white-space: nowrap;
+	background-color: #eedbf7;
+
+}
+
+div.cerceve div.baslik1 span
+{
+	padding-top: 5px;
+	padding-left: 25px;
+	height: 27px;
+	position: relative;
+	display: inherit;
+	white-space: nowrap;
+}
+
+div.cerceve div.baslik2
+{
+	height: 39px;
+	background:url(themes/base/cdn1.kariyer.net/WebSite/Images/baslikmorbg.png) top left;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	color: #ffffff;
+	padding-left: 30px;
+	position: relative;
+	left: -6px;
+	white-space: nowrap;
+}
+
+
+div.cerceve div.baslik2 span
+{
+	height: 39px;
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/baslikmorsag.png);
+	background-position: top right;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	color: #ffffff;
+	padding-top: 10px;
+	left: 6px;
+	display: block;
+	white-space: nowrap;
+	position: relative;
+	clear: both;
+	width: 100%;
+}
+
+div.cerceve div.baslik3
+{
+	height: 39px;
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/basliksaribg.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	color: #ffffff;
+	padding-left: 30px;
+	position: relative;
+	left: -6px;
+	white-space: nowrap;
+}
+
+
+div.cerceve div.baslik3 span
+{
+	height: 39px;
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/basliksarisag.png);
+	background-position: top right;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	color: #ffffff;
+	padding-top: 10px;
+	left: 6px;
+	display: block;
+	white-space: nowrap;
+	position: relative;
+	clear: both;
+	width: 100%;
+}
+
+div.cerceve div.baslik4
+{
+	height: 39px;
+	background:url(themes/base/cdn1.kariyer.net/WebSite/Images/baslikmorbg.png) top left;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	color: #9E14A9;
+	padding-left: 30px;
+	position: relative;
+	left: -6px;
+	white-space: nowrap;
+}
+
+div.cerceve div.baslik4 span
+{
+	height: 39px;
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/baslikmorsag.png);
+	background-position: top right;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	color: #9E14A9;
+	padding-top: 10px;
+	left: 6px;
+	display: block;
+	white-space: nowrap;
+	position: relative;
+	clear: both;
+	width: 100%;
+}
+
+    
+div.saricerceve div.ust { 
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/roundTopLeftSari.gif);
+	background-position: top left;
+	background-repeat: repeat-x;
+	height: 7px;
+	
+	}
+	
+	div.saricerceve div.ust span { 
+	width: 100%;
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/roundTopRightSari.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	height: 7px;
+	position: relative;
+	display: block;
+	white-space: nowrap;
+	overflow: visible;
+	}
+
+	div.saricerceve div.alt { 
+	background-image:  url(themes/base/cdn1.kariyer.net/WebSite/Images/roundBottomLeftSari.gif);
+	background-position: top left;
+	background-repeat: repeat-x;
+	height: 7px;
+	
+	}
+
+	div.saricerceve div.alt span { 
+	width: 100%;
+	background-image:  url(themes/base/cdn1.kariyer.net/WebSite/Images/roundBottomRightSari.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	height: 7px;
+	position: relative;
+	display: block; 
+	white-space: nowrap;
+	overflow: visible;
+	}
+
+	div.saricerceve div.icerik {
+	height: 100%;
+	border-left: 1px solid #FFCC00;
+	border-right: 1px solid #FFCC00;
+	background-color:#FEFE9C;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	}
+
+    div.saricerceveaktivasyon div.ust { 
+	background-image: url(themes/base/cdn1.kariyer.net/WebSite/Images/aday-aktivasyon-bar-ust.png);
+	background-position: top left;
+	background-repeat: repeat-x;
+	height: 13px;
+	
+	}
+	
+	div.saricerceveaktivasyon div.ust span { 
+	width: 100%;
+	height: 7px;
+	position: relative;
+	display: block;
+	white-space: nowrap;
+	overflow: visible;
+	}
+
+	div.saricerceveaktivasyon div.alt { 
+	background-image:  url(themes/base/cdn1.kariyer.net/WebSite/Images/aday-aktivasyon-bar-alt.png);
+	background-position: top left;
+	background-repeat: repeat-x;
+	height: 13px;
+	
+	}
+
+	div.saricerceveaktivasyon div.alt span { 
+	width: 100%;
+	height: 7px;
+	position: relative;
+	display: block; 
+	white-space: nowrap;
+	overflow: visible;
+	}
+
+	div.saricerceveaktivasyon div.icerik {
+	height: 100%;
+	background-image:  url(themes/base/cdn1.kariyer.net/WebSite/Images/aday-aktivasyon-bar-orta.png);
+	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	}
+.leftMenuDiv
+{
+    border-right:0px;
+    border-left:1px solid #d2b8e2;
+      
+    background-image:url('themes/base/cdn1.kariyer.net/WebSite/Images/genel/leftmenudivbg.png');
+    background-position:right;
+    color:#810582;
+}
+
+.leftMenuDiv table tr td
+{
+    color:#810582;
+}
+
+.leftMenuDiv div
+{
+    position: relative;
+    width:inherit;
+    display: table;
+    vertical-align: middle;
+       
+       
+}
+.leftMenuDiv div div
+{
+    text-align:right;
+position: relative;
+display: table-cell;
+vertical-align: middle;
+width: 90%;
+cursor:pointer;
+padding: 8px 18px 8px 5px;
+    
+}
+   
+*html .leftMenuDiv div div
+{
+    padding-right:1px;
+}
+   
+.leftMenuDiv div.selected
+{
+    background-image:url('themes/base/cdn1.kariyer.net/WebSite/Images/genel/leftmenuselectedbg.png');
+    background-position:right center; 
+    color:White;
+    font-weight:bold;
+}
+
+.leftMenuDiv div.selected table tr td
+{
+    color:White;
+}
+
+.leftMenuDiv div.selected p
+{
+    font-size:11px; color:White;
+}
+
+.leftMenuDiv div p
+{
+    font-size:11px; color:Gray;
+}
+
+
+
+.leftMenuDiv2
+{
+    border-right:0px;
+    border-left:1px solid #d2b8e2;
+    background-image:url('themes/base/cdn1.kariyer.net/WebSite/Images/genel/leftmenudivbg.png');
+    
+    background-position:right;
+    color:#810582;
+}
+
+.leftMenuDiv2 table tr td
+{
+    color:#810582;
+    
+}
+.leftMenuDiv2 div
+{
+    position: relative;
+    width:inherit;
+    display: table;
+    vertical-align: middle;       
+}
+.leftMenuDiv2 div div
+{
+    text-align:right;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 90%;
+    cursor:pointer;
+    padding: 8px 18px 8px 5px;    
+}
+   

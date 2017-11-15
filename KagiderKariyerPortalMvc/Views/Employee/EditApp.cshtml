@@ -1,0 +1,43 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.IlanBasvuru
+
+
+@{
+    ViewBag.Title = "Başvur";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@*@ViewBag.Message*@Başvurunuzu güncelleyebilirsiniz.</h2>
+</hgroup>
+
+@using (Html.BeginForm("EditApp", "Employee", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "updateForm" }))
+{
+    @Html.HiddenFor(m => m.Ilan)
+    @Html.HiddenFor(m=>m.BasvuruId)
+    @Html.HiddenFor(m=>m.UserId)
+    @Html.HiddenFor(m=>m.IlanId)
+    @Html.HiddenFor(m=>m.BasvuruTarih)
+    
+    <table class="pure-table pure-table-horizontal">
+        <tr>
+            <td>Başvuru Durumu</td>
+            <td>@Html.CheckBoxFor(m=>m.BasvuruDurum,htmlAttributes:new{@class="pure-checkbox"})</td>
+        </tr>
+        <tr>
+            <td>Ön Yazı</td>
+            <td>
+                @Html.TextAreaFor(m => m.Onyazi, new { @class = "pure-controls" })
+                @Html.ValidationMessageFor(m => m.Onyazi)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Güncelle" class="btn btn-default" />
+            </td>
+        </tr>
+    </table>
+    
+    
+
+}

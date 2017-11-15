@@ -1,0 +1,169 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvSeminerler
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@functions {
+    public class Aylar
+    {
+        public string Ay { get; set; }
+        public string Id { get; set; }
+    }
+}
+@{
+
+    var listAylar = new List<Aylar>(){
+        new Aylar() { Ay="Ocak",Id="1"},
+        new Aylar() { Ay="Şubat",Id="2"},
+        new Aylar() { Ay="Mart",Id="3"},
+        new Aylar() { Ay="Nisan",Id="4"},
+            new Aylar() { Ay="Mayıs",Id="5"},
+                new Aylar() { Ay="Haziran",Id="6"},
+                    new Aylar() { Ay="Temmuz",Id="7"},
+                        new Aylar() { Ay="Ağustos",Id="8"},
+                            new Aylar() { Ay="Eylül",Id="9"},
+                                new Aylar() { Ay="Ekim",Id="10"},
+                                    new Aylar() { Ay="Kasım",Id="11"},
+                                     new Aylar() { Ay = "Aralık", Id = "12" }
+
+        };
+}
+@using (Ajax.BeginForm("AddSeminer", "Cv", new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+
+    UpdateTargetId = "dvsem-box",
+    HttpMethod = "POST",
+    OnSuccess = "updateSuccessSeminer"
+
+}, new { @id = "updateFormSeminer", @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(model => model.UserId)
+                  <div class="form-group">
+                     @Html.LabelFor(m => m.EgitimAd, new { @class = "col-md-4 control-label fontSmall" })
+                     <div class="col-md-8">
+                         @Html.TextBoxFor(m => m.EgitimAd, new { @class = "form-control" })
+                         @Html.ValidationMessageFor(model => model.EgitimAd)
+                     </div>
+                  </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.EgitimKurumu, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            @Html.TextBoxFor(m => m.EgitimKurumu, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EgitimKurumu)
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.EgitimBaslangic, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            <select name="gun" class="col-md-4">
+                @for(var i=1;i<=31;i++)
+                {
+                    var sec = false;
+                    sec = i == 1;
+                    <option value="@i" selected="@sec">@i</option>
+                }
+            </select>
+            <select name="ay" class="col-md-4">
+                @foreach (var ay in listAylar)
+                {
+                    var sec = false;
+                    sec = ay.Id == "1";
+                    <option value="@ay.Id" selected="@sec">@ay.Ay</option>
+                }
+            </select>
+            <select name="sene" id="sene" class="col-md-4">
+                <option value="">Seçiniz</option>
+
+                @for (var i = DateTime.Now.Year; i >= DateTime.Now.Year - 60; i--)
+                {
+                    var sec = false;
+                    sec = i == DateTime.Now.Year;
+                    <option value="@i" selected="@sec">@i</option>
+                }
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.EgitimBitis, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            <select name="gunbitis" class="col-md-4">
+                @for(var i=1;i<=31;i++)
+                {
+                    var sec = false;
+                    sec = i == 1;
+                    <option value="@i" selected="@sec">@i</option>
+                }
+            </select>
+            <select name="aybitis" class="col-md-4">
+                @foreach (var ay in listAylar)
+                {
+                    var sec = false;
+                    sec = ay.Id == "1";
+                    <option value="@ay.Id" selected="@sec">@ay.Ay</option>
+                }
+            </select>
+            <select name="senebitis"class="col-md-4">
+                <option value="">Seçiniz</option>
+
+                @for (var i = DateTime.Now.Year; i >= DateTime.Now.Year - 60; i--)
+                {
+                    var sec = false;
+                    sec = i == DateTime.Now.Year;
+                    <option value="@i" selected="@sec">@i</option>
+                }
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+                     @Html.LabelFor(m => m.EgitimSure,new { @class = "col-md-4 control-label fontSmall" })
+                     <div class="col-md-8">
+                         @Html.TextBoxFor(m => m.EgitimSure, new { @class = "form-control" })
+                         @Html.ValidationMessageFor(model => model.EgitimSure)
+                     </div>
+                 </div>
+ 
+         <div class="form-group">
+                     @Html.LabelFor(m => m.Aciklama, new { @class = "col-md-4 control-label fontSmall" })
+                     <div class="col-md-8">
+                         @Html.TextAreaFor(m => m.Aciklama, new { @class = "form-control" })
+                         @Html.ValidationMessageFor(model => model.Aciklama)
+                     </div>
+                 </div>            
+
+           
+                  <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+                        </div>
+                    </div>
+                    @*<div class="editor-label">
+                        @Html.LabelFor(model => model.Okuma)
+                        @Html.DropDownListFor(m => m.Okuma, new SelectList(ViewBag.DilSurec,"SurecId", "Surec","Temel"))
+                    </div>*@
+                  
+
+
+}
+
+
+<script>
+
+    function kaydet() {
+        if ($('#updateFormSeminer').valid()) {
+            $('#updateFormSeminer').submit();
+            $('#updateDialogSeminer').dialog('destroy').empty();
+            $('#updateDialogSeminer').dialog('close');
+        }
+    }
+    function updateSuccessSeminer() {
+
+        $('#commonMessage').html("Seminer Eklenmiştir!");
+        $('#commonMessage').delay(400).slideDown(400).delay(3000).slideUp(400);
+    }
+</script>

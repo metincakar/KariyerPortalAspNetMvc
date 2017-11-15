@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Hakkında";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@*@ViewBag.Message*@Kagider Hakkıdan kısa bilgi...</h2>
+</hgroup>
+
+<article>
+    <p>
+       Kagider hakkında bilgi...
+    </p>
+
+    <p>
+        Kagider hakkında bilgi...
+    </p>
+
+    <p>
+        Kagider hakkında bilgi...
+    </p>
+</article>
+
+<aside>
+    <h3>Linkler</h3>
+    <p>
+        Diğer Linkler
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

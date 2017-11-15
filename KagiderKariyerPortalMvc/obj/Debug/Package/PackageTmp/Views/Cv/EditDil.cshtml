@@ -1,0 +1,95 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvDilBilgi
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+            @using (Ajax.BeginForm("EditDil", "Cv", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "dvDillerTum",
+            HttpMethod = "POST",
+            OnSuccess = "updateSuccessDil"
+            
+        }, new { @id = "updateForm",@class = "form-horizontal" ,role = "form"  }))
+        {
+                  <input type="hidden" name="is_delete" id="is_delete" value="0" />  
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                
+                    @Html.HiddenFor(model => model.DilBilgId)
+                    @Html.HiddenFor(model => model.UserId)
+                  <div class="form-group">
+             @Html.LabelFor(m => m.Dil, new { @class = "col-md-4 control-label fontSmall" })
+             <div class="col-md-8">
+                 @Html.DropDownListFor(m => m.Dil, new SelectList(ViewBag.Dil, "Ydil", "YDil"), "Seçiniz", new { @class = "form-control" })
+             
+                 @Html.ValidationMessageFor(model => model.Dil)
+             </div>
+         </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Okuma, new { @class = "col-md-4 control-label fontSmall" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(m => m.Okuma, new SelectList(ViewBag.DilSurec, "SurecId", "Surec",Model.Okuma), "Seçiniz", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Okuma)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Yazma, new { @class = "col-md-4 control-label fontSmall" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(m => m.Yazma, new SelectList(ViewBag.DilSurec, "SurecId", "Surec",Model.Yazma), "Seçiniz", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Yazma)
+                </div>
+            </div>
+                 <div class="form-group">
+             @Html.LabelFor(m => m.Konusma, new { @class = "col-md-4 control-label fontSmall" })
+             <div class="col-md-8">
+                 @Html.DropDownListFor(m => m.Konusma, new SelectList(ViewBag.DilSurec, "SurecId", "Surec",Model.Konusma), "Seçiniz", new { @class = "form-control" })
+                 @Html.ValidationMessageFor(model => model.Konusma)
+             </div>
+         </div>
+                 <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="button" class="btn btn-default" value="Sil" onclick="sil();" />
+                    </div>
+                </div>
+                  <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+                        </div>
+                    </div>
+                    @*<div class="editor-label">
+                        @Html.LabelFor(model => model.Okuma)
+                        @Html.DropDownListFor(m => m.Okuma, new SelectList(ViewBag.DilSurec,"SurecId", "Surec","Temel"))
+                    </div>*@
+                  
+        }
+
+
+<script>
+ 
+    function sil() {
+    if ($('#updateForm').valid()) {
+                $('#is_delete').val('1');
+                $('#updateForm').submit();
+                $('#commonMessage').html("Yabancı Dil Silinmiştir!");
+                $('#updateDialog').dialog('destroy').empty();
+                $('#updateDialog').dialog('close');
+        }
+    }
+
+
+        function kaydet() {
+            if ($('#updateForm').valid()) {
+                $('#updateForm').submit();
+                $('#commonMessage').html("Yabancı Dil Bilgileri Güncellenmiştir!");
+                $('#updateDialog').dialog('destroy').empty();
+                $('#updateDialog').dialog('close');
+            }
+        }
+
+        function updateSuccessDil() {
+
+          
+            $('#commonMessage').delay(400).slideDown(400).delay(3000).slideUp(400);
+        }
+</script>

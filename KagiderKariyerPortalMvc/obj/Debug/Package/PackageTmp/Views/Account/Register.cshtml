@@ -1,0 +1,152 @@
+﻿@model KagiderKariyerPortalMvc.Models.RegisterModel
+@{
+    ViewBag.Title = "Üye Kayıt";
+}
+@{
+    if (Model.MemberTypeId == 1)
+    {
+        Layout = "../Shared/_layoutIsveren.cshtml";
+    }
+    else if (Model.MemberTypeId == 0)
+    {
+        Layout = "../Shared/_layout.cshtml";
+    }
+}
+<hgroup class="title">
+    
+       
+    @if (Model.MemberTypeId == 1)
+    {
+        <h3>İş Veren @ViewBag.Title. </h3>
+    }
+    else if (Model.MemberTypeId == 0)
+    {
+        <h3>İş arayan @ViewBag.Title. </h3>
+    }
+
+
+   
+    <h4>Yeni bir hesap oluşturun.</h4>
+</hgroup>
+
+@using (Html.BeginForm("Register","Account",FormMethod.Post,new {  @class = "form-horizontal", role = "form" })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    @Html.HiddenFor(m=>m.MemberTypeId)
+    @Html.Hidden("membertype", Request.QueryString["membertype"])
+    @*<div class="row">*@
+            <div class="form-group">
+                @Html.LabelFor(m => m.AccountName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.AccountName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.AccountSurName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.AccountSurName, new { @class = "form-control" })
+                </div>
+            </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+       <div class="form-group">
+            @Html.LabelFor(m => m.MobilPhone, new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.MobilPhone, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+            <div class="col-md-4">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+        </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        <div class="col-md-4">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @if (Model.MemberTypeId == 0)
+            {
+                <b class="col-md-2 control-label">Genç Kagider Üyesimisiniz?</b>
+            }
+            else
+            {
+             @Html.LabelFor(m => m.KagiderUyesi, new {@class = "col-md-2 control-label"})
+             }
+        <div class="col-md-4">
+            @Html.CheckBoxFor(m => m.KagiderUyesi, new { @class = "form-control" })
+        </div>
+    </div>
+    if (Model.MemberTypeId == 0)
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Referansli, new {@class = "col-md-2 control-label"})
+            <div class="col-md-4">
+                @Html.CheckBoxFor(m => m.Referansli, new {@class = "form-control", @id = "Referansli"})
+            </div>
+        </div>
+        <div class="form-group" id="ReferansPhone">
+            @Html.LabelFor(m => m.ReferansPhone, new {@class = "col-md-2 control-label"})
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.ReferansPhone, new {@class = "form-control"})
+            </div>
+        </div>
+    }
+    <div class="form-group">
+             <div class="col-md-offset-2 col-md-4">
+                 <input type="submit" class="btn btn-default" value="Kaydet" onsubmit="kontrol()" />
+             </div>
+         </div>
+       
+      
+}
+
+    
+    @if (Model.MemberTypeId == 0)
+    {
+        <script>
+            $(document).ready(function() {
+                document.getElementById("ReferansPhone").style.display = "none";
+                $("#Referansli").click(function() {
+                    if (this.checked)
+                        document.getElementById("ReferansPhone").style.display = "";
+                    else
+                        document.getElementById("ReferansPhone").style.display = "none";;
+                });
+
+                function kontrol() {
+                    if (document.all.Referansli.checked && document.all.ReferansPhone.value.length == 0) {
+                        alert("Kagider Üyesi Referansınıza ait Telefon Numarasını Girmelisiniz!");
+                        return false;
+                    }
+                    return true;
+                }
+
+            });
+        </script>
+    }
+    else
+    {
+        <script>
+            function kontrol() {
+                
+                return true;
+            }
+        </script>
+    }
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    }

@@ -1,0 +1,145 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvSertifikaBilgi
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@functions {
+    public class Aylar 
+    {
+        public string Ay { get; set; }
+        public string Id { get; set; }
+    }
+}
+@{
+    
+    var listAylar=new List<Aylar>(){
+        new Aylar() { Ay="Ocak",Id="01"},
+        new Aylar() { Ay="Şubat",Id="02"},
+        new Aylar() { Ay="Mart",Id="03"},
+        new Aylar() { Ay="Nisan",Id="04"},
+            new Aylar() { Ay="Mayıs",Id="05"},
+                new Aylar() { Ay="Haziran",Id="06"},
+                    new Aylar() { Ay="Temmuz",Id="07"},
+                        new Aylar() { Ay="Ağustos",Id="08"},
+                            new Aylar() { Ay="Eylül",Id="09"},
+                                new Aylar() { Ay="Ekim",Id="10"},
+                                    new Aylar() { Ay="Kasım",Id="11"},
+                                     new Aylar() { Ay = "Aralık", Id = "12" }
+        
+        };
+}
+<div id="dvSertifikaDetay">
+    @using (Ajax.BeginForm("EditSertifika", "Cv", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+
+        UpdateTargetId = "dvcert-box",
+        HttpMethod = "POST",
+        OnSuccess = "updateSuccessSertifika"
+
+    }, new {@id = "updateFormSertifika", @class = "form-horizontal", role = "form"}))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(m=>m.SertifikaId)
+          @Html.HiddenFor(m=>m.UserId)
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td class="" style="width: 30%" valign="top">
+                        <span id="lblSertifikaAdiRes">Sertifika Adı</span>*
+                    </td>
+                    <td style="width: 70%">
+                     <input type="hidden" name="is_delete" id="is_delete" value="0"/>
+                        @Html.TextBoxFor(m => m.SertifikaAd, htmlAttributes: new { style = "width: 300px;", @class = "nesne" })
+                        @Html.ValidationMessageFor(model => model.SertifikaAd)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="" style="width: 30%">
+                        <span id="lblSertifikaTarihiRes">Sertifika Tarihi</span>*
+                    </td>
+                    <td style="width: 70%">
+                        <select name="SertifikaAy" id="SertifikaAy">
+                            <option value="">Seçiniz</option>
+                            @foreach (var ay in listAylar)
+                            {
+                                var sec = false;
+                                sec = ay.Id == Model.SertifikaAy;
+                                <option value="@ay.Id" selected="@sec">@ay.Ay</option>
+                            }
+
+                        </select>
+                        <select name="SertifikaSene" id="SertifikaSene" uyari="Lütfen yıl seçiniz.">
+                            <option value="">Seçiniz</option>
+                        
+                            @for (var i = DateTime.Now.Year; i >= DateTime.Now.Year - 60; i--)
+                            {
+                                var sec = false;
+                                sec = i == Model.SertifikaSene;
+                                <option value="@i" selected="@sec">@i</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="" style="width: 30%">
+                        <span id="lblSertifikaAlindigiKurumRes">Alındığı Kurum</span>*
+                    </td>
+                    <td style="width: 70%">
+                        
+                        @Html.TextBoxFor(m => m.AlindigiKurum, htmlAttributes: new { style = "width: 300px;" ,@class="nesne"})
+                        @Html.ValidationMessageFor(model => model.AlindigiKurum)
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" style="width: 30%">
+                        <span id="lblSertifikaAciklama">Açıklama</span>
+                    </td>
+                    <td style="width: 70%">
+                  
+                        @Html.TextAreaFor(m => m.Aciklama, htmlAttributes: new { rows = "2", cols = "20", style = "height: 75px; width: 500px;" })
+                        @Html.ValidationMessageFor(model => model.Aciklama)
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="javascript://" id="btnKaydet" onclick="sil();" class="btn" style="float: right"><span>Sil</span></a></td>
+                    <td id="tdButon">
+
+                        <a href="javascript://" id="btnKaydet" onclick="kaydet();"  class="btn" style="float: right"><span>Kaydet</span></a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>
+
+<script>
+
+    function sil() {
+        if ($('#updateFormSertifika').valid()) {
+            $('#is_delete').val('1');
+            $('#updateFormSertifika').submit();
+            $('#commonMessage').html("Sertifika Silinmiştir!");
+            $('#updateDialogSertifika').dialog('destroy').empty();
+            $('#updateDialogSertifika').dialog('close');
+        }
+    }
+
+
+    function kaydet() {
+        if ($('#updateFormSertifika').valid()) {
+            $('#updateFormSertifika').submit();
+            $('#commonMessage').html("Sertifika Güncellenmiştir!");
+            $('#updateDialogSertifika').dialog('destroy').empty();
+            $('#updateDialogSertifika').dialog('close');
+        }
+    }
+
+    function updateSuccessSertifika() {
+
+
+        $('#commonMessage').delay(400).slideDown(400).delay(3000).slideUp(400);
+    }
+</script>

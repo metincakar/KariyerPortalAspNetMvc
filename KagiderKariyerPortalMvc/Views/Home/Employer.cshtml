@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "../shared/_LayoutIsveren.cshtml";
+}
+@{
+    ViewBag.Title = "İşveren login";
+}
+@if (Request.QueryString["uyari"]==null)
+{
+    <span class="alert alert-warning " style="display: block">Bu sayfalara erişebilmek için üye olmanız gerekmektedir. Üye iseniz lütfen sisteme giriş yapınız.</span>
+}
+    <hgroup class="title">
+  
+    <h1>@ViewBag.Title.</h1>
+    @*<h2>@ViewBag.Message</h2>*@
+</hgroup>
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+           
+        </div>
+    </section>
+}
+
+<article>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Kagider üyesi girişi</h4>
+            <p>
+                Kagider Üyesi iseniz sisteme mobil numaranızla giriş yapabilir ve iş ilanı bırakabilirsiniz.
+            </p>
+            <p><a class="btn btn-default editDialog" en="750" href="@Url.Action("LoginMember", "Account", routeValues: new { membertypeid = 4, membertype = "uyeIsveren", viewtype = 1 })">Kagider Üye Girişi &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h4>Şifreli üye girişi</h4>
+            <p>Kagider üyesi değilsiniz fakat online ik platformumuza kayıtlı iseniz şifrenizle giriş yapabilirsiniz veya sisteme kayıt olabilirsiniz.</p>
+            <p><a class="btn btn-default editDialog" en="750" href="@Url.Action("Login","Account",routeValues: new { membertypeid = 1, membertype = "sifreliIsveren",viewtype=1 })">Şifreli Üye Girişi &raquo;</a></p>
+        </div>
+
+    </div>
+</article>
+
+    <div id="updateDialog"></div>
+    @Html.Partial("~/Views/Cv/_ScriptsDialog.cshtml")

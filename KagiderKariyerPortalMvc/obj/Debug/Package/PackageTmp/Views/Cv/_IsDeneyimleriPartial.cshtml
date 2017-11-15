@@ -1,0 +1,53 @@
+﻿@using KagiderKariyerPortal.Entities.ConCreate
+@model System.Collections.Generic.List<KagiderKariyerPortal.Entities.ConCreate.CvIsDeneyimleri>
+
+
+@if (Model.Count > 0)
+{
+    <div class="job-exp-info info-box">
+        <h3>İş Deneyimleri @Html.ActionLink("Ekle", "CvAddIsDeneyim", "Cv", new { @class = "editDialog add-btn", title = "İş Bilgileri Ekle", en = "750", boy = "515" })</h3>
+        @*<ul id="tecrubetr" class="pers-experience">
+            <li style="list-style: none;" id="calismadurumutr"><strong><span id="lblToplamTecrubeRes">Toplam Tecrübe</span></strong>: 10 Yıl </li>
+            <li style="list-style: none;" id="calismafurumutr"><strong> <span id="lblCalismaDurumuRes">Çalışma Durumu</span></strong>: Çalışıyorum</li>
+        </ul>*@
+        @foreach (CvIsDeneyimleri cvIsDeneyimleri in Model)
+        {
+            <div class="job-exp-cont">
+
+                <h4>İş Deneyimleri</h4>
+
+                <ul class="job-experience">
+                    <li class="clearfix"><strong> @cvIsDeneyimleri.FirmadakiPozisyon </strong>@Html.ActionLink("Düzenle", "CvEditIsDeneyim", new { id = cvIsDeneyimleri.IsDeneyimleriId }, new { @class = "editDialog edit-btn", @id = "isTecrubesiDuzenle", title = "İş Deneyimleri Düzenle", en = "750", boy = "515" })</li>
+                    <li class="job-title">@cvIsDeneyimleri.FirmaAdi </li>
+                    <li class="job-detail-title">
+                        @cvIsDeneyimleri.BaslangicTarihi.ToShortDateString() - @cvIsDeneyimleri.BitisTarihi.ToShortDateString()
+                        &nbsp;&nbsp;@*(1 yıl)*@
+
+                       
+                    </li>
+                    <li class="job-details">
+                        <div>
+                            @cvIsDeneyimleri.Istanimi
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        }
+
+    </div>
+}
+else
+{
+    <div class="short-info info-box empty-box">
+        <h3> İş Deneyimleri </h3>
+        <div class="empty-area">
+            <span>
+                @Html.ActionLink("Bilginizi ekleyin", "CvAddIsDeneyim", "Cv", new { @class = "editDialog add-btn", title = "İş Bilgileri Ekle", en = "750", boy = "515" })
+             
+            </span>
+        </div>
+    </div>
+}
+
+
+@Html.Partial("_ScriptsDialog")

@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "İş arayan login";
+}
+
+
+
+
+@if (Request.QueryString["uyari"] == null)
+{
+    <span class="alert alert-warning " style="display: block">Bu sayfalara erişebilmek için üye olmanız gerekmektedir. Üye iseniz lütfen sisteme giriş yapınız.</span>
+}
+<hgroup class="title">
+    <h3>@ViewBag.Title.</h3>
+    @*<h4>@ViewBag.Message</h4>*@
+</hgroup>
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+
+        </div>
+    </section>
+}
+
+
+<article>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h4>İk portal işarayan üye girişi</h4>
+            <p>Geleceğin Kadın Liderleri üyesi değilsiniz fakat online ik platformumuza kayıtlı iseniz şifrenizle giriş yapabilirsiniz veya sisteme bu link ile <a href="@Url.Action("Register","Account",routeValues: new { membertypeid = 0})" class="pozlink">kayıt</a>  olabilirsiniz.</p>
+            <p><a class="btn btn-default editDialog" en="750" href="@Url.Action("Login", "Account", routeValues: new { membertypeid = 0, membertype = "sifreliIsarayan",viewtype=1 })">Login&raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h4>Geleceğin Kadın Liderleri üye girişi</h4>
+            <p>
+                Kagiderde kayıtlı telefon numaranız ile giriş yapabilir,özgeçmiş oluşturabilirsiniz.
+            </p>
+            <p><a class="btn btn-default editDialog" en="750" href="@Url.Action("LoginMember", "Account", routeValues: new { membertypeid = 2, membertype = "uyeIsarayan", viewtype = 1 })"> Geleceğin Kadın Lideri <br/>Login &raquo;</a></p>
+        </div>
+        @*<div class="col-md-4">
+            <h4>Referanslı üye girişi</h4>
+            <p>
+                Referans numaranız ile giriş yapabilir,özgeçmiş oluşturabilirsiniz.
+            </p>
+            <p><a class="btn btn-default editDialog" en="750" href="@Url.Action("LoginRef", "Account", routeValues: new { membertypeid = 3, membertype = "referansliIsarayan", viewtype = 1 })"> Üye referanslı <br />Login &raquo;</a></p>
+        </div>*@
+
+    </div>
+</article>
+
+<div id="updateDialog"></div>
+@Html.Partial("~/Views/Cv/_ScriptsDialog.cshtml")
+

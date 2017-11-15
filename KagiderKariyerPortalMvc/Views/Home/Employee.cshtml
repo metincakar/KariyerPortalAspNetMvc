@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "İş arayan login";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<p>Geleceğin Kadın Liderleri <a href="@Url.Action("LoginMember","Account")">Kagiderde Login…</a></p>
+<p>Şifreli Üye Girişi<a href="@Url.Action("Login", "Account", routeValues: new { membertypeid = 0, membertype = "sifreliIsarayan" })">Login…</a></p>
+
+

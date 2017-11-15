@@ -1,0 +1,61 @@
+﻿@model IEnumerable<KagiderKariyerPortalMvc.Models.IlanBasvuruModel>
+
+@{
+    ViewBag.Title = "İlanlarınıza yapılan başvurular.";
+    Layout = "../Shared/_LayoutIsveren.cshtml";
+}
+
+<div class="page-header">
+    <h1>Başvurular <small>@ViewBag.Title</small></h1>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Başvuru Listesi</div>
+    <div class="panel-body">
+        <table class="table table-hover" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>
+                        İlan Başlığı
+                    </th>
+                    <th>
+                        Açık Pozisyon
+                    </th>
+                    <th>
+                        İlan Tarihi
+                    </th>
+                    <th>
+                        Başvuru Yapan
+                    </th>
+                    <th>
+                        Başvuru Tarihi
+                    </th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>@Html.ActionLink(item.IlanTitle, "IlanDetail", "Ilan", new { id = item.IlanId }, new { @class = "pozlink" })</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AcikPozisyon)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IlanTarihi, string.Format("0", item.IlanTarihi.ToString("d")))
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BasvuruYapanAd) @Html.DisplayFor(modelItem => item.BasvuruYapanSoyad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BasvuruTarihi)
+                        </td>
+                        <td>@Html.ActionLink("Cv Görüntüle", "Index", "Cv", new { id = item.BasvuruYapanId }, new { @class = "pozlink" })</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

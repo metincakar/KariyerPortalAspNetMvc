@@ -1,0 +1,44 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.User
+
+@{
+    ViewBag.Title = "title";
+    Layout = "";
+}
+
+@*@using (Ajax.BeginForm("", "", new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "per-img",
+    HttpMethod = "POST",
+    OnSuccess = "updateSuccess"
+}, new { enctype = "multipart/form-data", @id = "updateForm", @class = "form-horizontal", role = "form", action = "/Cv/UserImage" }))*@
+@using (Html.BeginForm("UserImage", "Cv", FormMethod.Post, new { @id = "updateForm", enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m=>m.UserId)
+     <div class="form-group">
+        
+        <div class="col-md-4">
+            <img id="cvfoto" class="img-frame" style="width: 100px; height: 130px;" src="@Model.ResimYol" />
+
+        </div>
+    </div>
+    <div class="form-group">
+     
+        <div class="col-md-4">
+            <input type="file" id="inputFile" name="resimfile" class="form-control" style="width: 320px;" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+        </div>
+    </div>
+}
+<script>
+    function kaydet() {
+
+        $('#updateForm').submit();
+        $('#updateDialog').dialog('close');
+    }
+</script>

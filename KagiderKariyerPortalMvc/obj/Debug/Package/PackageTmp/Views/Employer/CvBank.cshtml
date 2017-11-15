@@ -1,0 +1,118 @@
+﻿@using KagiderKariyerPortalMvc.HtmlHelpers
+@model IEnumerable<KagiderKariyerPortalMvc.Models.CvBankModel>
+
+
+@{
+    ViewBag.Title = "Cv Bankası";
+    Layout = "../Shared/_LayoutIsveren.cshtml";
+}
+
+
+<div class="page-header">
+    <h1>Özgeçmiş Bankası <small>cv listesi</small></h1>
+</div>
+<div class="row">
+    @using (@Html.BeginForm("SearchCv", "Employer"))
+    {
+        <div class="col-md-3" >
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Anahtar Kelime</h3>
+                    </div>
+                    <div class="panel-body">
+                        <input type="text" name="Keyword" value="" class="form-control" />
+                        <input type="submit" name="ara2" value="Ara" class="btn btn-warning" />
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Kriterler</h3>
+                    </div>
+                    <div class="panel-body">
+                        <label>Firma Adı</label>
+                        <input type="text" name="FirmaAd" value="@ViewBag.selectedFirmaad" class="form-control" />
+                        <label>Çalımak İstediğiniz Pozisyon</label>
+                        @Html.ListBox("ArananPozisyon", new MultiSelectList(ViewBag.Pozisyonlar, "Value", "Text", ViewBag.selectedPozisyonList), new { style = "width: 100%", @class = "searchSelect", multiple = "multiple" })
+                        <label>Firma Sektörü</label>
+                        @Html.ListBox("Sektorler", new MultiSelectList(ViewBag.Sektorlist, "Value", "Text", ViewBag.selectedSektorlist), new { style = "width:100%", @class = "searchSelect", @multiple = "multiple" })
+                        <label>Pozisyon Seviyesi</label>
+                        @Html.ListBox("PSeviye", new MultiSelectList(ViewBag.pozisyonSeviyeList, "Value", "Text", ViewBag.selectedPseviye), new { style = "width:100%", @class = "form-control searchSelect", @multiple = "multiple" })
+                        <label>Pozisyon Tipi</label>
+                        @Html.ListBox("PTipi", new MultiSelectList(ViewBag.pozisyonTipList, "Value", "Text", ViewBag.selectedPtip), new { @class = "form-control searchSelect", @multiple = "multiple" })
+                        <label>Şehir</label>
+                        @Html.DropDownList("Sehir", new SelectList(ViewBag.Sehirler, "CityId", "City"), "Şehir", new { @class = "form-control", @id = "cities" })
+                        <label>İlçe</label>
+                        @Html.DropDownList("Ilce", new SelectList(ViewBag.Ilceler, "CountyId", "County"), "İlçe", new { @class = "form-control", @id = "towns" })
+                        <input type="submit" name="ara" value="Ara" class="btn btn-warning" />
+                    </div>
+                </div>
+               
+            </div>
+            @*<div class="row">
+            <div class="form-group">
+                <label>Çalımak İstediğiniz Departman</label>
+                @Html.DropDownList("CalismakIstedigiAlan", new MultiSelectList(ViewBag.ListDepartman, "Value", "Text"), "Depatman Seçiniz", new { style = "width: 100%", @class = "searchSelect", multiple = "multiple" })
+            </div>
+        </div>*@
+ 
+           
+           
+        </div>
+    }
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Cv Listesi</div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Resim/Ad Soyad</th>
+                            <th>
+                                
+                            </th>
+                            <th>İletişim Bilgileri</th>
+                            <th>
+                                
+                            </th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><a title="@item.MemberName" class="genLink" style="text-decoration: none; float: left;" href="@Url.Action("Index", "Cv", routeValues: new {id = item.UserId})" target="_blank">
+                                        <img class="media-object" width="95" height="26" align="left" id="imgFirmaLogo" src="@item.Resim">
+                                    </a></td>
+                                <td><a class="pozlink genLink" href="@Url.Action("Index","Cv",routeValues:new{id=item.UserId})" target="_blank">
+                                        @item.MemberName @item.MemberSurName
+                                    </a> </td>
+                                <td><a class="frmlink genLink" href="@Url.Action("Index","Cv",routeValues:new{id=item.UserId})">@item.Email</a><br>
+                                    <span title="" class="sehirlink">@item.MobilTel</span></td>
+                                <td><a class="edit-btn pozlink" href="@Url.Action("Index", "Cv", routeValues: new {id = item.UserId})" target="_blank">
+    <span class="label label-warning">Cv Görüntüle</span>
+</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+              
+            </div>
+            @*<div class="pager PageTable" style="margin-top: 22px;">
+                Sayfa  @Html.Pager(Model.PagingInfo)
+            </div>*@
+        </div>
+        </div>
+  
+</div>
+<script>
+    $(document).ready(function () {
+        $(".searchSelect").select2({
+            placeholder: "Seçiniz...",
+            allowClear: true
+        });
+    });
+
+</script>

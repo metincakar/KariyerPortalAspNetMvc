@@ -1,0 +1,170 @@
+﻿@using System.Collections
+@model KagiderKariyerPortalMvc.Models.FirmaModel
+@{
+    ViewBag.Title = "title";
+    Layout = "../Shared/_LayoutIsveren.cshtml";
+}
+
+
+
+<div class="page-header">
+    <h1>Firma bilgilerini düzenle <small>firma bilgilerinizi kayıt ederek ilan bırakabilirsiniz.</small></h1>
+</div>
+<section>
+      <div class="panel panel-primary">
+                <div class="panel-heading">Firma Düzenle</div>
+                <div class="panel-body">
+    @using (Html.BeginForm("EditFirma", "Ilan", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "updateForm", enctype = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(m => m.Firma.UserId)
+         @Html.HiddenFor(m => m.Firma.FirmaId)
+         @Html.HiddenFor(m => m.Firma.User)
+      <table>
+    
+    <tr>
+        
+        <td>
+            
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.FirmaAd, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.TextBoxFor(m => m.Firma.FirmaAd, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Firma.FirmaAd)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.SorumluAd, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.TextBoxFor(m => m.Firma.SorumluAd, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Firma.SorumluAd)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.SorumluSoyAd, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.TextBoxFor(m => m.Firma.SorumluSoyAd, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.SorumluPozisyon, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.TextBoxFor(m => m.Firma.SorumluPozisyon, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.Tel, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.TextBoxFor(m => m.Firma.Tel, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.Email, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.TextBoxFor(m => m.Firma.Email, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.Adres, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.TextAreaFor(m => m.Firma.Adres, new { @class = "form-control" })
+                </div>
+            </div>
+        
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.FirmaHakkinda, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.TextAreaFor(m => m.Firma.FirmaHakkinda, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.FirmaCalismaAlanlari, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.DropDownListFor(m => m.Sektorler, new MultiSelectList(ViewBag.Sektorlist, "Value", "Text", Model.Firma.FirmaCalismaAlanlari), "Seçiniz", new { style = "width:100%", @class = "form-control searchSelect", multiple = "multiple" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.FaliyetGosterdigiIller, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @*@Html.ListBox("FaliyetGosterdigiIller", new SelectList(ViewBag.Ilceler, "CountyId", "County"), new { @class = "form-control",multiple="" })*@
+                    @*@Html.ListBoxFor(m => m.FaliyetGosterdigiIller,new SelectList(ViewBag.Ilceler, "CountyId", "County"), "Seçiniz", new {@class = "form-control"})*@
+                    @Html.ListBoxFor(m => m.CitiesViewModel.SelectedCities, Model.CitiesViewModel.Cities, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.CalisanSayisi, new { @class = "col-xs-5" })
+                <div class="col-xs-7">
+                    @Html.DropDownListFor(m => m.Firma.CalisanSayisi, new SelectList(Model.CalisanSayisiList,"Id","Sayi",Model.Firma.CalisanSayisi),"Seçiniz",new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Kaydet" class="btn btn-default" />
+                </div>
+            </div>
+        </td>
+        <td valign="top">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Firma.FirmaLogo, new { @class = "col-xs-5" })
+                <div class="col-xs-12">
+                    <img src="@Model.Firma.FirmaLogo" />
+                </div>
+            </div>
+            <div class="form-group">
+               
+                <div class="col-xs-7">
+                 
+                    <input type="file" name="logofile" value="" class="form-control" />
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+    }</div></div>
+</section>
+<aside>
+    <h3>İlan Bırak.</h3>
+    <p>
+        Firma bilgilerinizi girerek ilan bırakabilirsiniz
+    </p>
+</aside>
+@Html.Partial("~/Views/Cv/_ScriptsDialog.cshtml")
+
+<script>
+    $(document).ready(function () {
+        $("#cities").change(function () {
+
+            $.ajax({
+                type: "post",
+
+                url: "/Cv/IlceGetir",
+
+                data: "ilId=" + $(this).val(),
+
+                error: function (err) { },
+
+                success: function (response) { $("#towns").html(addOption(response)); },
+
+                complete: function () { }
+
+            });
+
+        });
+    });
+    function addOption(response) {
+
+        var items = "<option value=\"\">Lütfen Seçiniz...</option>";
+
+        $.each(response, function (i, town) {
+
+            items += "<option value=\"" + town.Value + "\">" + town.Text + "</option>";
+
+        });
+
+        return items;
+
+    }
+    $(document).ready(function () {
+        $(".searchSelect").select2();
+    });
+</script>

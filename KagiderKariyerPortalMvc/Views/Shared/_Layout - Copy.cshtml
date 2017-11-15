@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Kagider Online İnsan Kaynakları Platformu</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+                @Styles.Render("~/Content/css")
+        <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+        @Scripts.Render("~/bundles/jquery")
+        <script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+        <link href="~/Content/frontend.min.css" rel="stylesheet" />
+        <link href="~/Content/frontend.css" rel="stylesheet" />
+       
+        <link href="~/Content/Atlantis.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <script src="@Url.Content("~/Scripts/jquery-ui-1.8.11.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+        @Scripts.Render("~/bundles/modernizr")
+        
+       
+       
+
+
+
+        @*<script>
+            $(function() {
+                $("#dialog-model").dialog(
+                {
+                    height:140,
+                    modal:true
+
+                });
+            });
+        </script>*@
+      
+        @*<script type="text/javascript">
+           
+            $(document).ready(function () {
+
+                $(function () {
+                    $(".datepicker").datepicker();
+                });
+
+                $.ajaxSetup({ cache: false });
+
+                $("#openDialog").live("click", function (e) {
+                    e.preventDefault();
+                    var url = $(this).attr('href');
+
+                    $("#dialog-edit").dialog({
+                        title: 'Add Student',
+                        autoOpen: false,
+                        resizable: false,
+                        height: 355,
+                        width: 400,
+                        show: { effect: 'drop', direction: "up" },
+                        modal: true,
+                        draggable: true,
+                        open: function (event, ui) {
+                            $(this).load(url);
+                        },
+                        close: function (event, ui) {
+                            $(this).dialog('close');
+                        }
+                    });
+
+                    $("#dialog-edit").dialog('open');
+                    return false;
+                });
+
+                $(".editDialog").live("click", function (e) {
+                    var url = $(this).attr('href');
+                    $("#dialog-edit").dialog({
+                        title: '@ViewBag.DialogTitle',
+                        autoOpen: false,
+                        resizable: false,
+                        height: 500,
+                        width: 600,
+                        show:'slide',
+                        //show: { effect: 'drop', direction: "up" },
+                        modal: true,
+                        draggable: true,
+                        open: function (event, ui) {
+                         
+                            $(this).load(url);
+
+                        }//,
+                        //close: function (event, ui) {
+                        //    $(this).dialog('close');
+                        //}
+                    });
+
+                    $("#dialog-edit").dialog('open');
+                    return false;
+                });
+
+                function OoSuccess() {
+                    alert("alert");
+                    $("#dialog-edit").dialog('close');
+                    
+                }
+
+                $(".confirmDialog").live("click", function (e) {
+
+                    var url = $(this).attr('href');
+                    $("#dialog-confirm").dialog({
+                        autoOpen: false,
+                        resizable: false,
+                        height: 170,
+                        width: 350,
+                        show: { effect: 'drop', direction: "up" },
+                        modal: true,
+                        draggable: true,
+                        buttons: {
+                            "OK": function () {
+                                $(this).dialog("close");
+                                window.location = url;
+
+                            },
+                            "Cancel": function () {
+                                $(this).dialog("close");
+
+                            }
+                        }
+                    });
+                    $("#dialog-confirm").dialog('open');
+                    return false;
+                });
+
+                $(".viewDialog").live("click", function (e) {
+                    var url = $(this).attr('href');
+                    $("#dialog-view").dialog({
+                        title: 'View Customer',
+                        autoOpen: false,
+                        resizable: false,
+                        height: 355,
+                        width: 400,
+                        show: { effect: 'drop', direction: "up" },
+                        modal: true,
+                        draggable: true,
+                        open: function (event, ui) {
+                            $(this).load(url);
+
+                        },
+                        buttons: {
+                            "Close": function () {
+                                $(this).dialog("close");
+
+                            }
+                        },
+                        close: function (event, ui) {
+                            $(this).dialog('close');
+                        }
+                    });
+
+                    $("#dialog-view").dialog('open');
+                    return false;
+                });
+
+                $("#btncancel").live("click", function (e) {
+                    $("#dialog-edit").dialog('close');
+
+                });
+            });
+        </script>*@
+       
+    </head>
+    <body>
+        <header>
+            <div id="commonMessage"></div>
+            <div class="content-wrapper">
+                <div class="float-left">
+
+                    
+                    <p class="site-title"><img src="~/Images/logokagider.png" />@Html.ActionLink(" Online İnsan Kaynakları Platformu", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Ana Sayfa", "Index", "Home")</li>
+                            <li>@Html.ActionLink("İlanlar", "Index", "Ilan")</li>
+                            @if ((Session["uid"]==null))
+                            {
+                                <li>@Html.ActionLink("Öz Geçmiş Oluştur", "Employee", "Home")</li>
+                                <li>@Html.ActionLink("İş Veren", "Employer", "Home")</li>
+                            }
+                            else if (Session["uid"] != null && (int)(Session["typeid"])==0 )
+                            {
+                                <li>@Html.ActionLink("Öz Geçmiş", "Index", "Cv")</li>
+                            }
+                            else if (Session["uid"] != null && (int) (Session["typeid"]) == 1)
+                            {
+                                <li>@Html.ActionLink("İlan Verin", "AddIlan", "Ilan")</li>
+                            }
+
+                            <li>@Html.ActionLink("Hakkında", "About", "Home")</li>
+                            <li>@Html.ActionLink("İletişim", "Contact", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+           @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Kagider</p>
+                </div>
+            </div>
+        </footer>
+
+       
+        @RenderSection("scripts", required: false)
+        
+
+       
+      
+        
+
+    </body>
+</html>

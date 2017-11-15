@@ -1,0 +1,45 @@
+﻿@using KagiderKariyerPortal.Controllers
+@model KagiderKariyerPortal.Models.LoginIsArayanDiger
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+
+<div id="loginIsArayan">
+    @using (Html.BeginForm())
+    {
+         @Html.AntiForgeryToken()    
+    <div class="form-horizontal">
+        <h4>Login</h4>
+        <hr />
+        @Html.ValidationSummary()
+        <div class="form-group">
+            @Html.LabelFor(model => model.UyeMail, new { @class = "editor-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UyeMail)
+                @Html.ValidationMessageFor(model => model.UyeMail)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.UyeSifre, new { @class = "editor-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UyeSifre)
+                @Html.ValidationMessageFor(model => model.UyeSifre)
+            </div>
+        </div>
+        <div>@Html.ActionLink("Yeni Üye Kayıt","EkleIsArayan","Account")</div>
+        @*Fields removed for brevity.*@        
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    }
+</div>

@@ -1,0 +1,187 @@
+﻿@using KagiderKariyerPortal.Entities.ConCreate
+@using KagiderKariyerPortalMvc.Models
+@model IEnumerable<KagiderKariyerPortal.Entities.ConCreate.CvEgitimUniversiteBilgi>
+
+@{
+    var okullar = Model;
+    var modeleEgitimSeviyesiModel = new EgitimSeviyesiModel();
+    var cvEgitimUniversiteBilgis = okullar as CvEgitimUniversiteBilgi[] ?? okullar.ToArray();
+    var ensonEgitim = "??";
+    if (cvEgitimUniversiteBilgis.ToList().Count > 0)
+    {
+        ensonEgitim = modeleEgitimSeviyesiModel.EgitimSeviyesiList.Find(f => f.Id == cvEgitimUniversiteBilgis.OrderBy(e => e.EgitimTipi).ToList()[0].EgitimTipi).Seviye;
+        ;
+    }
+    
+}
+
+<div class="education-info info-box">
+    <h3>Eğitim Bilgileri @Html.ActionLink("Ekle", "AddEgitim",null, new { @class = "editEgitim add-btn", @id = "universiteLink", title = "Eğitim Düzenle", en = "600", boy = "400" })</h3>
+
+    <ul class="ec-state">
+        <li id="egitimdurumutr"><strong> <span id="lblEgitimDurumRes">Eğitim Durumu</span></strong>: <span id="egitimdurumu">Eğitim Durumunuz, <b>@ensonEgitim</b> olarak kaydedilmiştir.</span></li>
+
+    </ul>
+    
+    <div id="universiteBilgi">
+        
+      
+        @if (cvEgitimUniversiteBilgis.ToList().Count > 0)
+        {
+         
+            foreach (var universiteBilgi in cvEgitimUniversiteBilgis)
+            {
+              var egitim = modeleEgitimSeviyesiModel.EgitimSeviyesiList.Find(e => e.Id == universiteBilgi.EgitimTipi).Seviye; 
+                <ul class="ec-history" id="divUniversitelerDolu">
+
+
+                    <li class="school clearfix">
+                        <div class="col sc-info"><strong> <span id="lblUniversiteRes">@egitim</span> </strong>@universiteBilgi.MezuniyetYil</div>
+                        <div class="col sc-name">
+                            <div class="sc-col clearfix">
+                                <div class="sc-cont">
+                                    <strong>
+                                        @universiteBilgi.OkulAd
+                                        <span id="Label5" style="font-style: italic; font-weight: normal;"> </span>
+                                    </strong>
+                                    @universiteBilgi.Bolum
+                                    <!-- <span> (<span id="lblogretimDili" style="font-style: italic;"></span>)</span>
+                                        <span id="unibursTipi">  - <span id="lblUniBursTipi" style="font-style: italic;">Destek Bursu</span> </span>
+                                        <span id="spnBursNotu" style="font-style: italic;">(%0)</span>-->
+                                </div>
+                                <div class="sc-avg"><strong>&nbsp;<span id="spnGoster">(@universiteBilgi.MezuniyetDerece)</span></strong></div>
+                            </div>
+
+
+
+                            <div class="sc-col ec-notes clearfix">
+                                <span id="lblEgitimNotlari"></span>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col sc-edit">
+                            @Html.ActionLink("Düzenle", "EditEgitim", new { id = universiteBilgi.EgitimId}, new { @class = "editEgitim edit-btn", @id = "universiteDuzenle", title = "Eğitim Düzenle", en = "600", boy = "400" })
+                        </div>
+                    </li>
+
+
+                </ul>
+            }
+        }
+        else
+        {
+            <div id="divUniversitelerBos" class="short-info info-box empty-box">
+                <h3>Üniversite Bilgileri </h3>
+                <div class="empty-area">
+                    <span>
+
+                        @Html.ActionLink("Bilginizi ekleyin", "AddEgitim", null, new { @class = "editEgitim add-btn", title = "Eğitim Ekle", en = "600", boy = "400" })
+                    </span>
+                </div>
+            </div>
+        }
+        <!--Soldaki tüm alanlar için boş olduğunda bu görünecek-->
+        <!--Soldaki tüm alanlar için boş olduğunda bu görünecek-->
+        
+        @*@{
+            var egitimUniversiteBilgis = liseler as IList<CvEgitimUniversiteBilgi> ?? liseler.ToList();
+        }
+        @if (egitimUniversiteBilgis.ToList().Count > 0)
+        {
+            <ul class="ec-history" id="lisebilgisi">
+                <li class="school clearfix">
+                    <div class="col sc-info"><strong><span id="lblLiseRes">Lise</span></strong>@egitimUniversiteBilgis.ToList()[0].MezuniyetYil</div>
+
+                    <div class="col sc-name">
+                        <div class="sc-col clearfix">
+                            <div class="sc-cont">
+                                <strong>@egitimUniversiteBilgis.ToList()[0].UniversiteAd</strong>@egitimUniversiteBilgis.ToList()[0].Bolum
+                            </div>
+                            <div class="sc-avg"><strong>&nbsp;</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="col sc-edit">
+                        @Html.ActionLink("Düzenle", "EditEgitim", new {id = egitimUniversiteBilgis.ToList()[0].EgitimId, etip = 1}, new {@class = "editEgitim edit-btn", @id = "universiteDuzenle", title = "Lise Eğitim Düzenle", en = "600", boy = "265"})
+                    </div>
+                </li>
+            </ul>
+        }
+        else
+        {
+            <div id="divUniversitelerBos" class="short-info info-box empty-box">
+                <h3>Lise Bilgileri </h3>
+                <div class="empty-area">
+                    <span>
+
+                        @Html.ActionLink("Bilginizi ekleyin", "AddEgitim", new {etip=1}, new { @class = "editEgitim add-btn", title = "Lise Eğitim Ekle", en = "600", boy = "400" })
+                    </span>
+                </div>
+            </div>
+        }*@
+    </div>
+
+</div>
+
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+
+
+@*<script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@Scripts.Render("~/bundles/modernizr")
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.ajaxSetup({ cache: false });
+        var linkObj;
+        $(function () {
+
+            
+            $(".editEgitim").click(function () {
+                //change the title of the dialog
+
+                linkObj = $(this);
+                var dialogDiv = $('#updateDialogEgitim');
+                var viewUrl = linkObj.attr('href');
+                var title = linkObj.attr('title');
+                var en = linkObj.attr('en');
+                var boy = linkObj.attr('boy');
+                $('#updateDialogEgitim').dialog({
+                    autoOpen: false,
+                    height: boy,
+                    width: en,
+
+                    title: title,
+                    resizable: false,
+                    modal: true,
+                    draggable: true,
+                    open: function (event, ui) {
+                        $(this).load(viewUrl);
+
+                    },
+                    close: function (event, ui) {
+                        $('#updateDialogEgitim').dialog('destroy').empty();
+                    }
+
+                });
+                
+                $('#updateDialogEgitim').dialog('open');
+                return false;
+            });
+        });
+
+
+
+    });
+
+
+</script>

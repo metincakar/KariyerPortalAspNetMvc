@@ -1,0 +1,142 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvIletisimBilgi
+
+
+    @using (Ajax.BeginForm("CvEditInfo", "Cv", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "genelbilgiajax",
+            HttpMethod = "POST",
+            OnSuccess = "updateSuccess"
+        }, new { @id = "updateForm", @class = "form-horizontal", role = "form" }))
+     {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+    
+ 
+            <input type="hidden" name="silinsinmi" id="silinsinmi" value="0" />
+            @Html.HiddenFor(model => model.IletisimBilgiId)
+            @Html.HiddenFor(model => model.UserId)
+            <div class="form-group">
+                @Html.LabelFor(m => m.UyeAd, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.UyeAd, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.UyeSoyad, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.UyeSoyad, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.UyeMail, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.UyeMail, new { @class = "form-control" })
+                </div>
+            </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MobilTel, new { @class = "col-md-4 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.MobilTel, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.EvTel, new { @class = "col-md-4 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.EvTel, new { @class = "form-control" })
+            </div>
+        </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Adres, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.Adres, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CityId, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.DropDownListFor(m => m.CityId, new SelectList(ViewBag.Sehirler, "CityId", "City"), "Seçiniz", new { @class = "form-control",@id="cities" })
+                    @Html.ValidationMessageFor(model => model.CityId)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CountyId, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.DropDownListFor(m => m.CountyId, new SelectList(ViewBag.Ilceler, "CountyId", "County"), "Seçiniz", new { @class = "form-control",@id="towns" })
+                    @Html.ValidationMessageFor(model => model.CountyId)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Semt, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.Semt, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CountryId, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+
+                    @Html.DropDownListFor(m => m.CountryId, new SelectList(ViewBag.Ulkeler, "CountryId", "Country"), "Seçiniz", new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.CountryId)
+                </div>
+            </div>
+         <div class="form-group">
+             @Html.LabelFor(m => m.EgitimDurumu, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+                 @Html.TextBoxFor(m => m.EgitimDurumu, new { @class = "form-control" })
+             </div>
+         </div>
+          <div class="form-group">
+                @Html.LabelFor(m => m.WebLink, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.WebLink, new { @class = "form-control" })
+                </div>
+            </div>
+       <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+        </div>
+    </div>
+    }
+<script>
+    $(document).ready(function() {
+        $("#cities").change(function() {
+
+            $.ajax({
+                type: "post",
+
+                url: "/Cv/IlceGetir",
+
+                data: "ilId=" + $(this).val(),
+
+                error: function(err) {},
+
+                success: function(response) { $("#towns").html(addOption(response)); },
+
+                complete: function() {}
+
+            });
+
+        });
+    });
+    function addOption(response) {
+
+        var items = "<option value=\"\">Lütfen Seçiniz...</option>";
+
+        $.each(response, function (i, town) {
+
+            items += "<option value=\"" + town.Value + "\">" + town.Text + "</option>";
+
+        });
+
+        return items;
+
+    }
+    function kaydet() {
+
+        $('#updateForm').submit();
+        //$('#updateDialog').dialog('close');
+    }
+</script>
+    

@@ -1,0 +1,65 @@
+﻿@model System.Collections.Generic.List<KagiderKariyerPortal.Entities.ConCreate.CvSinavBilgi>
+
+
+
+@foreach (var snv in Model)
+{
+
+    <div class="exam-item">
+        <strong class="clearfix">
+            <span>@snv.SinavAdi (@snv.SinavSkor)</span> 
+            <a href="@Url.Action("EditSinav","Cv",routeValues:new{id=@snv.SinavId})" title="Sınav Düzenle" en="600" boy="390" class="editDialogSinav edit-btn">Düzenle</a>
+        </strong>
+        <span>@snv.SinavYapanKurulus - @snv.SinavTarih</span>
+        <p>@snv.Aciklama</p>
+    </div>
+}
+
+
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var linkObj;
+        $(function () {
+
+            $.ajaxSetup({ cache: false });
+            $(".editDialogSinav").click(function () {
+                //change the title of the dialog
+                
+                linkObj = $(this);
+                var dialogDiv = $('#updateDialogSinav');
+                var viewUrl = linkObj.attr('href');
+                var title = linkObj.attr('title');
+                var en = linkObj.attr('en');
+                var boy = linkObj.attr('boy');
+                $('#updateDialogSinav').dialog({
+                    autoOpen: false,
+                    height: 'auto',
+                    width: en,
+
+                    title: title,
+                    resizable: true,
+                    modal: true,
+                    draggable: true,
+                    open: function (event, ui) {
+                  
+                        $(this).load(viewUrl);
+                    },
+                    close: function (event, ui) {
+                        $('#updateDialogSinav').dialog('destroy').empty();
+                    }
+
+                });
+                dialogDiv.dialog('open');
+                return false;
+            });
+        });
+
+
+
+    });
+
+
+</script>

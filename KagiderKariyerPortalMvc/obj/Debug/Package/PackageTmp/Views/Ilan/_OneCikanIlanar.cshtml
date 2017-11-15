@@ -1,0 +1,55 @@
+﻿@model IEnumerable<KagiderKariyerPortal.Entities.ConCreate.Ilan>
+
+
+
+<div class="icerik" style="background-color: White; border: 0px solid silver; padding: 10px;">
+    <table>
+        <tr>
+            <td colspan="2">
+                <div style="color: rgb(162, 47, 167); font-size: 18px; font-weight: bold; margin-top: 10px; margin-bottom: 5px; margin-left: 10px;">
+                    <strong class="h3">Öne Çıkan İş İlanları</strong>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="prestijPaging" style="opacity: 1;" @*onmouseover="prestijPause();" onmouseout="prestijResume();"*@>
+                    <ul id="prestij" style="width: 620px;">
+                        @if (Model != null && Model.ToList().Count > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <li>
+                                    <div style="width: 300px; height: 50px; overflow: hidden; float: left;">
+                                       
+                                            <div style='width: 101px; height: 32px; margin-right: 7px; vertical-align: middle; float: left; position: relative; background-image: url("http://cdn3.kariyer.net/WebSite/Images/AnaSayfa/prestijcerceve.png");'>
+                                                <img width="95" height="26" align="left" alt="@item.Firma.FirmaAd" src="@item.Firma.FirmaLogo">
+                                            </div>
+
+                                       
+                                        <div style="height: 50px; float: left;">
+                                            <b>
+                                                @*<a style="color: rgb(0, 0, 0); text-decoration: none;" onclick="@Url.Action("IlanDetail", "Ilan", new {@ilanId = item.IlanId })"><span>@item.Firma.FirmaAd ...</span></a>*@
+                                                @Html.ActionLink(item.Firma.FirmaAd, "IlanDetail", "Ilan", new { @id = item.IlanId }, new { style = "color: rgb(0, 0, 0); text-decoration: none;" })
+                                            </b>
+                                            <br>
+                                            <a style="color: black; text-decoration: none; float: left;">
+                                                @item.AcikPozisyon
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </li>
+
+                               
+
+                            }
+                        }
+
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+</div>

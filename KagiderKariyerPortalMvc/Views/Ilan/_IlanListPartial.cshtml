@@ -1,0 +1,199 @@
+﻿
+@model KagiderKariyerPortalMvc.Models.TumIlanViewModel
+@{
+    Layout = ViewBag.logintype==1 ? "../shared/_LayoutIsveren.cshtml" : "../shared/_Layout.cshtml";
+}
+@if (Request.QueryString["uyari"] != null)
+{
+    <span class="alert alert-warning " style="display: block">İş Başvurusu yapabilmek için cv oluşturmanız gerekmektedir.</span>
+}
+@if (ViewBag.logintype == 0)
+{
+    <div class="page-header">
+         <h1>İş İlanları. <small>Listedeki ilanlara iş başvurusu yapabilirsiniz...</small></h1>
+     </div>
+}
+else
+{
+   
+      <div class="page-header">
+         <h1>İlanlarınız. <small>yayındaki ilanlarınız...</small></h1>
+     </div>
+}
+
+<div class="row">
+    @using (@Html.BeginForm("SearchIlan", "Ilan",FormMethod.Post))
+{
+
+    <div class="col-md-3" >
+
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Anahtar Kelime</h3>
+                </div>
+                <div class="panel-body">
+                    <input type="text" name="Keyword" value="@ViewBag.selectedFirmaad" class="form-control" />
+                    <input type="submit" name="ara2" value="Ara" class="form-control btn btn-warning" />
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Kriterler</h3>
+                </div>
+                <div class="panel-body">
+                    <label>Firma Adı</label>
+                    <input type="text" name="FirmaAd" value="@ViewBag.selectedFirmaad" class="form-control" />
+                    <label>Çalımak İstediğiniz Pozisyon</label>
+                    @Html.ListBox("ArananPozisyon", new MultiSelectList(ViewBag.Pozisyonlar, "Value", "Text", ViewBag.selectedPozisyonList), new { style = "width: 100%", @class = "searchSelect", multiple = "multiple" })
+                    <label>Firma Sektörü</label>
+                    @Html.ListBox("Sektorler", new MultiSelectList(ViewBag.Sektorlist, "Value", "Text", ViewBag.selectedSektorlist), new { style = "width:100%", @class = "searchSelect", @multiple = "multiple" })
+                    <label>Pozisyon Seviyesi</label>
+                    @Html.ListBox("PSeviye", new MultiSelectList(ViewBag.pozisyonSeviyeList, "Value", "Text", ViewBag.selectedPseviye), new { style = "width:100%", @class = "form-control searchSelect", @multiple = "multiple" })
+                    <label>Pozisyon Tipi</label>
+                    @Html.ListBox("PTipi", new MultiSelectList(ViewBag.pozisyonTipList, "Value", "Text", ViewBag.selectedPtip), new { @class = "form-control searchSelect", @multiple = "multiple" })
+                    <label>Şehir</label>
+                    @Html.DropDownList("Sehir", new SelectList(ViewBag.Sehirler, "CityId", "City"), "Şehir", new { @class = "form-control", @id = "cities" })
+                    <label>İlçe</label>
+                    @Html.DropDownList("Ilce", new SelectList(ViewBag.Ilceler, "CountyId", "County"), "İlçe", new { @class = "form-control", @id = "towns" })
+                    <input type="submit" name="ara" value="Ara" class="form-control btn btn-warning" />
+                </div>
+            </div>
+        </div>
+     
+        @*<div class="row">
+            <div class="form-group">
+                <label>Çalımak İstediğiniz Departman</label>
+                @Html.DropDownList("CalismakIstedigiAlan", new MultiSelectList(ViewBag.ListDepartman, "Value", "Text"), "Depatman Seçiniz", new { style = "width: 100%", @class = "searchSelect", multiple = "multiple" })
+            </div>
+        </div>*@
+    </div>    
+    }
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">İlan Listesi</div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead >
+                        <tr>
+                            <th>Firma</th>
+                            <th>
+                                Açık Pozisyon
+                            </th>
+                            <th>İl/İlçe</th>
+                            <th>
+                                İlan Tarihi
+                            </th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tbody >
+                        @foreach (var item in Model.IlanList)
+                        {
+                            <tr>
+                                <td>
+                                    @if (ViewBag.logintype == 1)
+                                    {
+                                        <a title="@item.Firma.FirmaAd" class="genLink" style="text-decoration: none; float: left;" href="@Url.Action("EditFirma", routeValues: new { id = item.FirmaId })" target="_blank">
+                                            <img width="95" height="26" class="media-object" align="left" id="imgFirmaLogo" alt="@item.Firma.FirmaAd" src="@item.Firma.FirmaLogo">
+                                            <b>@item.Firma.FirmaAd</b>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <img width="95" height="26" class="media-object" align="left" id="imgFirmaLogo" alt="@item.Firma.FirmaAd" src="@item.Firma.FirmaLogo">
+                                        <b>@item.Firma.FirmaAd</b>
+                                    }
+                                </td>
+                                <td>
+                                    <a class="pozlink genLink" href="@Url.Action("IlanDetail", routeValues: new { id = item.IlanId })" target="_blank">
+                                        @item.AcikPozisyon
+                                    </a>
+                                </td>
+                                <td><span title="İstanbul(Avr.), İstanbul(Asya)" class="sehirlink">@item.SetupCity.City (@item.SetupCounty.County)</span></td>
+                                <td>
+                                    @item.IlanStartDate.ToShortDateString()
+                                </td>
+                                <td>
+                                    @if (ViewBag.logintype == 0)
+                                    {
+                                        <a  href="@Url.Action("AddApp", "Employee", routeValues: new { id = item.IlanId })" target="_blank">
+                                           
+                                            <span class="label label-default">Başvur</span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        if (Request.IsAuthenticated && WebSecurity.GetUserId(User.Identity.Name.Replace("i","İ"))==item.UserId)
+                                        {
+                                            <a class="pozlink" style="height: 1px;" href="@Url.Action("EditIlan", "Ilan", routeValues: new {id = item.IlanId})" target="_blank">
+                                                Düzenle
+                                            </a>
+                                        }
+                                    }
+
+                                </td>
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div></div></div>
+
+
+
+
+
+        <div class="pager PageTable" style="margin-top: 22px;">
+            Sayfa  @*@Html.Pager(Model.PagingInfo)*@
+        </div>
+
+
+
+        <script>
+
+            $(document).ready(function () {
+
+
+
+                $("#cities").change(function () {
+
+                    $.ajax({
+                        type: "post",
+
+                        url: "/Cv/IlceGetir",
+
+                        data: "ilId=" + $(this).val(),
+
+                        error: function (err) { },
+
+                        success: function (response) { $("#towns").html(addOption(response)); },
+
+                        complete: function () { }
+
+                    });
+
+                });
+
+            });
+            function addOption(response) {
+
+                var items = "<option value=\"\">Lütfen Seçiniz...</option>";
+
+                $.each(response, function (i, town) {
+
+                    items += "<option value=\"" + town.Value + "\">" + town.Text + "</option>";
+
+                });
+
+                return items;
+            }
+           $(document).ready(function () {
+                $(".searchSelect").select2();
+            });
+
+        </script>

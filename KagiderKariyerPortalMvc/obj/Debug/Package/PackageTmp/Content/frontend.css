@@ -1,0 +1,844 @@
+﻿/*CLEAR FIX*/
+.clear {
+  *zoom: 1;
+}
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*FONTS*/
+/*@font-face {
+  font-family: 'open-sans';
+  src: url('../fonts/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/OpenSans-Regular-webfontd41d.eot?#iefix') format('eot'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open-sans-b';
+  src: url('../fonts/OpenSans-Bold-webfont.eot');
+  src: url('../fonts/OpenSans-Bold-webfontd41d.eot?#iefix') format('eot'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Bold-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open-sans-l';
+  src: url('../fonts/OpenSans-Light-webfont.eot');
+  src: url('../fonts/OpenSans-Light-webfontd41d.eot?#iefix') format('eot'), url('../fonts/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Light-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open-sans-sb';
+  src: url('../fonts/OpenSans-Semibold-webfont.eot');
+  src: url('../fonts/OpenSans-Semibold-webfontd41d.eot?#iefix') format('eot'), url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Semibold-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+/*KARİYERİM*/
+.kariyerimWrapper,
+.ozgecmisimWrapper {
+  width: 992px;
+  margin: 0 auto;
+}
+.kariyerimWrapper img,
+.ozgecmisimWrapper img {
+  border: 0;
+}
+.kariyerimWrapper ul,
+.ozgecmisimWrapper ul,
+.kariyerimWrapper ol,
+.ozgecmisimWrapper ol {
+  margin: 0;
+  padding: 0;
+}
+.kariyerimWrapper .left-side,
+.ozgecmisimWrapper .left-side {
+  width: 656px;
+  float: left;
+}
+.kariyerimWrapper .right-side,
+.ozgecmisimWrapper .right-side {
+  width: 327px;
+  float: right;
+}
+.kariyerimWrapper .right-side .right-banner,
+.ozgecmisimWrapper .right-side .right-banner {
+  margin: 0 0 15px;
+}
+.kariyerimWrapper .right-side .right-banner img,
+.ozgecmisimWrapper .right-side .right-banner img {
+  display: block;
+  max-width: 100%;
+}
+
+.kariyerimWrapper .box,
+.ozgecmisimWrapper .box {
+  border: 1px solid #eedbf7;
+  font: 12px Helvetica, arial, sans-serif;
+  margin: 0 0 15px;
+}
+.kariyerimWrapper .box li,
+.ozgecmisimWrapper .box li {
+  list-style: none;
+}
+.kariyerimWrapper .box .title,
+.ozgecmisimWrapper .box .title {
+  padding: 10px 20px;
+  background: #eedbf7;
+  color: #333;
+}
+.kariyerimWrapper .box .title h1,
+.ozgecmisimWrapper .box .title h1 {
+  font: bold 14px/18px Helvetica, arial, sans-serif;
+  color: #333;
+}
+.kariyerimWrapper .box .title h1 span,
+.ozgecmisimWrapper .box .title h1 span {
+  color: #333;
+}
+.kariyerimWrapper .box .title h1.ico,
+.ozgecmisimWrapper .box .title h1.ico {
+  padding-left: 30px;
+  background: url(../images/kariyerim_box_title_sprite.png) no-repeat left top;
+}
+
+.ozgecmisimWrapper {
+  font: normal 13px Arial, Helvetica, Sans-Serif;
+}
+.ozgecmisimWrapper a.edit-btn {
+  font-size: 12px;
+  font-weight: normal;
+  color: #683685;
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -2px -3px;
+  padding-left: 18px;
+}
+.ozgecmisimWrapper a.add-btn {
+  font-size: 12px;
+  font-weight: normal;
+  color: #683685;
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -2px -457px;
+  padding-left: 18px;
+}
+.ozgecmisimWrapper .right-side {
+  width: auto;
+}
+.ozgecmisimWrapper .box .steps-ozgecmis-doluluk {
+  width: 140px!important;
+}
+.ozgecmisimWrapper .print-logo-cont {
+  text-align: right;
+  padding: 10px 26px 0 0;
+}
+.ozgecmisimWrapper .top-link-cont {
+  width: 95%;
+}
+.ozgecmisimWrapper .top-link-cont a {
+  display: block;
+  float: right;
+  padding: 10px;
+}
+.ozgecmisimWrapper .print-page {
+  overflow: visible!important;
+}
+.ozgecmisimWrapper .print-page .left-side {
+  width: 95%;
+  overflow: visible !important;
+  margin-bottom: 20px;
+}
+.ozgecmisimWrapper .print-page .left-side .cv-page-cont {
+  overflow: visible !important;
+}
+.ozgecmisimWrapper .print-page .left-side .exam-info .exam-item,
+.ozgecmisimWrapper .print-page .left-side .cert-info .cert-item,
+.ozgecmisimWrapper .print-page .left-side .course-info .course-item {
+  width: 80%;
+}
+.ozgecmisimWrapper .print-page .left-side .cert-info .cert-item,
+.ozgecmisimWrapper .print-page .left-side .exam-info .exam-item,
+.ozgecmisimWrapper .print-page .left-side .course-info .course-item {
+  float: left !important;
+  width: 100% !important;
+}
+.ozgecmisimWrapper .pp2 * {
+  font-size: 14px !important;
+}
+.ozgecmisimWrapper .pp3 .left-side {
+  float: none;
+}
+.ozgecmisimWrapper .page-break {
+  page-break-inside: avoid;
+}
+.ozgecmisimWrapper .left-side {
+  border: 1px solid #eedbf7;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont {
+  margin: 15px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box {
+  margin-top: 40px;
+  page-break-inside: avoid;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box ul.pers-experience,
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box ul.job-experience,
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box ul.ec-history li.school,
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box ul.pers-langs li table tr,
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box ul.cert-info li,
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box .comp-ab li,
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box ul.exam-info li,
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box .ref-info ul li {
+  page-break-inside: avoid !important;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-info,
+.ozgecmisimWrapper .left-side .cv-page-cont education-info,
+.ozgecmisimWrapper .left-side .cv-page-cont ability-info,
+.ozgecmisimWrapper .left-side .cv-page-cont ref-info {
+  page-break-inside: auto !important;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box h3 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding: 0 0 5px 35px;
+  margin: 10px 0;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box h3 a.edit-btn,
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box h3 a.add-btn {
+  float: right;
+  margin-right: 4px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .contact-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -1px -76px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .pers-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 5px -153px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .short-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 6px -304px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .executive-admin-info h3,
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 1px -379px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .education-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -1px -529px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .language-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 2px -607px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -2px -684px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .project-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -3px -758px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .add-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -4px -831px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ref-info h3 {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -4px -910px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box > ul li {
+  list-style-type: none;
+  font-size: 12px;
+  color: #333;
+  padding: 3px 0;
+  page-break-after: auto;
+  word-break: break-word;
+  -ms-word-break: break-word;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box > ul li strong {
+  display: inline-block;
+  width: 140px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box > ul li div {
+  word-break: break-word;
+  -ms-word-break: break-word;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box > ul li ul {
+  margin-left: 25px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box > ul li li {
+  list-style-type: disc;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box > div > ul li {
+  list-style-type: none;
+  font-size: 12px;
+  color: #333;
+  padding: 3px 0;
+  page-break-after: auto;
+  word-break: break-word;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .info-box > div > ul li strong {
+  display: inline-block;
+  width: 140px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .executive-admin-info > ul li > strong {
+  width: 395px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .education-info > ul li > strong {
+  width: 183px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .per-info-cont .per-img {
+  width: 97px;
+  float: left;
+  text-align: center;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .per-info-cont .per-img img {
+  margin-bottom: 10px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .per-info-cont .per-name-title {
+  float: left;
+  width: 400px;
+  margin-left: 20px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .per-info-cont .per-name-title h1 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .per-info-cont .per-name-title h2 {
+  font-weight: normal;
+  font-size: 16px;
+  color: #333;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .per-info-cont > a.edit-btn {
+  display: block;
+  float: right;
+  margin-right: 5px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .contact-info {
+  margin-top: 35px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-cont h4,
+.ozgecmisimWrapper .left-side .cv-page-cont .intership-cont h4 {
+  color: #ff6600;
+  margin-bottom: 0;
+  page-break-after: auto;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont ul.job-experience {
+  margin-bottom: 20px !important;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont ul.job-experience ~ ul.job-experience {
+  border-top: 1px solid #ececec;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-cont ul.job-experience > li,
+.ozgecmisimWrapper .left-side .cv-page-cont .intership-cont ul.job-experience > li {
+  list-style-type: none;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-cont li.clearfix a.edit-btn,
+.ozgecmisimWrapper .left-side .cv-page-cont .intership-cont li.clearfix a.edit-btn {
+  float: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-cont li.clearfix,
+.ozgecmisimWrapper .left-side .cv-page-cont .intership-cont li.clearfix {
+  margin: 7px 0;
+  padding-top: 15px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-cont li.job-detail-title,
+.ozgecmisimWrapper .left-side .cv-page-cont .intership-cont li.job-detail-title {
+  font-weight: bold;
+  color: #999;
+  margin: 10px 0;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-cont ul li.job-details,
+.ozgecmisimWrapper .left-side .cv-page-cont .intership-cont ul li.job-details {
+  margin: 0 5px 10px 20px;
+  word-wrap: break-word;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .job-exp-cont ul li.job-details ul li,
+.ozgecmisimWrapper .left-side .cv-page-cont .intership-cont ul li.job-details ul > li {
+  list-style-type: disc;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .education-info .ec-state li {
+  border-bottom: 1px solid #ececec;
+  padding: 20px 0 25px 0;
+  margin-bottom: 20px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school {
+  margin-bottom: 15px;
+  padding-top: 15px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school div {
+  float: left;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school ~ .school {
+  border-top: 1px solid #ececec;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school div ~ div {
+  margin-left: 5px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school div.sc-info {
+  width: 180px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school div.sc-info strong {
+  display: block;
+  width: auto;
+  margin-bottom: 5px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school div.sc-name {
+  width: 307px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school div.sc-name strong {
+  display: block;
+  width: auto;
+  margin-bottom: 5px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ec-history .school div.sc-avg {
+  width: 55px;
+  font-weight: bold;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .language-info {
+  /* ul li {float:left;}
+           ul li.table-col {width:562px;}*/
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .language-info table th {
+  padding-bottom: 5px;
+  text-align: left;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .language-info table td.lang-title {
+  width: 180px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .language-info table td {
+  padding-bottom: 15px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .language-info table td:last-child {
+  padding-right: 3px;
+  text-align: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul.comp-ab li div {
+  float: left;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul.comp-ab li div.title-col {
+  width: 200px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul.comp-ab li div.info-col {
+  width: 357px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul.comp-ab li div.info-col ul > li {
+  list-style-type: disc;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul.comp-ab li div.edit-col {
+  float: right;
+  margin-right: 3px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .cert-info .cert-title {
+  margin-bottom: 10px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .cert-info .cert-title a.add-btn {
+  float: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .cert-info .cert-item {
+  float: right;
+  width: 446px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .cert-info .cert-item strong {
+  display: block;
+  width: auto;
+  margin: 10px 0;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .cert-info .cert-item strong span {
+  display: block;
+  float: left;
+  width: 345px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .cert-info .cert-item strong a.edit-btn {
+  display: block;
+  float: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .exam-info .exam-title {
+  margin-bottom: 10px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .exam-info .exam-title a.add-btn {
+  float: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .exam-info .exam-item {
+  float: right;
+  width: 446px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .exam-info .exam-item strong {
+  display: block;
+  width: auto;
+  margin: 10px 0;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .exam-info .exam-item strong span {
+  display: block;
+  float: left;
+  width: 345px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .exam-info .exam-item strong a.edit-btn {
+  display: block;
+  float: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .course-info .course-title {
+  margin-bottom: 10px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .course-info .course-title a.add-btn {
+  float: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .course-info .course-item {
+  float: right;
+  width: 446px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .course-info .course-item strong {
+  display: block;
+  width: auto;
+  margin: 10px 0;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .course-info .course-item strong span {
+  display: block;
+  float: left;
+  width: 345px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .course-info .course-item strong a.edit-btn {
+  display: block;
+  float: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .abilities-info .course-title {
+  margin-bottom: 10px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .abilities-info .course-title a.add-btn {
+  float: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .abilities-info .editing-row {
+  text-align: right;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul {
+  margin-bottom: 15px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul > li {
+  padding-top: 15px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul > li ul li {
+  padding-top: 0;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ability-info ul ~ ul {
+  border-top: 1px solid #ececec;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ref-info .ref-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.ozgecmisimWrapper .left-side .cv-page-cont .ref-info .ref-name a {
+  float: right;
+}
+.ozgecmisimWrapper .left-side .empty-area {
+  background: #f5f5f5;
+  text-align: center;
+  border: 2px dashed #b4b4b4;
+  height: 80px;
+  border-radius: 5px;
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+  margin: 10px 0;
+}
+.ozgecmisimWrapper .left-side .empty-area span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.ozgecmisimWrapper .left-side .empty-area span a {
+  text-decoration: underline !important;
+}
+.ozgecmisimWrapper .left-side .empty-box h3 {
+  border: none !important;
+}
+.ozgecmisimWrapper .right-side {
+  width: 327px !important;
+  float: right;
+}
+.ozgecmisimWrapper .right-side .cerceve {
+  margin-bottom: 15px;
+}
+.ozgecmisimWrapper .right-side .cerceve .baslik2 {
+  border: 1px solid #eedbf7 !important;
+  border-bottom: none !important;
+  padding: 0 !important;
+}
+.ozgecmisimWrapper .right-side .cerceve .baslik2 div {
+  padding: 10px 20px 10px 45px;
+}
+.ozgecmisimWrapper .right-side .box {
+  margin: 0 0 15px 0 !important;
+}
+.ozgecmisimWrapper .right-side .box .title {
+  background: #f5f3f3;
+  padding: 10px 15px !important;
+}
+.ozgecmisimWrapper .right-side .box .steps-ozgecmis-doluluk {
+  width: 174px !important;
+}
+.ozgecmisimWrapper .right-side .box .chart-ozgecmis-doluluk {
+  text-align: center;
+}
+.ozgecmisimWrapper .right-side .box .chart-ozgecmis-doluluk a {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -4px -1835px;
+}
+.ozgecmisimWrapper .right-side .box .chart-ozgecmis-doluluk a span {
+  padding: 10px 5px 10px 17px;
+}
+.ozgecmisimWrapper .right-side .box .content {
+  padding: 20px 10px 15px 10px !important;
+}
+.ozgecmisimWrapper .right-side .cv-pross .baslik2 div {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 11px -1653px;
+}
+.ozgecmisimWrapper .right-side .cv-pross .icerik ul li {
+  list-style-type: none;
+  padding: 3px 5px 3px 6px;
+}
+.ozgecmisimWrapper .right-side .cv-pross .icerik ul li a {
+  font-size: 12px;
+  color: #683685;
+  text-decoration: none;
+  display: block;
+  padding: 3px 0;
+}
+.ozgecmisimWrapper .right-side .cv-pross .icerik ul li a span {
+  padding-left: 36px;
+}
+.ozgecmisimWrapper .right-side .cv-pross .icerik {
+  border: 1px solid #eedbf7 !important;
+  border-top: none !important;
+}
+.ozgecmisimWrapper .right-side .cv-pross .icerik ul li a.cv-prev-link {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 0 -981px;
+}
+.ozgecmisimWrapper .right-side .cv-pross .icerik ul li a.pdf-link {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 0 -1056px;
+}
+.ozgecmisimWrapper .right-side .cv-pross .icerik ul li a.print-link {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 0 -1132px;
+}
+.ozgecmisimWrapper .right-side .cv-pross .icerik ul li a.email-link {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 0 -1204px;
+}
+.ozgecmisimWrapper .right-side .add-file .baslik2 div {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 11px -1270px;
+}
+.ozgecmisimWrapper .right-side .add-file ul {
+  margin: 7px 0 12px 0;
+}
+.ozgecmisimWrapper .right-side .add-file li {
+  list-style-type: none;
+}
+.ozgecmisimWrapper .right-side .add-file li span {
+  color: #f05426;
+}
+.ozgecmisimWrapper .right-side .add-file table td {
+  padding: 4px 0;
+}
+.ozgecmisimWrapper .right-side .add-file table td.file-title {
+  padding-right: 10px;
+  width: 65px;
+}
+.ozgecmisimWrapper .right-side .add-file table a.button {
+  padding: 8px 13px 8px 13px !important;
+}
+.ozgecmisimWrapper .right-side .add-file .saving-files {
+  padding: 10px 0;
+  border-top: 1px solid #eedbf7;
+  border-bottom: 1px solid #eedbf7;
+}
+.ozgecmisimWrapper .right-side .add-file .saving-files table th,
+.ozgecmisimWrapper .right-side .add-file .saving-files table td {
+  text-align: left !important;
+}
+.ozgecmisimWrapper .right-side .add-file .saving-files table th:first-child {
+  width: 190px;
+}
+.ozgecmisimWrapper .right-side .add-file .saving-files table td:first-child {
+  width: 190px;
+}
+.ozgecmisimWrapper .right-side .add-file .view-all-files {
+  text-align: right;
+  padding-top: 10px;
+}
+.ozgecmisimWrapper .right-side .add-file .view-all-files a {
+  font-size: 11px;
+  text-decoration: underline;
+}
+.ozgecmisimWrapper .right-side .ambargo-box .baslik2 div {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 12px -1351px;
+}
+.ozgecmisimWrapper .right-side .ambargo-box button {
+  width: 100% !important;
+}
+.ozgecmisimWrapper .right-side .ambargo-box a.btn {
+  margin: 0;
+  padding: 8px 13px 8px 13px !important;
+}
+.ozgecmisimWrapper .right-side .prefer-box .baslik2 div {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 16px -1428px;
+}
+.ozgecmisimWrapper .right-side .prefer-box .pr-table1 td {
+  padding: 3px 0;
+}
+.ozgecmisimWrapper .right-side .prefer-box .pr-table1 td select {
+  width: 100% !important;
+}
+.ozgecmisimWrapper .right-side .prefer-box .pr-table1 td input {
+  width: 97% !important;
+}
+.ozgecmisimWrapper .right-side .prefer-box .pr-table1 .prefer-title {
+  padding-right: 3px;
+}
+.ozgecmisimWrapper .right-side .prefer-box a.btn {
+  margin: 0;
+  padding: 8px 13px 8px 13px !important;
+}
+.ozgecmisimWrapper .right-side .prefer-box .save-cont {
+  margin: 10px 0 25px 0;
+  text-align: right;
+}
+.ozgecmisimWrapper .right-side .prefer-box ul {
+  margin: 10px 0 20px 0;
+}
+.ozgecmisimWrapper .right-side .prefer-box ul li {
+  list-style-type: none;
+}
+.ozgecmisimWrapper .right-side .prefer-box ul li span {
+  color: #f05426;
+}
+.ozgecmisimWrapper .right-side .prefer-box .pr-table2 b {
+  display: block;
+  padding: 3px 0;
+}
+.ozgecmisimWrapper .right-side .prefer-box a.lock-link {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat -5px -1514px;
+  padding-left: 20px;
+}
+.ozgecmisimWrapper .right-side .disc-env-box .baslik2 div {
+  background: url(../images/cv_duzenle_box_title_sprite.png) no-repeat 9px -1578px;
+}
+.ozgecmisimWrapper .right-side .disc-env-box .disc-img-td {
+  vertical-align: middle;
+  width: 100px;
+}
+.ozgecmisimWrapper .right-side .disc-env-box .icerik table td a.kalin {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#tblBasvuruYok {
+  padding: 0 0 15px;
+}
+/*SİTE GENEL BAŞLIK DÜZENLEMELELERİ*/
+div.cerceve div.ust {
+  height: 0;
+  background: none;
+  border-top: 1px solid #eedbf7;
+}
+div.cerceve div.ust span {
+  display: none;
+}
+div.cerceve div.baslik1 {
+  padding: 10px 20px;
+  background: #eedbf7;
+  height: auto;
+}
+div.cerceve div.baslik1 span {
+  padding: 0;
+  height: auto;
+  display: block;
+  font: bold 14px/18px Helvetica, arial, sans-serif;
+  color: #333;
+}
+div.cerceve div.baslik1 span div {
+  font: bold 14px/18px Helvetica, arial, sans-serif;
+  color: #333;
+  float: none!important;
+  position: static!important;
+}
+div.cerceve div.baslik1 span div .sprite-help {
+  position: absolute!important;
+  right: 0;
+  top: 50%;
+  margin-top: -6px;
+}
+div.cerceve div.baslik1 span h1 {
+  font: bold 14px/18px Helvetica, arial, sans-serif;
+  color: #333;
+}
+div.cerceve div.baslik2 {
+  padding: 10px 20px;
+  background: #f5f3f3;
+  height: auto;
+  left: 0;
+  border: solid #eedbf7;
+  border-width: 0 1px 1px;
+}
+div.cerceve div.baslik2 span {
+  padding: 0;
+  height: auto;
+  display: block;
+  font: bold 14px/18px Helvetica, arial, sans-serif;
+  color: #333;
+  overflow: hidden;
+  background: none;
+  left: 0;
+}
+div.cerceve div.baslik2 span div {
+  position: static!important;
+}
+div.cerceve div.baslik2 span div a {
+  font: bold 14px/18px Helvetica, arial, sans-serif;
+}
+div.cerceve div.baslik2 span div + div a {
+  font: bold 12px/18px Helvetica, arial, sans-serif;
+}
+div.cerceve div.icerik {
+  border: solid #eedbf7;
+  border-width: 0 1px;
+  padding: 10px 8px;
+}
+div.cerceve div.alt {
+  height: 0;
+  background: none;
+  border-bottom: 1px solid #eedbf7;
+}
+div.cerceve div.alt span {
+  display: none;
+}
+
+
+
+div.ustalan {
+  margin-bottom: 5px;
+}
+#AramaUstAlan > div:first-child {
+  width: 64%;
+}
+/*Modal Popup Fixler*/
+.basvuru-durum-modal a.yes-btn {
+  padding: 10px 23px 10px 24px !important;
+}
+/*Hedefli Anket Fix*/
+#divSurvey .icerik {
+  padding: 10px 20px;
+}
+#divSurvey .icerik #divSurveyTopStrip > div {
+  right: -21px !important;
+}

@@ -1,0 +1,226 @@
+﻿@using DotNetOpenAuth.OpenId.Extensions.AttributeExchange
+@using KagiderKariyerPortal.Entities.ConCreate
+@model System.Collections.Generic.IEnumerable<KagiderKariyerPortalMvc.Models.CvDetail>
+
+
+
+
+<script>
+    $('header').html('')
+</script>
+<style media="print">
+
+
+    .left-side {
+        display: run-in;
+        width:100%
+    }
+       
+</style>
+<table width="1000" align="center" style="background-color: rgb(255, 255, 255);" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td>
+                <div id="cvDiv" style="background-color: White; border: 0px solid silver; ">
+                    <div class="ozgecmisimWrapper" >
+                        @{
+                            var item = new CvIletisimBilgi();
+                            var kisiselitem = new CvKisiselBilgi();
+                            var deneyimlist = new List<CvIsDeneyimleri>();
+                            var universilist = new List<CvEgitimUniversiteBilgi>();
+                            var dillerlist = new List<CvDilBilgi>();
+                            var user = new User();
+                            foreach (var detail in Model)
+                            {
+                                item = detail.IletisimBilgisi;
+                                kisiselitem = detail.KisiselBilgisi;
+                                deneyimlist = detail.IsDeneyimleri;
+                                universilist = detail.Universiteler;
+                                dillerlist = detail.Diller;
+                                user = detail.User;
+                            }
+
+                        }
+
+                        <div class="left-side" style="width: 100%">
+                            <div class="cv-page-cont" id="cvDuzenleme">
+                                <style type="text/css">
+                                    .photo-holder {
+                                        padding: 10px 10px 4px 10px;
+                                        background: #f6f6f6;
+                                        border: solid 1px #d5d5d5;
+                                        margin-bottom: 14px;
+                                    }
+
+                                    .photo-holder {
+                                        padding-bottom: 10px;
+                                    }
+
+                                    .photo-shaddow {
+                                        background: url(/WebSite/Images/Kariyerim/shaddow.png) no-repeat scroll 0px 100% transparent;
+                                        width: auto;
+                                        height: auto;
+                                        float: right;
+                                        margin: 0 15px 12px 0;
+                                        overflow: visible;
+                                    }
+
+                                    .cvduzenle {
+                                        float: right;
+                                        text-decoration: none;
+                                        font-weight: normal;
+                                        color: #000000;
+                                        position: relative;
+                                        left: -5px;
+                                        top: 3px;
+                                        font-size: 12px;
+                                    }
+
+                                    .cvbaslik {
+                                        color: #000000;
+                                        font-family: Arial;
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                        z-index: 20000;
+                                        position: relative;
+                                    }
+
+                                    .cvtitle {
+                                        color: #666666;
+                                        font-family: Arial;
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                    }
+
+                                    .beyaz {
+                                        color: #fff3ce;
+                                    }
+
+                                    .item-css {
+                                        vertical-align: top;
+                                        padding-bottom: 10px;
+                                    }
+
+                                    .linkYaziBoyutu {
+                                        font-size: 12px;
+                                    }
+                                </style>
+                                <style type="text/css">
+                                    .jcrop-holder {
+                                        text-align: left;
+                                    }
+
+                                    .jcrop-vline, .jcrop-hline {
+                                        font-size: 0;
+                                        position: absolute;
+                                        background: white url('/WebSite/Images/Jcrop.gif') top left repeat;
+                                    }
+
+                                    .jcrop-vline {
+                                        height: 100%;
+                                        width: 1px !important;
+                                    }
+
+                                    .jcrop-hline {
+                                        width: 100%;
+                                        height: 1px !important;
+                                    }
+
+                                    .jcrop-handle {
+                                        font-size: 1px;
+                                        width: 7px !important;
+                                        height: 7px !important;
+                                        border: 1px #eee solid;
+                                        background-color: #333;
+                                        width: 9px;
+                                        height: 9px;
+                                    }
+
+                                    .jcrop-tracker {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+
+                                    .custom .jcrop-vline, .custom .jcrop-hline {
+                                        background: yellow;
+                                    }
+
+                                    .custom .jcrop-handle {
+                                        border-color: black;
+                                        background-color: #C7BB00;
+                                        -moz-border-radius: 3px;
+                                        -webkit-border-radius: 3px;
+                                    }
+                                </style>
+                                <div class="per-info-cont clearfix">
+                                    <div class="per-img" id="per-img">
+                                        @if (Session["uid"] != null)
+                                        {
+                                            @Html.Partial("_ResimGosterPartial", user)
+                                        }
+                                    </div>
+                                    <div class="per-name-title">
+                                        <h1 id="cvisim">@Html.DisplayFor(modelItem => item.UyeAd) @Html.DisplayFor(modelItem => item.UyeSoyad)</h1>
+                                        <h2 id="cvunvan"></h2>
+                                    </div>
+                                </div>
+
+
+
+                                @{
+                                    var detailkisisel = new List<CvKisiselBilgi>();
+                                    detailkisisel.Add(kisiselitem);
+                                    var iletisimlist = new List<CvIletisimBilgi>();
+                                    iletisimlist.Add(item);
+                                }
+
+
+                                <div id="genelbilgiajax">
+
+                                    @Html.Partial("_IletisimBilgileriPartial", iletisimlist)
+
+                                </div>
+
+
+                                <div id="kisiselajax">
+                                    @Html.Partial("_KisiselBilgilerPartial", detailkisisel.AsEnumerable())
+                                </div>
+                                <!--İş deneyimleri-->
+                                <div id="dvIsTecrubelerim">
+                                    @Html.Partial("_IsDeneyimleriPartial", deneyimlist)
+                                </div>
+                                <!--/İş deneyimleri-->
+                                <!--Eğitim Bilgileri-->
+                                <div id="dvEgitimDurumum">
+                                    @Html.Partial("_UniversiteEgitimPartial", universilist)
+                                </div>
+                                <!--/Eğitim Bilgileri-->
+                                <!--Yabancı Dil-->
+
+                                <div id="dvDillerTum">
+                                    @Html.Partial("_YabanciDillerPartial", dillerlist)
+
+                                </div>
+
+
+                                <!--/Yabancı Dil-->
+
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                    
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    <script>
+        $(".right-side").hide();
+        $(".edit-btn").hide();
+        $(".add-btn").hide();
+    
+    </script>

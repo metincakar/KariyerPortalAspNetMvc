@@ -1,0 +1,22 @@
+﻿@if (Request.IsAuthenticated)
+{ 
+    <div class="nav navbar-nav navbar-right">
+        Merhaba, @Html.ActionLink(User.Identity.Name.Replace('İ','i'), "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Çıkış</a>
+        }
+        <a class="btn btn-warning" href="@Url.Action("Login", "Account", routeValues: new {id = 0, viewtype = 0 })">İş arayan Girişi</a>
+    </div>
+}
+else
+{
+    <div class="nav navbar-nav navbar-right">
+        @Html.ActionLink("Yeni Üye Ol", "Register", "Account", routeValues: new { id = 1 }, htmlAttributes: new { id = "registerLink" })
+        @Html.ActionLink("Üye Girişi", "Login", "Account", routeValues: new { id = 1, viewtype = 0 }, htmlAttributes: new { id = "loginLink" })
+        <a class="btn btn-warning" href="@Url.Action("Login", "Account", routeValues: new {id = 0, viewtype = 0 })">İş arayan Girişi</a>
+    </div>
+  
+}
+

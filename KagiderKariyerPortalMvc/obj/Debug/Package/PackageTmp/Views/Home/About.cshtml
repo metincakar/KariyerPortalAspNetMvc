@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Hakkında";
+}
+@{
+    var isarayan = new int[] { 0, 2, 3 };
+    var isveren = new int[] { 1, 4 };
+    if (Session["uid"] != null && isarayan.Contains((int)Session["typeid"]))
+    {
+        Layout = "../shared/_Layout.cshtml";
+    }
+    else if (Session["uid"] != null && isveren.Contains((int)Session["typeid"]))
+    {
+        Layout = "../shared/_LayoutIsveren.cshtml";
+
+    }
+    else
+    {
+        Layout = "../shared/_Layout.cshtml";
+    }
+}
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@*@ViewBag.Message*@Kagider Hakkıdan kısa bilgi...</h2>
+</hgroup>
+
+<article>
+    <p>
+       Kagider hakkında bilgi...
+    </p>
+
+    <p>
+        Kagider hakkında bilgi...
+    </p>
+
+    <p>
+        Kagider hakkında bilgi...
+    </p>
+</article>
+
+<aside>
+    <h3>Linkler</h3>
+    <p>
+        Diğer Linkler
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

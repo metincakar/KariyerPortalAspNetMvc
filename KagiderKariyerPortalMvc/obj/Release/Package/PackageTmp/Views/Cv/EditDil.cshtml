@@ -1,0 +1,82 @@
+﻿
+@using KagiderKariyerPortal.Entities.ConCreate
+@model KagiderKariyerPortal.Entities.ConCreate.CvDilBilgi
+
+@{
+    Layout = null;
+}
+            @using (Ajax.BeginForm("EditDil", "Cv", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "dvDillerTum",
+            HttpMethod = "POST",
+            OnSuccess = "updateSuccess"
+            
+        }, new { @id = "updateForm",@class = "form-horizontal" ,role = "form"  }))
+        {
+                  <input type="hidden" name="is_delete" id="is_delete" value="0" />  
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                
+                    @Html.HiddenFor(model => model.DilBilgId)
+                    @Html.HiddenFor(model => model.UserId)
+                  <div class="form-group">
+             @Html.LabelFor(m => m.Dil, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+                 @Html.DropDownListFor(m => m.Dil, new SelectList(ViewBag.Dil, "DilId", "YDil"), "Seçiniz", new { @class = "form-control" })
+                 @Html.ValidationMessageFor(model => model.Dil)
+             </div>
+         </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Okuma, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.DropDownListFor(m => m.Okuma, new SelectList(ViewBag.DilSurec, "SurecId", "Surec"), "Seçiniz", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Okuma)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Yazma, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.DropDownListFor(m => m.Yazma, new SelectList(ViewBag.DilSurec, "SurecId", "Surec"), "Seçiniz", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Yazma)
+                </div>
+            </div>
+                 <div class="form-group">
+             @Html.LabelFor(m => m.Konusma, new { @class = "col-md-4 control-label" })
+             <div class="col-md-4">
+                 @Html.DropDownListFor(m => m.Konusma, new SelectList(ViewBag.DilSurec, "SurecId", "Surec"), "Seçiniz", new { @class = "form-control" })
+                 @Html.ValidationMessageFor(model => model.Konusma)
+             </div>
+         </div>
+                 <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="button" class="btn btn-default" value="Sil" onclick="sil();" />
+                    </div>
+                </div>
+                  <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+                        </div>
+                    </div>
+                    @*<div class="editor-label">
+                        @Html.LabelFor(model => model.Okuma)
+                        @Html.DropDownListFor(m => m.Okuma, new SelectList(ViewBag.DilSurec,"SurecId", "Surec","Temel"))
+                    </div>*@
+                  
+        }
+
+
+<script>
+ 
+    function sil() {
+        $('#is_delete').val('1');
+        $('#updateForm').submit();
+    }
+
+    function kaydet() {
+
+        $('#updateForm').submit();
+        //$('#updateDialog').dialog('close');
+    }
+
+</script>

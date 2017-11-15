@@ -1,0 +1,3004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\KagiderKariyerPortal</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>03/30/2015 12:59:06</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/de/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>04/07/2015 20:53:10</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>04/07/2015 20:53:12</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>04/07/2015 20:53:12</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>04/07/2015 20:53:12</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/06/2015 21:03:50</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/06/2015 21:03:50</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/es/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/fr/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/it/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/ja/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/KagiderKariyerPortal.Dal.dll">
+      <publishTime>11/08/2015 22:28:41</publishTime>
+    </File>
+    <File Include="bin/KagiderKariyerPortal.Dal.pdb">
+      <publishTime>11/08/2015 22:28:41</publishTime>
+    </File>
+    <File Include="bin/KagiderKariyerPortal.Entities.dll">
+      <publishTime>11/08/2015 22:28:40</publishTime>
+    </File>
+    <File Include="bin/KagiderKariyerPortal.Entities.pdb">
+      <publishTime>11/08/2015 22:28:40</publishTime>
+    </File>
+    <File Include="bin/KagiderKariyerPortalMvc.dll">
+      <publishTime>11/08/2015 22:56:20</publishTime>
+    </File>
+    <File Include="bin/KagiderKariyerPortalMvc.pdb">
+      <publishTime>11/08/2015 22:56:20</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/ko/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Edm.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.OData.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/30/2015 12:58:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.WebPages.OAuth.dll">
+      <publishTime>04/07/2015 20:53:10</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/30/2015 12:58:58</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/ru/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/10/2012 12:07:38</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/10/2012 12:07:38</publishTime>
+    </File>
+    <File Include="bin/System.Spatial.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>03/30/2015 12:59:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.OData.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>03/30/2015 12:59:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>03/30/2015 12:59:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/30/2015 12:58:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>03/30/2015 12:59:06</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.Data.dll">
+      <publishTime>07/09/2013 12:05:10</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.WebData.dll">
+      <publishTime>04/07/2015 20:53:10</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Data.Edm.resources.dll">
+      <publishTime>04/07/2015 20:53:16</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/07/2015 20:53:18</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Spatial.resources.dll">
+      <publishTime>04/07/2015 20:53:14</publishTime>
+    </File>
+    <File Include="ckeditor/adapters/jquery.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/build-config.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/CHANGES.md">
+      <publishTime>12/13/2014 02:49:54</publishTime>
+    </File>
+    <File Include="ckeditor/ckeditor.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/config.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/contents.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/lang/af.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ar.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/bg.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/bn.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/bs.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ca.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/cs.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/cy.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/da.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/de.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/el.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/en-au.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/en-ca.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/en-gb.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/en.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/eo.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/es.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/et.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/eu.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fa.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fi.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fo.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fr-ca.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fr.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/gl.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/gu.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/he.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/hi.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/hr.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/hu.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/id.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/is.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/it.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ja.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ka.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/km.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ko.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ku.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/lt.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/lv.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/mk.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/mn.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ms.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/nb.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/nl.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/no.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/pl.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/pt-br.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/pt.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ro.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ru.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/si.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sk.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sl.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sq.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sr-latn.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sr.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sv.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/th.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/tr.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/tt.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ug.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/uk.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/vi.js">
+      <publishTime>12/13/2014 02:50:04</publishTime>
+    </File>
+    <File Include="ckeditor/lang/zh-cn.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/lang/zh.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/LICENSE.md">
+      <publishTime>12/13/2014 02:49:54</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/af.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/ar.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/bg.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/ca.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/cs.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/cy.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/da.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/de.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/el.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/en.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/eo.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/es.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/et.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/fa.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/fi.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/fr.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/gl.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/gu.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/he.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/hi.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/hr.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/hu.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/id.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/it.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/ja.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/km.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/ko.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/ku.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/lt.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/lv.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/mk.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/mn.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/nb.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/nl.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/no.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/pl.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/pt.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/ro.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/ru.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/si.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/sk.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/sl.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/sq.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/sr.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/sv.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/th.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/tr.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/tt.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/ug.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/uk.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/vi.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/zh.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/about/dialogs/about.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/about/dialogs/logo_ckeditor.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/clipboard/dialogs/paste.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/dialog/dialogDefinition.js">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/icons.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/icons_hidpi.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/image/dialogs/image.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/image/images/noimage.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/link/dialogs/anchor.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/link/dialogs/link.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/link/images/anchor.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/link/images/hidpi/anchor.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/magicline/images/hidpi/icon-rtl.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/magicline/images/hidpi/icon.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/magicline/images/icon-rtl.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/magicline/images/icon.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/pastefromword/filter/default.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/scayt/dialogs/options.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/scayt/dialogs/toolbar.css">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/scayt/LICENSE.md">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/scayt/README.md">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/af.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/ar.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/bg.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/ca.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/cs.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/cy.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/da.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/de.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/el.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/en-gb.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/en.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/eo.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/es.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/et.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/fa.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/fi.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/fr.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/gl.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/he.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/hr.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/hu.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/id.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/it.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/ja.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/km.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/ku.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/lt.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/lv.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/nb.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/nl.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/no.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/pl.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/pt-br.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/pt.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/ru.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/si.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/sk.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/sl.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/sq.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/sv.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/th.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/tr.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/tt.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/ug.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/uk.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/vi.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/zh.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/specialchar.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/table/dialogs/table.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/tabletools/dialogs/tableCell.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/ciframe.html">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/tmpFrameset.html">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/wsc.css">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/wsc.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/wsc_ie.js">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/LICENSE.md">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/README.md">
+      <publishTime>12/13/2014 02:50:02</publishTime>
+    </File>
+    <File Include="ckeditor/README.md">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/ajax.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/api.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/appendto.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/assets/inlineall/logo.png">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/assets/outputxhtml/outputxhtml.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/assets/posteddata.php">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/assets/sample.jpg">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/assets/uilanguages/languages.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/datafiltering.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/divreplace.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/index.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/inlineall.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/inlinebycode.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/inlinetextarea.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/jquery.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/dialog/assets/my_dialog.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/dialog/dialog.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/enterkey/enterkey.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.fla">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.swf">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/htmlwriter/assets/outputforflash/swfobject.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/htmlwriter/outputforflash.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/htmlwriter/outputhtml.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/magicline/magicline.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/toolbar/toolbar.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/plugins/wysiwygarea/fullpage.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/readonly.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/replacebyclass.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/replacebycode.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/sample.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/sample.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/sample_posteddata.php">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/tabindex.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/uicolor.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/uilanguages.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/samples/xhtmlstyle.html">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/dialog.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/dialog_ie.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/dialog_ie7.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/dialog_ie8.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/dialog_iequirks.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/editor.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/editor_gecko.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/editor_ie.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/editor_ie7.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/editor_ie8.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/editor_iequirks.css">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/icons.png">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/icons_hidpi.png">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/arrow.png">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/close.png">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/hidpi/close.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/hidpi/lock-open.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/hidpi/lock.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/hidpi/refresh.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/lock-open.png">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/lock.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/images/refresh.png">
+      <publishTime>12/13/2014 02:49:58</publishTime>
+    </File>
+    <File Include="ckeditor/skins/moono/readme.md">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="ckeditor/styles.js">
+      <publishTime>12/13/2014 02:49:56</publishTime>
+    </File>
+    <File Include="Content/Atlantis.css">
+      <publishTime>11/07/2015 18:00:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/16/2015 16:12:50</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>06/16/2015 16:12:50</publishTime>
+    </File>
+    <File Include="Content/frontend.css">
+      <publishTime>11/07/2015 18:00:55</publishTime>
+    </File>
+    <File Include="Content/frontend.min.css">
+      <publishTime>11/07/2015 17:36:07</publishTime>
+    </File>
+    <File Include="Content/pure-min.css">
+      <publishTime>05/09/2015 13:02:26</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>11/07/2015 18:05:27</publishTime>
+    </File>
+    <File Include="Content/SiteYeni.css">
+      <publishTime>04/30/2015 14:42:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/10763_logo2.gif">
+      <publishTime>01/03/2013 08:47:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/11040_etclogo.gif">
+      <publishTime>12/25/2014 15:14:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/1115_logo.gif">
+      <publishTime>05/20/2014 14:15:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/11310_logo.gif">
+      <publishTime>05/10/2011 14:44:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/14694_logo.gif">
+      <publishTime>09/26/2008 15:42:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/15042_logo.gif">
+      <publishTime>07/16/2013 11:20:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/16654_logo.gif">
+      <publishTime>10/13/2010 15:56:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/16672_logo.gif">
+      <publishTime>05/06/2011 17:59:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/16690_logo2.gif">
+      <publishTime>07/31/2012 14:14:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/16785_logo.gif">
+      <publishTime>04/11/2015 18:08:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/16914_logo.gif">
+      <publishTime>02/01/2012 12:40:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/17187_logo.gif">
+      <publishTime>12/28/2007 09:15:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/18673_logo.gif">
+      <publishTime>05/08/2008 09:29:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/19336_logo.gif">
+      <publishTime>04/12/2013 16:07:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/20802_logo7.gif">
+      <publishTime>04/11/2015 14:14:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/21022_logo4.gif">
+      <publishTime>12/17/2014 09:03:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/21059.gif">
+      <publishTime>04/03/2015 14:30:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/21059_logo.gif">
+      <publishTime>02/05/2009 13:55:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/23127_logo.gif">
+      <publishTime>10/04/2012 13:23:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/23411_logo.gif">
+      <publishTime>09/18/2014 13:37:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/23581_logo.gif">
+      <publishTime>04/15/2011 14:06:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/23611_logo.gif">
+      <publishTime>12/21/2009 14:10:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/24106_2.gif">
+      <publishTime>01/28/2014 07:53:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/25024_logo.gif">
+      <publishTime>10/14/2011 15:00:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/25245_logo2.gif">
+      <publishTime>03/20/2015 12:31:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/25353_logo.gif">
+      <publishTime>05/20/2010 11:07:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/26213_logo.gif">
+      <publishTime>02/20/2013 10:03:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/27673_logo.gif">
+      <publishTime>10/09/2013 10:09:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/30729_logo8.gif">
+      <publishTime>04/18/2011 17:06:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/30912_logo.gif">
+      <publishTime>01/30/2013 14:12:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/31521_logo2.gif">
+      <publishTime>03/04/2015 14:31:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/31945_logo2.gif">
+      <publishTime>02/18/2014 08:20:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/31980_logo.gif">
+      <publishTime>06/09/2011 17:14:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/32407_logo3.gif">
+      <publishTime>08/25/2014 14:13:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/33676_logo.gif">
+      <publishTime>10/31/2012 12:24:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/34148_logo.b91.delayed">
+      <publishTime>04/11/2015 13:47:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/34368_logo.gif">
+      <publishTime>10/20/2011 14:00:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/34520_logo.gif">
+      <publishTime>09/24/2012 09:02:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/35398_logo.gif">
+      <publishTime>01/16/2012 16:57:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/35618_logo.gif">
+      <publishTime>01/02/2012 12:28:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/36058_logo.gif">
+      <publishTime>07/22/2014 11:29:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/36614_logo.gif">
+      <publishTime>04/13/2012 10:27:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/37088_logo.gif">
+      <publishTime>07/02/2012 10:54:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/37176_logo.gif">
+      <publishTime>04/11/2015 11:44:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/37216_logo.gif">
+      <publishTime>03/23/2012 14:06:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/37381_logo.gif">
+      <publishTime>03/30/2012 17:15:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/37732_logo.gif">
+      <publishTime>04/17/2012 10:33:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/37788_logo.gif">
+      <publishTime>04/19/2012 11:24:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/38045_logo.gif">
+      <publishTime>06/26/2012 17:29:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/39096_logo.gif">
+      <publishTime>06/21/2012 16:29:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/40290_logo.gif">
+      <publishTime>08/22/2012 13:45:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/41171_logo.gif">
+      <publishTime>10/10/2012 09:44:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/41383_logo.gif">
+      <publishTime>10/22/2012 11:06:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/41528_logo.gif">
+      <publishTime>03/17/2015 08:22:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/41686_logo.gif">
+      <publishTime>11/13/2012 07:56:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/41992_logo.gif">
+      <publishTime>11/29/2012 16:52:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/42153_logo.gif">
+      <publishTime>12/10/2012 08:51:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/42362_logo.gif">
+      <publishTime>12/27/2012 16:47:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/43124_logo.gif">
+      <publishTime>06/23/2014 11:00:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/43419_logo.gif">
+      <publishTime>02/26/2013 07:54:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/44547_logo.gif">
+      <publishTime>04/04/2013 16:12:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/45000_logo.gif">
+      <publishTime>04/22/2013 17:44:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/45732_logo2.gif">
+      <publishTime>11/13/2014 13:51:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/45748_logo.gif">
+      <publishTime>06/04/2013 11:04:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/47353_logo2.gif">
+      <publishTime>03/17/2015 16:31:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/4832.gif">
+      <publishTime>02/16/2015 13:14:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/48761_logo.gif">
+      <publishTime>09/24/2013 11:30:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/49052_logo.gif">
+      <publishTime>10/09/2013 11:30:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/50974_logo.gif">
+      <publishTime>09/02/2014 13:58:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/51043_logo.gif">
+      <publishTime>01/10/2014 09:24:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/53338_logo.gif">
+      <publishTime>04/25/2014 09:23:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/53383_logo.gif">
+      <publishTime>04/30/2014 10:25:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/53574_logo.gif">
+      <publishTime>11/14/2014 14:54:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/53779.gif">
+      <publishTime>03/09/2015 13:32:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/54446_logo.gif">
+      <publishTime>06/09/2014 17:02:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/5772_logo6.gif">
+      <publishTime>10/23/2014 09:17:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/58691_logo.gif">
+      <publishTime>10/08/2014 14:40:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/58816_logo.gif">
+      <publishTime>09/23/2014 14:46:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/59183_logo.gif">
+      <publishTime>10/08/2014 11:07:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/59329_logo.gif">
+      <publishTime>10/01/2014 09:55:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/62367_logo.gif">
+      <publishTime>11/03/2014 12:42:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/67543_logo.gif">
+      <publishTime>01/09/2015 13:26:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/67788.gif">
+      <publishTime>01/29/2015 09:29:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/68867_logo.gif">
+      <publishTime>01/23/2015 10:56:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/71583a.gif">
+      <publishTime>03/31/2015 14:55:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/7285_logo2.gif">
+      <publishTime>01/18/2013 07:57:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/74874.gif">
+      <publishTime>04/02/2015 16:18:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/76532.gif">
+      <publishTime>03/24/2015 15:20:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/78261_logo.gif">
+      <publishTime>04/06/2015 17:21:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/78412_logoo.gif">
+      <publishTime>04/07/2015 16:37:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/8490.gif">
+      <publishTime>01/29/2015 12:28:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/8710.gif">
+      <publishTime>01/27/2015 08:47:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/akkok_logo.gif">
+      <publishTime>05/22/2014 10:39:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/boggayri_2.gif">
+      <publishTime>03/21/2014 10:08:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/bp_logo.gif">
+      <publishTime>09/13/2013 16:29:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/cocacola_logo.gif">
+      <publishTime>09/19/2011 11:29:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/cozum_logo.gif">
+      <publishTime>07/08/2010 10:02:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/dt_logo.gif">
+      <publishTime>03/10/2008 15:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/emino_logo.gif">
+      <publishTime>08/19/2013 11:59:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/gunki_logo.gif">
+      <publishTime>06/09/2006 14:48:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/hasel_logo.gif">
+      <publishTime>03/02/2012 14:38:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/hisarcatal_logo.gif">
+      <publishTime>02/18/2005 04:04:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/karacaut_logo.gif">
+      <publishTime>11/25/2013 09:12:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/Karteks_logo.gif">
+      <publishTime>03/15/2005 03:49:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/kiracelek_logo.gif">
+      <publishTime>04/15/2008 15:41:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/kuveyt_logo.gif">
+      <publishTime>10/28/2010 10:22:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/laressa_logo2.gif">
+      <publishTime>07/03/2012 15:00:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/natekbi_logo.gif">
+      <publishTime>04/15/2011 17:02:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/ozdilek_logo.gif">
+      <publishTime>11/02/2012 13:18:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/ozlerp_logo.gif">
+      <publishTime>03/22/2011 08:11:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/t2.gif">
+      <publishTime>03/12/2015 14:07:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/toyota_logo.gif">
+      <publishTime>09/13/2012 10:04:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/tunaylar_logo.gif">
+      <publishTime>04/28/2008 09:50:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/turisco_3.gif">
+      <publishTime>10/08/2010 18:23:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/Logolar/Turkticaret_logo.gif">
+      <publishTime>05/01/2008 15:38:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/11021_logo.gif">
+      <publishTime>09/07/2011 16:29:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/11159_logo.gif">
+      <publishTime>09/07/2011 16:44:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/1115_logo.gif">
+      <publishTime>05/20/2014 14:15:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/11247_logo.gif">
+      <publishTime>09/07/2011 16:46:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/11431_logo.gif">
+      <publishTime>09/07/2011 16:50:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/11501_logo.gif">
+      <publishTime>07/17/2012 09:42:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/11864_logo.gif">
+      <publishTime>09/07/2011 17:11:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/12282_logo.gif">
+      <publishTime>04/11/2015 19:27:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/12368_logo.gif">
+      <publishTime>09/07/2011 17:31:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/12972_logo.gif">
+      <publishTime>09/07/2011 17:50:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/13076_logo.gif">
+      <publishTime>04/24/2012 14:13:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/13360_logo.gif">
+      <publishTime>09/07/2011 18:03:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/13440_logo.gif">
+      <publishTime>09/07/2011 18:07:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/14018_logo.gif">
+      <publishTime>09/07/2011 18:26:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/14643_logo2.gif">
+      <publishTime>08/27/2014 17:50:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/14796_logo.gif">
+      <publishTime>09/07/2011 18:52:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/15029_logo.gif">
+      <publishTime>09/09/2013 14:16:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/15478_logo.gif">
+      <publishTime>09/07/2011 19:10:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/15808_logo.gif">
+      <publishTime>09/07/2011 19:21:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/16776_logo.gif">
+      <publishTime>09/08/2011 09:12:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/16847_logo.gif">
+      <publishTime>09/08/2011 09:13:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/16914_logo.gif">
+      <publishTime>09/08/2011 10:52:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/16976_logo.gif">
+      <publishTime>09/08/2011 10:54:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/16989_logo.gif">
+      <publishTime>03/17/2012 07:46:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/17278_logo.gif">
+      <publishTime>11/15/2013 09:01:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/17827_logo.gif">
+      <publishTime>03/17/2012 07:46:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/17860_logo.gif">
+      <publishTime>09/08/2011 13:29:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/17944_logo.gif">
+      <publishTime>09/08/2011 13:31:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/18263_logo.gif">
+      <publishTime>03/17/2012 07:47:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/18400_logo2.gif">
+      <publishTime>05/24/2012 13:33:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/18667_logo.gif">
+      <publishTime>05/13/2014 10:53:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/19365_logo.gif">
+      <publishTime>09/08/2011 13:55:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/19528_logo.gif">
+      <publishTime>09/08/2011 14:00:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/19530_logo.gif">
+      <publishTime>09/08/2011 14:00:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/20111_logo.gif">
+      <publishTime>09/08/2011 14:29:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/20272_logo.gif">
+      <publishTime>09/08/2011 14:36:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/21217_logo6.gif">
+      <publishTime>01/29/2014 16:34:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/21339_logo.gif">
+      <publishTime>03/17/2012 07:49:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/21454_logo.gif">
+      <publishTime>09/08/2011 15:12:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/22048_logo.gif">
+      <publishTime>09/08/2011 15:31:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/22273_logo.gif">
+      <publishTime>09/08/2011 15:55:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/22375_logo.gif">
+      <publishTime>09/08/2011 15:58:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/22413_logo.gif">
+      <publishTime>09/08/2011 16:00:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/23354_logo.gif">
+      <publishTime>09/08/2011 17:37:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/23849_logo.gif">
+      <publishTime>06/05/2013 17:03:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/23965_logo.gif">
+      <publishTime>09/08/2011 17:51:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/24118_logo.gif">
+      <publishTime>08/07/2014 17:44:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/24386_2.gif">
+      <publishTime>03/13/2014 14:12:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/24812_logo.gif">
+      <publishTime>09/08/2011 18:13:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/25092_logo.gif">
+      <publishTime>03/17/2012 07:51:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/25226_logo.gif">
+      <publishTime>09/08/2011 20:13:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/26100_logo.gif">
+      <publishTime>09/08/2011 20:55:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/26185_logo.gif">
+      <publishTime>09/08/2011 20:57:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/27112_logo.gif">
+      <publishTime>09/08/2011 21:25:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/27183_logo.gif">
+      <publishTime>09/08/2011 21:31:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/28545_logo.gif">
+      <publishTime>09/09/2011 10:50:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/28828_logo2.gif">
+      <publishTime>08/06/2012 11:18:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/30077_logo.gif">
+      <publishTime>09/09/2011 11:50:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/31014_logo.gif">
+      <publishTime>09/09/2011 13:35:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/3105_2.gif">
+      <publishTime>02/10/2014 14:42:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/31179_logo.gif">
+      <publishTime>03/14/2014 16:27:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/3180_logo1.gif">
+      <publishTime>12/23/2014 15:23:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/32407_logo.gif">
+      <publishTime>07/06/2012 12:00:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/34075_7.gif">
+      <publishTime>06/12/2014 11:23:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/34647_logo.gif">
+      <publishTime>12/27/2012 08:17:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/35618_logo.gif">
+      <publishTime>03/17/2012 08:51:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/37721_logo.gif">
+      <publishTime>06/27/2014 18:04:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/3991_logo.gif">
+      <publishTime>01/14/2015 10:50:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/40215_logo.gif">
+      <publishTime>02/06/2014 09:52:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/4077_logoo2.gif">
+      <publishTime>02/11/2015 15:13:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/43159_logo.gif">
+      <publishTime>02/22/2013 16:23:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/43521_logo.gif">
+      <publishTime>02/21/2013 09:54:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/43575_2.gif">
+      <publishTime>03/14/2014 10:10:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/45650_logo.gif">
+      <publishTime>05/24/2013 09:36:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/45987_logo.gif">
+      <publishTime>06/06/2013 11:46:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/46478_logo.gif">
+      <publishTime>08/13/2013 13:27:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/4687_logo.gif">
+      <publishTime>01/09/2013 15:34:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/47039_logo.gif">
+      <publishTime>07/15/2013 14:40:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/4705_logo.gif">
+      <publishTime>06/11/2014 15:26:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/49841_logo.gif">
+      <publishTime>11/19/2013 10:02:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/5775_logo.gif">
+      <publishTime>11/01/2013 08:10:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/5995_logo.gif">
+      <publishTime>09/09/2011 15:42:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/7046_logo.gif">
+      <publishTime>03/24/2014 16:44:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/7651_logo.gif">
+      <publishTime>08/19/2014 17:06:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/abb_logo.gif">
+      <publishTime>09/09/2011 15:44:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/acibadem_logo.gif">
+      <publishTime>09/09/2011 15:46:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/adecco_logo.gif">
+      <publishTime>09/09/2011 15:47:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/adore_logo.gif">
+      <publishTime>09/09/2011 15:48:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/agaogluk_logo.gif">
+      <publishTime>10/09/2012 11:36:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/aig_logo.gif">
+      <publishTime>11/16/2012 10:40:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/akbaslar_logo.gif">
+      <publishTime>09/09/2011 15:53:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Akfel_logo.gif">
+      <publishTime>09/09/2011 15:54:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/aksaj_5.gif">
+      <publishTime>03/17/2012 09:14:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/alarkotg_logo.gif">
+      <publishTime>09/09/2011 16:06:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Albaraka_logo.gif">
+      <publishTime>09/09/2011 16:06:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/alisan_logo.2474.delayed">
+      <publishTime>04/11/2015 19:35:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/altunbil_logo.2496.delayed">
+      <publishTime>04/11/2015 19:37:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/anadoluf_logo.gif">
+      <publishTime>07/19/2012 09:58:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/anamotor_logo.gif">
+      <publishTime>09/09/2011 16:11:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/anel_logo.gif">
+      <publishTime>01/17/2013 09:25:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/areva_logo.gif">
+      <publishTime>09/09/2011 16:19:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/arikanli_logo.gif">
+      <publishTime>09/09/2011 16:19:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Arzum_logo.gif">
+      <publishTime>09/09/2011 16:23:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/axaoyak_logo.gif">
+      <publishTime>01/08/2013 13:20:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/balikesire_logo.gif">
+      <publishTime>05/29/2012 08:52:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/banvit_logo.gif">
+      <publishTime>09/09/2011 16:37:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/barsan_logo.gif">
+      <publishTime>09/09/2011 16:37:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/betek_logo.gif">
+      <publishTime>04/11/2015 19:33:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/beybipl_logo.gif">
+      <publishTime>09/09/2011 16:47:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Bioder_logo.gif">
+      <publishTime>09/09/2011 16:50:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/calike_logo.gif">
+      <publishTime>09/09/2011 17:17:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/celik_logo.gif">
+      <publishTime>09/09/2011 17:21:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/cocacola_logo.gif">
+      <publishTime>09/09/2011 17:27:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/coskunoz_logo.gif">
+      <publishTime>09/09/2011 17:29:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/denizbank_logo.gif">
+      <publishTime>09/09/2011 17:40:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/dorukik_logo.gif">
+      <publishTime>03/17/2012 09:16:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Durmazlar_logo.gif">
+      <publishTime>09/09/2011 18:11:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/duzey_logo.gif">
+      <publishTime>09/09/2011 18:11:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/eker_logo.gif">
+      <publishTime>09/09/2011 18:15:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/eksimh_logo.gif">
+      <publishTime>09/09/2011 18:17:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Embil_logo.gif">
+      <publishTime>09/09/2011 18:21:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/emino_logo.gif">
+      <publishTime>08/19/2013 11:51:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Erikli_logo.gif">
+      <publishTime>09/09/2011 18:31:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Etap_logo4.gif">
+      <publishTime>02/25/2014 12:41:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Ethic_logo.gif">
+      <publishTime>01/15/2013 10:48:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/etsers_logo.gif">
+      <publishTime>09/09/2011 18:38:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Farplas_logo.gif">
+      <publishTime>09/09/2011 18:40:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/garantie_logo.gif">
+      <publishTime>09/09/2011 19:05:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/gnc_logo.gif">
+      <publishTime>12/13/2013 12:39:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Grundfos_logo.gif">
+      <publishTime>09/09/2011 19:12:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/gulsansen_2.gif">
+      <publishTime>09/09/2011 19:14:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/guney_logo.gif">
+      <publishTime>04/20/2012 13:32:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/hisarsa_logo.gif">
+      <publishTime>03/17/2012 09:18:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/horoz_logo.243c.delayed">
+      <publishTime>04/11/2015 19:32:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/icdas_logo.gif">
+      <publishTime>09/11/2011 12:34:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/inteltek_logo.gif">
+      <publishTime>09/11/2011 12:38:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/ipragaz_logo.gif">
+      <publishTime>09/11/2011 12:40:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/istcerrahi_logo.gif">
+      <publishTime>07/10/2012 16:14:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/IstSaglik_logo.gif">
+      <publishTime>09/11/2011 12:42:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/isuzu_logo.gif">
+      <publishTime>09/11/2011 12:42:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/JtiPaz_logo.gif">
+      <publishTime>09/11/2011 12:43:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/jti_logo.gif">
+      <publishTime>09/11/2011 12:43:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/karadeniz_logo.gif">
+      <publishTime>04/11/2015 19:33:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/kavaklidere_logo.gif">
+      <publishTime>09/11/2011 12:47:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/keskinoglu_logo.gif">
+      <publishTime>09/11/2011 12:51:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/kibar_logo.gif">
+      <publishTime>03/17/2012 09:19:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/kimteks_logo.gif">
+      <publishTime>09/11/2011 12:52:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/kiraca_logo.23e6.delayed">
+      <publishTime>04/11/2015 19:28:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Korozo_logo.gif">
+      <publishTime>09/11/2011 12:58:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Kumport_logo.gif">
+      <publishTime>09/11/2011 12:59:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/las-par_4.gif">
+      <publishTime>10/11/2012 15:22:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/lilateks_logo.gif">
+      <publishTime>09/11/2011 13:02:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/limak_logo.gif">
+      <publishTime>09/11/2011 13:03:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/lokmanhe_logo.gif">
+      <publishTime>03/27/2012 16:20:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Maysan_logo.gif">
+      <publishTime>09/11/2011 13:15:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/mayt_logo.gif">
+      <publishTime>09/11/2011 13:15:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/memorial_logo..gif">
+      <publishTime>10/20/2014 15:10:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/metisb_logo.gif">
+      <publishTime>02/20/2014 10:33:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Mey_logo.gif">
+      <publishTime>09/11/2011 13:21:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/mn_logo.gif">
+      <publishTime>09/11/2011 13:23:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/mobiltel_logo.gif">
+      <publishTime>09/11/2011 13:23:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/ned_logo.gif">
+      <publishTime>09/11/2011 13:27:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/numil_nkb.gif">
+      <publishTime>09/11/2011 13:32:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/olguncelik_logo.gif">
+      <publishTime>06/15/2012 09:46:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/omsan_logo.gif">
+      <publishTime>09/11/2011 13:34:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/orka_25.gif">
+      <publishTime>03/25/2014 10:35:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Oxford_logo.gif">
+      <publishTime>09/11/2011 14:06:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Ozak_3.gif">
+      <publishTime>09/11/2011 14:06:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/ozon_defacto.gif">
+      <publishTime>08/01/2014 14:41:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/ozyurtlarin_logo.gif">
+      <publishTime>06/20/2014 14:09:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/ParkBravo_logo2.gif">
+      <publishTime>01/06/2014 15:01:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/parkyeri_4.gif">
+      <publishTime>09/11/2011 14:14:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/perfetti_logo.gif">
+      <publishTime>09/11/2011 14:15:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/pfizer_logo.gif">
+      <publishTime>09/11/2011 14:16:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/philip_logo.gif">
+      <publishTime>09/11/2011 14:16:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Pronet_logo.gif">
+      <publishTime>05/02/2014 17:12:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Saide_logo.gif">
+      <publishTime>09/11/2011 14:30:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/santafarma_logo.gif">
+      <publishTime>09/11/2011 14:32:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Sapro_logo.gif">
+      <publishTime>09/11/2011 14:32:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Sarar_logo.gif">
+      <publishTime>04/11/2015 19:34:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/savunma_logo.gif">
+      <publishTime>09/11/2011 14:33:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/sekerbank_logo.gif">
+      <publishTime>09/11/2011 14:34:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/sembol_logo.gif">
+      <publishTime>03/01/2013 10:16:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Senpilic_logo.gif">
+      <publishTime>09/11/2011 14:36:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/stroer_logo.gif">
+      <publishTime>09/11/2011 14:45:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/sunjut_logo.gif">
+      <publishTime>09/11/2011 14:46:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/sunriser_logo.gif">
+      <publishTime>09/11/2011 14:46:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/suntekstil_logo.gif">
+      <publishTime>09/11/2011 14:46:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/syk_logo.gif">
+      <publishTime>08/14/2012 16:56:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/tefirom_logo.gif">
+      <publishTime>01/09/2013 14:45:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/teknosa_logo.gif">
+      <publishTime>09/11/2011 14:54:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/TelesetE_logo.gif">
+      <publishTime>03/17/2012 09:22:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/tepesav_logo.gif">
+      <publishTime>09/11/2011 14:56:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/Termikel_logo.gif">
+      <publishTime>04/11/2015 19:34:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/tntlojistik_logo.gif">
+      <publishTime>09/11/2011 14:59:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/totalgaz_logo.gif">
+      <publishTime>05/09/2014 17:30:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/ulusoyelek_logo.gif">
+      <publishTime>09/11/2011 15:08:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/vaillant_logo.gif">
+      <publishTime>09/11/2011 15:11:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/viko_logo.gif">
+      <publishTime>09/11/2011 15:13:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/volga_logo2.gif">
+      <publishTime>09/11/2011 15:14:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/wurth_logo.gif">
+      <publishTime>09/11/2011 15:15:30</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/yapikredi_logo.gif">
+      <publishTime>09/11/2011 15:17:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/yazaki_logo.gif">
+      <publishTime>09/11/2011 15:18:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/yesilova_logo.gif">
+      <publishTime>09/11/2011 15:19:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/yukselp_logo.gif">
+      <publishTime>09/11/2011 15:21:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/yunsa_logo.gif">
+      <publishTime>09/11/2011 15:22:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/ZFsachs_logo.gif">
+      <publishTime>11/26/2012 08:38:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/UploadFiles/Clients/slogodb3/ZorluH_logo.gif">
+      <publishTime>09/11/2011 15:24:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/aday-aktivasyon-bar-alt.png">
+      <publishTime>03/19/2014 06:37:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/aday-aktivasyon-bar-orta.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/aday-aktivasyon-bar-ust.png">
+      <publishTime>02/21/2014 15:11:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/ajax-loader.gif">
+      <publishTime>04/13/2011 10:20:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/anaaramabg.jpg">
+      <publishTime>08/06/2011 13:46:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/anaaramasag.jpg">
+      <publishTime>08/06/2011 13:45:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/AnaSayfa/ftmid132_yeni2.png">
+      <publishTime>05/02/2015 12:52:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/AnaSayfa/ftmid72.png">
+      <publishTime>02/17/2014 08:05:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/AnaSayfa/ftmid92.png">
+      <publishTime>02/17/2014 08:05:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/AnaSayfa/ftsprite.png">
+      <publishTime>02/19/2015 17:24:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/AnaSayfa/isara2.png">
+      <publishTime>04/16/2013 17:26:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/AnaSayfa/ok.png">
+      <publishTime>12/23/2013 10:43:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/AnaSayfa/prestijcerceve.png">
+      <publishTime>01/02/2012 13:55:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/AnaSayfa/vipSliderGolge.png">
+      <publishTime>09/18/2013 09:36:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/baslikmorbg.png">
+      <publishTime>08/06/2011 11:39:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/baslikmorsag.png">
+      <publishTime>08/06/2011 14:02:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/basliksaribg.png">
+      <publishTime>06/04/2011 18:05:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/basliksarisag.png">
+      <publishTime>06/04/2011 18:05:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/bg_button_a.png">
+      <publishTime>02/16/2011 14:16:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/bg_button_a_gray.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/bg_button_span.png">
+      <publishTime>02/16/2011 14:16:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/bg_button_span_gray.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/box/accept.png">
+      <publishTime>05/04/2011 18:02:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/box/error.png">
+      <publishTime>05/04/2011 18:02:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/box/exclamation.png">
+      <publishTime>05/04/2011 18:02:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/box/information.png">
+      <publishTime>05/04/2011 18:02:32</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Egitimlerim/zeminarama_s1.png">
+      <publishTime>11/30/2011 12:48:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/baloon/baloonBackground.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/baloon/baloonclose.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/baloon/smallbaloon.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/griddizayn_r1_c1.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/griddizayn_r1_c28.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/grid_bottom.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/grid_bottom_left.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/grid_bottom_right.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/grid_left.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/grid_right.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/grid_td_bottom.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/sag.png">
+      <publishTime>02/17/2012 23:56:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/sol.png">
+      <publishTime>02/17/2012 23:56:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/grid/thUzun.png">
+      <publishTime>11/25/2010 14:36:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/IsverenMenu/anasayfaG.jpg">
+      <publishTime>10/05/2011 17:48:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/IsverenMenu/anasayfaM.jpg">
+      <publishTime>10/05/2011 17:48:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/leftmenudivbg.png">
+      <publishTime>09/13/2011 14:55:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/leftmenuselectedbg.png">
+      <publishTime>09/14/2011 14:27:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/leftmenuselectedbg2.png">
+      <publishTime>05/16/2011 15:22:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/listbox/comboCenter.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/listbox/comboleft.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/listbox/comboright.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/listbox/input_search_bg.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/listbox/slListbg.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/isverenGirisi.jpg">
+      <publishTime>08/06/2011 11:46:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/menuB2.jpg">
+      <publishTime>11/05/2011 11:44:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/menuG.jpg">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/menuG2.jpg">
+      <publishTime>08/06/2011 11:45:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/menuLeftG.jpg">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/menuLeftM.jpg">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/menuM.jpg">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/menuM2.jpg">
+      <publishTime>11/05/2011 11:44:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/Menu/menuRightG.jpg">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/modal/null.gif">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/modal/transparent.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/pageback.jpg">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/pageback2.jpg">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Genel/separator2.png">
+      <publishTime>04/20/2011 13:49:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/gradient.jpg">
+      <publishTime>09/29/2010 14:17:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/griBackGround.png">
+      <publishTime>02/04/2013 15:21:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/alert.png">
+      <publishTime>09/20/2010 13:49:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/anaSayfa/pageActive.jpg">
+      <publishTime>05/15/2013 17:23:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/anaSayfa/pagePassive.jpg">
+      <publishTime>05/15/2013 17:23:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/comeback1.png">
+      <publishTime>08/08/2014 15:35:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/exclamationBig.png">
+      <publishTime>03/02/2012 17:13:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/facebookNew.png">
+      <publishTime>04/29/2013 16:36:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/g1.jpg">
+      <publishTime>01/21/2014 12:24:18</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/ilanx.png">
+      <publishTime>08/19/2014 15:02:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/insanasaygi.jpg">
+      <publishTime>07/21/2011 14:41:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/mektupyeni.png">
+      <publishTime>11/25/2011 08:53:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/ok.gif">
+      <publishTime>03/05/2011 10:43:12</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/success.png">
+      <publishTime>09/24/2010 10:43:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/successbig.png">
+      <publishTime>09/24/2010 10:43:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/twitterNew.png">
+      <publishTime>04/29/2013 16:36:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/unlem.gif">
+      <publishTime>11/10/2012 16:33:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/unlem4.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Ikon/Warning.png">
+      <publishTime>10/26/2011 15:46:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/ilanverme/noktaTuruncu.png">
+      <publishTime>12/27/2010 13:45:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/info.gif">
+      <publishTime>05/10/2010 10:48:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/isArama/sekme1.jpg">
+      <publishTime>09/20/2010 13:49:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/jqueryui/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>09/20/2010 13:49:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Kariyerim/cv/cvlineLonger2.png">
+      <publishTime>10/26/2011 15:46:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Kariyerim/postitalt.png">
+      <publishTime>03/12/2012 07:24:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Kariyerim/postitorta.png">
+      <publishTime>03/12/2012 07:19:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/Kariyerim/postitust.png">
+      <publishTime>03/12/2012 07:19:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/linkbullet.gif">
+      <publishTime>03/21/2011 14:06:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundBottomLeftmor.gif">
+      <publishTime>01/28/2011 14:07:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundBottomLeftSari.gif">
+      <publishTime>11/28/2011 14:46:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundBottomRight.gif">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundBottomRightmor.gif">
+      <publishTime>01/28/2011 14:07:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundBottomRightSari.gif">
+      <publishTime>11/28/2011 14:46:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundTopLeft.gif">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundTopLeftmor.gif">
+      <publishTime>01/28/2011 14:07:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundTopLeftSari.gif">
+      <publishTime>11/28/2011 14:46:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundTopRight.gif">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundTopRightmor.gif">
+      <publishTime>01/28/2011 14:07:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/roundTopRightSari.gif">
+      <publishTime>11/28/2011 14:46:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Images/sayi.png">
+      <publishTime>09/20/2010 13:49:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/Media/Images/Sprites/Base.png">
+      <publishTime>02/17/2014 14:32:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/uploads/KariyerIso/Resim/2015/1.jpg">
+      <publishTime>02/13/2015 09:44:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/uploads/KariyerIso/Resim/2015/2.jpg">
+      <publishTime>02/13/2015 09:44:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn1.kariyer.net/Website/uploads/KariyerIso/Resim/2015/3.jpg">
+      <publishTime>02/13/2015 09:44:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/10763/maxx-royal-kemer-hotel-bottom.jpg">
+      <publishTime>02/17/2015 14:38:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/10763/maxx-royal-kemer-hotel-head.jpg">
+      <publishTime>02/17/2015 14:38:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/1115/vestel-tek-vkusagi.jpg">
+      <publishTime>04/08/2015 16:47:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/15042/ey-single2-1.jpg">
+      <publishTime>02/27/2015 16:26:54</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/2047/kuveytturk-saglam-bankacilik-head.jpg">
+      <publishTime>03/23/2015 14:35:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/23127/deneteam-bottom.jpg">
+      <publishTime>09/10/2014 10:11:26</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/23127/deneteam-head.jpg">
+      <publishTime>09/10/2014 10:16:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/25245/erkulkozmatik-bottom.jpg">
+      <publishTime>07/15/2014 17:12:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/25245/erkulkozmatik-head1-2.jpg">
+      <publishTime>03/17/2015 12:41:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/34368/soyluemlak-head.jpg">
+      <publishTime>03/31/2014 16:36:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/35618/eliteworldhotel-head.jpg">
+      <publishTime>04/30/2014 16:40:50</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/36614/loginyazilim-bg.jpg">
+      <publishTime>04/17/2014 14:44:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/36614/loginyazilim-bottom.jpg">
+      <publishTime>04/17/2014 14:44:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/36614/loginyazilim-head.jpg">
+      <publishTime>04/17/2014 14:46:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/3690/emin-evim-bottom1-2.jpg">
+      <publishTime>11/17/2014 15:46:34</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/3690/emin-evim-head1-2.jpg">
+      <publishTime>11/17/2014 15:46:36</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/37088/koruhast-bg1-2.jpg">
+      <publishTime>04/15/2014 14:46:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/37088/koruhast-head1-1.jpg">
+      <publishTime>04/15/2014 14:46:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/43803/neziplioglu-otelcilik-bottom.jpg">
+      <publishTime>11/25/2014 10:19:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/43803/neziplioglu-otelcilik-head.jpg">
+      <publishTime>11/25/2014 10:19:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/43803/neziplioglu-otelcilik-left-logo.jpg">
+      <publishTime>11/25/2014 10:19:20</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/48552/nakkas-deker-bottom.jpg">
+      <publishTime>11/25/2014 16:01:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/50974/venbey-head.jpg">
+      <publishTime>11/26/2014 08:17:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/5672/haselistif-bottom2-2.jpg">
+      <publishTime>07/04/2014 15:41:58</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/68867/coverImage20150123115647.jpg">
+      <publishTime>01/23/2015 10:56:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/7285/grandtarabya-bottom.jpg">
+      <publishTime>05/28/2014 14:27:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/7285/grandtarabya-head.jpg">
+      <publishTime>05/28/2014 14:27:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/employers/jobposting/ShablonPic/7285/grandtarabya-left-bg.jpg">
+      <publishTime>05/28/2014 14:25:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/dikCizgi.jpg">
+      <publishTime>09/20/2010 13:49:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/hr-venue-logo.png">
+      <publishTime>05/02/2015 09:53:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/iste-sosyal.png">
+      <publishTime>05/27/2014 11:58:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/kariyer-net-logo-tek.png">
+      <publishTime>01/23/2015 15:29:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/tumisler2.png">
+      <publishTime>02/20/2015 14:26:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/unisbul.png">
+      <publishTime>05/27/2014 11:58:48</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/uye.jpg">
+      <publishTime>01/22/2014 08:56:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/uye2.jpg">
+      <publishTime>01/22/2014 08:56:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Anasayfa/yetenekli-logo.png">
+      <publishTime>05/27/2014 11:58:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/Ikon/anaSayfa/backgradient_s3.jpg">
+      <publishTime>10/27/2011 10:46:56</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/Images/YeniUyeOl/uye-ol.jpg">
+      <publishTime>01/22/2014 08:56:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/mailing/kucuklogomulakatsorulari.png">
+      <publishTime>01/27/2015 09:30:16</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/choice.jpg">
+      <publishTime>12/15/2014 16:28:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/choice1.jpg">
+      <publishTime>12/15/2014 16:35:40</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/dolunay-soysert-asli-enver.jpg">
+      <publishTime>06/04/2015 11:05:22</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/firstimpression1.jpg">
+      <publishTime>12/31/2014 14:01:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/ilham-sesen.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/mulakat.jpg">
+      <publishTime>10/13/2014 17:26:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/mulakat1.jpg">
+      <publishTime>10/13/2014 17:31:52</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/olmakistediginyer.jpg">
+      <publishTime>09/29/2014 15:03:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/cdn2.kariyer.net/WebSite/uploads/KariyerRehberi/olmakistediginyer600x300.jpg">
+      <publishTime>09/29/2014 15:03:14</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.all.css">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.base.css">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.button.css">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.core.css">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.slider.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.theme.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery-ui.min.css">
+      <publishTime>04/07/2015 20:53:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.accordion.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.autocomplete.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.button.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.core.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.datepicker.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.dialog.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.progressbar.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.resizable.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.selectable.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.slider.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.tabs.min.css">
+      <publishTime>04/07/2015 20:53:04</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
+      <publishTime>04/07/2015 20:53:02</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/accent.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/bullet.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/cv_duzenle_box_title_sprite.png">
+      <publishTime>04/14/2015 00:24:10</publishTime>
+    </File>
+    <File Include="Images/heroAccent.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/logokagider.png">
+      <publishTime>04/11/2015 01:13:46</publishTime>
+    </File>
+    <File Include="Images/multiselect_closed.png">
+      <publishTime>04/14/2015 00:12:34</publishTime>
+    </File>
+    <File Include="Images/multiselect_opened.png">
+      <publishTime>04/14/2015 00:13:44</publishTime>
+    </File>
+    <File Include="Images/orderedList0.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList1.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList2.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList3.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList4.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList5.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList6.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList7.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList8.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="Images/orderedList9.png">
+      <publishTime>04/07/2015 20:52:46</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/08/2015 00:48:30</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.5.1.min.js">
+      <publishTime>04/06/2012 20:13:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.js">
+      <publishTime>04/07/2015 20:52:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.min.js">
+      <publishTime>04/07/2015 20:52:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.11.min.js">
+      <publishTime>04/06/2012 20:13:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.js">
+      <publishTime>04/07/2015 20:53:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.min.js">
+      <publishTime>04/07/2015 20:53:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/07/2015 20:53:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/07/2015 20:53:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/07/2015 20:53:06</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.0.debug.js">
+      <publishTime>04/07/2015 20:53:20</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.0.js">
+      <publishTime>04/07/2015 20:53:20</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-1.7.min.js">
+      <publishTime>04/06/2012 20:13:26</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/07/2015 20:53:08</publishTime>
+    </File>
+    <File Include="Scripts/select2.full.min.js">
+      <publishTime>08/16/2015 19:49:40</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>04/07/2015 20:53:08</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>11/16/2013 22:41:30</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>08/17/2015 00:20:36</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>11/08/2015 04:52:28</publishTime>
+    </File>
+    <File Include="Views/Account/LoginMember.cshtml">
+      <publishTime>05/18/2015 01:36:30</publishTime>
+    </File>
+    <File Include="Views/Account/LoginRef.cshtml">
+      <publishTime>05/11/2015 10:25:51</publishTime>
+    </File>
+    <File Include="Views/Account/Manage - Copy.cshtml">
+      <publishTime>11/08/2015 19:50:34</publishTime>
+    </File>
+    <File Include="Views/Account/Manage.cshtml">
+      <publishTime>11/08/2015 20:00:33</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>07/26/2015 09:53:51</publishTime>
+    </File>
+    <File Include="Views/Account/_ChangePasswordPartial.cshtml">
+      <publishTime>11/08/2015 20:01:46</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>11/16/2013 22:41:30</publishTime>
+    </File>
+    <File Include="Views/Account/_RemoveExternalLoginsPartial.cshtml">
+      <publishTime>11/08/2015 19:54:11</publishTime>
+    </File>
+    <File Include="Views/Account/_SetPasswordPartial.cshtml">
+      <publishTime>11/16/2013 22:41:30</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>11/08/2015 20:43:47</publishTime>
+    </File>
+    <File Include="Views/Cv/AddDil.cshtml">
+      <publishTime>10/25/2015 02:09:43</publishTime>
+    </File>
+    <File Include="Views/Cv/AddEgitim.cshtml">
+      <publishTime>08/16/2015 18:05:39</publishTime>
+    </File>
+    <File Include="Views/Cv/AddSeminer.cshtml">
+      <publishTime>08/17/2015 14:02:51</publishTime>
+    </File>
+    <File Include="Views/Cv/AddSertifika.cshtml">
+      <publishTime>08/17/2015 14:04:15</publishTime>
+    </File>
+    <File Include="Views/Cv/AddSinav.cshtml">
+      <publishTime>11/03/2015 20:30:46</publishTime>
+    </File>
+    <File Include="Views/Cv/Create.cshtml">
+      <publishTime>04/11/2015 23:12:26</publishTime>
+    </File>
+    <File Include="Views/Cv/CvAddInfo.cshtml">
+      <publishTime>08/16/2015 18:01:51</publishTime>
+    </File>
+    <File Include="Views/Cv/CvAddIsdeneyim.cshtml">
+      <publishTime>11/04/2015 01:12:10</publishTime>
+    </File>
+    <File Include="Views/Cv/CvCreateKisiselBilgi.cshtml">
+      <publishTime>08/16/2015 23:36:47</publishTime>
+    </File>
+    <File Include="Views/Cv/CvEditInfo.cshtml">
+      <publishTime>08/16/2015 18:00:28</publishTime>
+    </File>
+    <File Include="Views/Cv/CvEditIsDeneyim.cshtml">
+      <publishTime>11/04/2015 01:17:14</publishTime>
+    </File>
+    <File Include="Views/Cv/CvEditKisiselBilgi.cshtml">
+      <publishTime>08/16/2015 17:59:29</publishTime>
+    </File>
+    <File Include="Views/Cv/CvYazdir.cshtml">
+      <publishTime>05/17/2015 12:01:29</publishTime>
+    </File>
+    <File Include="Views/Cv/EditDil.cshtml">
+      <publishTime>11/07/2015 15:46:10</publishTime>
+    </File>
+    <File Include="Views/Cv/EditEgitim.cshtml">
+      <publishTime>08/16/2015 17:58:06</publishTime>
+    </File>
+    <File Include="Views/Cv/EditOther.cshtml">
+      <publishTime>08/17/2015 13:56:28</publishTime>
+    </File>
+    <File Include="Views/Cv/EditSeminer.cshtml">
+      <publishTime>08/17/2015 13:44:09</publishTime>
+    </File>
+    <File Include="Views/Cv/EditSertifika.cshtml">
+      <publishTime>08/17/2015 13:45:17</publishTime>
+    </File>
+    <File Include="Views/Cv/EditSinav.cshtml">
+      <publishTime>11/04/2015 00:51:22</publishTime>
+    </File>
+    <File Include="Views/Cv/Index.cshtml">
+      <publishTime>11/08/2015 06:04:17</publishTime>
+    </File>
+    <File Include="Views/Cv/Index2.cshtml">
+      <publishTime>04/12/2015 02:39:02</publishTime>
+    </File>
+    <File Include="Views/Cv/_IletisimBilgileriPartial.cshtml">
+      <publishTime>08/17/2015 12:56:42</publishTime>
+    </File>
+    <File Include="Views/Cv/_IsDeneyimleriPartial.cshtml">
+      <publishTime>05/12/2015 22:58:27</publishTime>
+    </File>
+    <File Include="Views/Cv/_KisiselBilgilerPartial.cshtml">
+      <publishTime>08/17/2015 12:59:19</publishTime>
+    </File>
+    <File Include="Views/Cv/_ResimGosterPartial.cshtml">
+      <publishTime>06/13/2015 02:33:18</publishTime>
+    </File>
+    <File Include="Views/Cv/_ResimYuklePartial.cshtml">
+      <publishTime>05/14/2015 00:04:06</publishTime>
+    </File>
+    <File Include="Views/Cv/_ScriptPartialSuccess.cshtml">
+      <publishTime>04/26/2015 02:05:24</publishTime>
+    </File>
+    <File Include="Views/Cv/_ScriptsDialog.cshtml">
+      <publishTime>08/17/2015 12:42:51</publishTime>
+    </File>
+    <File Include="Views/Cv/_SeminerPartial.cshtml">
+      <publishTime>08/17/2015 12:57:56</publishTime>
+    </File>
+    <File Include="Views/Cv/_SertifikaPartial.cshtml">
+      <publishTime>08/17/2015 12:58:17</publishTime>
+    </File>
+    <File Include="Views/Cv/_SinavPartial.cshtml">
+      <publishTime>08/17/2015 12:58:41</publishTime>
+    </File>
+    <File Include="Views/Cv/_UniversiteEgitimPartial.cshtml">
+      <publishTime>08/17/2015 12:59:01</publishTime>
+    </File>
+    <File Include="Views/Cv/_YabanciDillerPartial.cshtml">
+      <publishTime>05/14/2015 00:11:46</publishTime>
+    </File>
+    <File Include="Views/Employee/AddApp.cshtml">
+      <publishTime>11/08/2015 21:38:55</publishTime>
+    </File>
+    <File Include="Views/Employee/EditApp.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Employee/Index.cshtml">
+      <publishTime>05/18/2015 11:36:34</publishTime>
+    </File>
+    <File Include="Views/Employee/MyAppList.cshtml">
+      <publishTime>11/08/2015 21:38:24</publishTime>
+    </File>
+    <File Include="Views/Employer/AppIlan.cshtml">
+      <publishTime>11/07/2015 13:12:53</publishTime>
+    </File>
+    <File Include="Views/Employer/CvBank.cshtml">
+      <publishTime>11/08/2015 21:37:29</publishTime>
+    </File>
+    <File Include="Views/Employer/Index.cshtml">
+      <publishTime>05/18/2015 11:37:11</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>05/03/2015 23:21:14</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>05/03/2015 23:21:24</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>11/07/2015 17:58:46</publishTime>
+    </File>
+    <File Include="Views/Ilan/AppIlan.cshtml">
+      <publishTime>05/03/2015 20:41:06</publishTime>
+    </File>
+    <File Include="Views/Ilan/CvBank.cshtml">
+      <publishTime>05/03/2015 20:41:46</publishTime>
+    </File>
+    <File Include="Views/Ilan/EditFirma.cshtml">
+      <publishTime>11/05/2015 14:22:25</publishTime>
+    </File>
+    <File Include="Views/Ilan/EditIlan.cshtml">
+      <publishTime>11/05/2015 15:29:48</publishTime>
+    </File>
+    <File Include="Views/Ilan/IlanDetail.cshtml">
+      <publishTime>05/18/2015 01:28:06</publishTime>
+    </File>
+    <File Include="Views/Ilan/Index.cshtml">
+      <publishTime>05/08/2015 22:46:37</publishTime>
+    </File>
+    <File Include="Views/Ilan/_EditIlan.cshtml">
+      <publishTime>05/03/2015 20:06:52</publishTime>
+    </File>
+    <File Include="Views/Ilan/_FirmaEklePartial.cshtml">
+      <publishTime>11/05/2015 14:06:32</publishTime>
+    </File>
+    <File Include="Views/Ilan/_IlanEklePartial.cshtml">
+      <publishTime>11/07/2015 13:15:57</publishTime>
+    </File>
+    <File Include="Views/Ilan/_IlanListPartial.cshtml">
+      <publishTime>11/08/2015 21:33:50</publishTime>
+    </File>
+    <File Include="Views/Ilan/_OneCikanIlanar.cshtml">
+      <publishTime>05/13/2015 17:51:49</publishTime>
+    </File>
+    <File Include="Views/Settings/Index.cshtml">
+      <publishTime>11/04/2015 02:05:53</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>11/16/2013 22:41:30</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/08/2015 21:23:31</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutIsveren.cshtml">
+      <publishTime>11/08/2015 21:25:13</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>11/08/2015 20:37:20</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartialIsveren.cshtml">
+      <publishTime>11/08/2015 20:38:17</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/13/2015 16:57:24</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>11/16/2013 22:41:30</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/08/2015 22:53:24</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

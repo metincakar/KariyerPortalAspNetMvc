@@ -1,0 +1,5 @@
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Entities\bin\Release\KagiderKariyerPortal.Entities.dll
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Entities\bin\Release\KagiderKariyerPortal.Entities.pdb
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Entities\obj\Release\KagiderKariyerPortal.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Entities\obj\Release\KagiderKariyerPortal.Entities.dll
+C:\Users\Metin\documents\visual studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Entities\obj\Release\KagiderKariyerPortal.Entities.pdb

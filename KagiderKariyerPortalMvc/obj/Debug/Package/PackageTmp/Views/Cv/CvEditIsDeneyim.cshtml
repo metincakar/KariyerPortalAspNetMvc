@@ -1,0 +1,120 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvIsDeneyimleri
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Ajax.BeginForm("CvEditIsDeneyim", "Cv", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            UpdateTargetId = "dvIsTecrubelerim",
+            OnSuccess = "updateSuccessIs"
+        }, new { @id = "updateForm", @class = "form-horizontal", role = "form" }))
+{
+    <h4>İş Deneyimleri.</h4>
+    <hr />
+    <input type="hidden" name="is_delete" id="is_delete" value="0" />
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(m => m.UserId)
+    @Html.HiddenFor(m => m.IsDeneyimleriId)
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirmaAdi, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            @Html.TextBoxFor(m => m.FirmaAdi, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.FirmaAdi)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirmaSektoru, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            @Html.DropDownListFor(m => m.FirmaSektoru, new SelectList(ViewBag.Sektorlist, "Value", "Text", Model.FirmaSektoru), "Seçiniz", new { @class = "form-control searchSelect" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirmadakiPozisyon, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            @Html.DropDownListFor(m => m.FirmadakiPozisyon, new SelectList(ViewBag.Pozisyonlar, "Value", "Text", Model.FirmadakiPozisyon), "Seçiniz", new { @class = "form-control searchSelect" })
+            @Html.ValidationMessageFor(model => model.FirmadakiPozisyon)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.BaslangicTarihi, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            @Html.TextBoxFor(m => m.BaslangicTarihi, Model.BaslangicTarihi.ToString("d"), new { @readonly = true, @class = "form-control datepicker" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.BitisTarihi, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            @Html.TextBoxFor(m => m.BitisTarihi, Model.BitisTarihi.ToString("d"), new { @readonly = true, @class = "form-control datepicker" })
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Istanimi, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            @Html.TextBoxFor(m => m.Istanimi, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.IsAlani, new { @class = "col-md-4 control-label fontSmall" })
+        <div class="col-md-8">
+            @Html.TextBoxFor(m => m.IsAlani, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Sil" onclick="sil();" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();" />
+        </div>
+    </div>
+
+}
+
+<script>
+    $.validator.methods["date"] = function (value, element) { return true; } //chrome daki tarhi sıkıntısını çözen kod
+    //$(".datepicker").datepicker('setDate', 'today');
+
+    $(".datepicker").datepicker({
+        //showOn: "button",
+        changeMonth: true,
+        changeYear: true,
+        buttonImage: "takvim.png",
+        buttonImageOnly: true,
+        dateFormat: "dd/mm/yy",
+        monthNames: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+        monthNamesShort: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+        dayNamesMin: ["Pts", "Sl", "Çrş", "Prş", "Cm", "Cts", "Pzr"]
+    });
+ 
+    function sil() {
+        if ($('#updateForm').valid()) {
+            $('#is_delete').val('1');
+            $('#updateForm').submit();
+            $('#commonMessage').html("İş Deneyimi Silinmiştir!");
+            $('#updateDialog').dialog('destroy').empty();
+            $('#updateDialog').dialog('close');
+        }
+    }
+
+    function kaydet() {
+        if ($('#updateForm').valid()) {
+            $('#updateForm').submit();
+            $('#commonMessage').html("İş Deneyimi Güncellenmiştir!");
+            $('#updateDialog').dialog('destroy').empty();
+            $('#updateDialog').dialog('close');
+        }
+    }
+    function updateSuccessIs() {
+
+        $('#commonMessage').delay(400).slideDown(400).delay(3000).slideUp(400);
+    }
+    $(document).ready(function () {
+        $(".searchSelect").select2();
+    });
+</script>

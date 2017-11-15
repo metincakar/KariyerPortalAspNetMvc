@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KagiderKariyerPortal.Entities", "KagiderKariyerPortal.Entities\KagiderKariyerPortal.Entities.csproj", "{595FD600-988A-40A1-9CBA-61EDA19F5163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KagiderKariyerPortal.Dal", "KagiderKariyerPortal.Dal\KagiderKariyerPortal.Dal.csproj", "{C967F7B7-8F73-4DEF-B54E-1BC8AC36AFAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KagiderKariyerPortal.Bll", "KagiderKariyerPortal.Bll\KagiderKariyerPortal.Bll.csproj", "{803B9372-F38A-455F-AAB3-83EF760DDBEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KagiderKariyerPortal.Interfaces", "KagiderKariyerPortal.Interfaces\KagiderKariyerPortal.Interfaces.csproj", "{BAE29C84-E773-4642-B081-5F59C6AD9396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KagiderKariyerPortalMvc", "KagiderKariyerPortalMvc\KagiderKariyerPortalMvc.csproj", "{AC700E3B-4335-40D7-B1DA-E1530C9C6086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web5", "web5\web5.csproj", "{F6488594-A67D-4069-AE5F-751298684299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{595FD600-988A-40A1-9CBA-61EDA19F5163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595FD600-988A-40A1-9CBA-61EDA19F5163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595FD600-988A-40A1-9CBA-61EDA19F5163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595FD600-988A-40A1-9CBA-61EDA19F5163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C967F7B7-8F73-4DEF-B54E-1BC8AC36AFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C967F7B7-8F73-4DEF-B54E-1BC8AC36AFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C967F7B7-8F73-4DEF-B54E-1BC8AC36AFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C967F7B7-8F73-4DEF-B54E-1BC8AC36AFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{803B9372-F38A-455F-AAB3-83EF760DDBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803B9372-F38A-455F-AAB3-83EF760DDBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803B9372-F38A-455F-AAB3-83EF760DDBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803B9372-F38A-455F-AAB3-83EF760DDBEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE29C84-E773-4642-B081-5F59C6AD9396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE29C84-E773-4642-B081-5F59C6AD9396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE29C84-E773-4642-B081-5F59C6AD9396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE29C84-E773-4642-B081-5F59C6AD9396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC700E3B-4335-40D7-B1DA-E1530C9C6086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC700E3B-4335-40D7-B1DA-E1530C9C6086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC700E3B-4335-40D7-B1DA-E1530C9C6086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC700E3B-4335-40D7-B1DA-E1530C9C6086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6488594-A67D-4069-AE5F-751298684299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6488594-A67D-4069-AE5F-751298684299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6488594-A67D-4069-AE5F-751298684299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6488594-A67D-4069-AE5F-751298684299}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

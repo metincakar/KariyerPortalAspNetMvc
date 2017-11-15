@@ -1,0 +1,5 @@
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Bll\bin\Debug\KagiderKariyerPortal.Bll.dll
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Bll\bin\Debug\KagiderKariyerPortal.Bll.pdb
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Bll\obj\Debug\KagiderKariyerPortal.Bll.dll
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Bll\obj\Debug\KagiderKariyerPortal.Bll.pdb
+C:\Users\acer-pc\Documents\Visual Studio 2013\Projects\KagiderKariyerPortal\KagiderKariyerPortal.Bll\obj\Debug\KagiderKariyerPortal.Bll.csprojResolveAssemblyReference.cache

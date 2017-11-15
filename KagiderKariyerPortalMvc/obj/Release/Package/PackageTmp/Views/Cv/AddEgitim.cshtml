@@ -1,0 +1,63 @@
+﻿@model KagiderKariyerPortal.Entities.ConCreate.CvEgitimUniversiteBilgi
+
+@using (Ajax.BeginForm("AddEgitim", "Cv", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "dvEgitimDurumum",
+            HttpMethod = "Post",
+            OnSuccess = "updateSuccessEgitim"
+        }, new { @id = "updateEgitim", @class = "form-horizontal", role = "form" }))
+{
+        @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+     
+            @Html.HiddenFor(model => model.EgitimId)
+            @Html.HiddenFor(model => model.UserId)
+            @Html.HiddenFor(model => model.UniversiteId)
+     @Html.HiddenFor(model => model.EgitimTipi)
+      
+    <div class="form-group">
+        
+        @(Model.EgitimTipi == 0 ? Html.Label("lblEgitimTip", "Üniversite Adı", new {@class = "col-md-4 control-label"}) : Html.Label("lblEgitimTip", "Lise Adı", new {@class = "col-md-4 control-label"}))
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.UniversiteAd, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Bolum, new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.Bolum, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MezuniyetYil, new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.MezuniyetYil, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MezuniyetDerece,new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.MezuniyetDerece, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+        </div>
+    </div>
+      
+    }
+<script>
+   function updateSuccessEgitim() {
+       $('#updateDialogEgitim').dialog('close');
+        $('#commonMessage').html("Egitim Bilgileri Ekleme Yapılmıştır!");
+        $('#commonMessage').delay(400).slideDown(400).delay(3000).slideUp(400);
+   }
+
+   function kaydet() {
+    
+       $('#updateEgitim').submit();
+    
+   }
+   </script>

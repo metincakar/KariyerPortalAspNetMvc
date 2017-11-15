@@ -1,0 +1,90 @@
+﻿
+@model KagiderKariyerPortal.Entities.ConCreate.CvIsDeneyimleri
+
+
+
+@using (Ajax.BeginForm("CvEditIsDeneyim", "Cv", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            UpdateTargetId = "dvIsTecrubelerim",
+            OnSuccess = "updateSuccess"
+        }, new { @id = "updateForm",@class = "form-horizontal" ,role = "form" }))
+{
+      <h4>İş Deneyimleri.</h4>
+    <hr />  
+       <input type="hidden" name="is_delete" id="is_delete" value="0" />  
+     @Html.AntiForgeryToken()
+      @Html.ValidationSummary(true)
+    @Html.HiddenFor(m=>m.UserId)
+     @Html.HiddenFor(m=>m.IsDeneyimleriId)
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirmaAdi, new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.FirmaAdi, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirmaSektoru, new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.FirmaSektoru, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirmadakiPozisyon, new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.FirmadakiPozisyon, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.BaslangicTarihi,new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.BaslangicTarihi, Model.BaslangicTarihi.ToString("d"), new { @class = "form-control datepicker" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.BitisTarihi,new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.BitisTarihi,Model.BitisTarihi.ToString("d"), new { @class = "form-control datepicker" })
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Istanimi,new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.Istanimi, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.IsAlani,new { @class = "col-md-4 control-label" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => m.IsAlani, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Sil" onclick="sil();" />
+        </div>
+    </div>
+  <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Kaydet" onclick="kaydet();"/>
+        </div>
+    </div>
+
+}
+
+<script>
+    $(".datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+    function sil() {
+        $('#is_delete').val('1');
+        $('#updateForm').submit();
+    }
+
+    function kaydet() {
+
+        $('#updateForm').submit();
+        $('#updateDialog').dialog('close');
+    }
+
+</script>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<KagiderKariyerPortal.Entities.ConCreate.CvIletisimBilgi>
+@{
+    var iletisim = Model.ToList()[0];
+}
+<div id="genelbilgidiv">
+    
+    @if (iletisim != null)
+    {
+        <div id="divIletisimDolu" class="contact-info info-box">
+            <p>
+                <h3>
+
+
+                    lletişim Bilgileri  @Html.ActionLink("Düzenle", "CvEditInfo", new { id = iletisim.IletisimBilgiId }, new { @class = "editDialogInfo edit-btn", title = "İletişim Bilgileri Düzenle", en = "750", boy = "515", sil = "0" })
+
+                    @*@Ajax.ActionLink("Düzenle", "CvEditInfo", "Cv", new { id = iletisim.IletisimBilgiId }, new AjaxOptions() { UpdateTargetId = "genelbilgidiv", HttpMethod = "Post" }, new { @class = "editDialog edit-btn", title = "İletişim Bilgileri Düzenle", en = "750", boy = "515", sil = "0" })*@
+                </h3>
+                <ul id="sonuc">
+                    <li id="epostatr"><strong><span id="lblEpostaRes">E-Posta</span></strong>:  <span id="uyemail"> @Html.DisplayFor(iletisimiletisim => iletisim.UyeMail)</span></li>
+
+                    <li><strong> <span id="lblAdresRes">Adres Bilgileri</span></strong>:  <span id="adres">@Html.DisplayFor(iletisimiletisim => iletisim.Adres) - @Html.DisplayFor(iletisimiletisim => iletisim.SetupCity.City) -@Html.DisplayFor(iletisimiletisim => iletisim.SetupCounty.County) - @Html.DisplayFor(iletisimiletisim => iletisim.Semt) -@Html.DisplayFor(iletisimiletisim => iletisim.SetupCountry.Country)</span></li>
+
+                    <li id="cepteltr"><strong> <span id="lblCepTelefonuRes">Cep Telefonu</span></strong>:<span id="mobiltel"> @Html.DisplayFor(iletisimiletisim => iletisim.MobilTel)</span></li>
+
+                    <li id="urltr"><strong><span id="lblWebSitesiRes">Kişisel Web Sayfası</span></strong>: <span id="weblink">@Html.DisplayFor(m=>iletisim.WebLink)</span></li>
+
+                </ul>
+            </p>
+        </div>
+    }
+    else
+    {
+        <div id="divIletisimBos" class="short-info info-box empty-box">
+            <h3> İletişim Bilgileri </h3>
+            <div class="empty-area">
+                <span>
+
+                    @Html.ActionLink("Bilginizi Ekleyin", "CvAddInfo", null, new { @class = "editDialogInfo add-btn", title = "İletişim Bilgileri Ekle", en = "750", boy = "515", sil = "0" })
+                </span>
+            </div>
+        </div>
+    }
+</div>
+<div id="loadingInfo" style="display: none;"><p class="text-success">Düzenleme yapılıyor...</p></div>
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+
+
+@*<script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@Scripts.Render("~/bundles/modernizr")
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var linkObj;
+        $(function () {
+
+            $.ajaxSetup({ cache: false });
+            $(".editDialogInfo").click(function () {
+                //change the title of the dialog
+
+                linkObj = $(this);
+                var dialogDiv = $('#updateDialogInfo');
+                var viewUrl = linkObj.attr('href');
+                var title = linkObj.attr('title');
+                var en = linkObj.attr('en');
+                var boy = linkObj.attr('boy');
+                $('#updateDialogInfo').dialog({
+                    autoOpen: false,
+                    height: 'auto',
+                    width: en,
+
+                    title: title,
+                    resizable: true,
+                    modal: true,
+                    draggable: true,
+                    close: function(event, ui) {
+                        $('#updateDialogInfo').dialog('destroy').empty();
+                    },
+                    open: function (event, ui) {
+                        $(this).load(viewUrl);
+
+                    }
+                      
+                });
+                dialogDiv.dialog('open');
+                return false;
+            });
+        });
+
+
+
+    });
+
+
+</script>
